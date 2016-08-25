@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script src="../source/jquery-3.1.0.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <h1>测试bootstrap的界面</h1>
+    <div class="bs-example bs-example-tabs" data-example-id="togglable-tabs">
+    <ul id="invite_tabs" class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#profile_form_div" id="profile_form_tab" role="tab" data-toggle="tab" aria-controls="profile_form_div" aria-expanded="true">邀请</a></li>
+      <li role="presentation"><a href="#import_data_div" role="tab" id="import_data_tab" data-toggle="tab" aria-controls="import_data_div">导入</a></li>
+    </ul>
+    <div id="myTabContent" class="tab-content">
+      <div role="tabpanel" class="tab-pane fade active in" id="profile_form_div" aria-labelledby="profile_form_tab">
+                                    <form role="form" id="profile_form">
+                                        <div class="form-group">
+                                            <label for="form_name">姓名</label>
+                                            <input type="text" class="form-control dy_input" id="form_name" name="name" required
+                                                   maxlength="30">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="form_name">用户</label>
+                                            <input type="text" class="form-control dy_input" id="form_username" name="username"
+                                                   required
+                                                   maxlength="30">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="form_gender">性别</label>
+                                            <select class="form-control c-select" id="form_gender" name="gender" required>
+                                                <option value="-1"></option>
+                                                <option value="1" selected>男</option>
+                                                <option value="0">女</option>
+                                            </select>
+                                        </div>
+                                        <!--for paper ref-->
+                                        <div class="form-group" id="leader_div">
+                                            <label for="form_paper">测评</label>
+                                            <select class="form-control select2" id="form_paper"
+                                                    multiple="multiple">
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="form_gmt_birthday">邮箱</label>
+                                            <input type="text" class="form-control" id="form_email" name="email"
+                                                   required data-parsley-type="email" maxlength="50">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="form_role">角色</label>
+                                            <select class="form-control c-select" id="form_role" name="role" required>
+                                            </select>
+                                        </div>
+                                        <!--
+                                        <div class="form-group hide">
+                                            <label for="form_level">权限</label>
+                                            <select class="form-control c-select" id="form_level" name="level" required>
+                                                <option value="1" selected>最低</option>
+                                                <option value="3">低</option>
+                                                <option value="5">中</option>
+                                            </select>
+                                        </div>
+                                        -->
+
+                                        <button type="submit" class="btn primary m-b" id="submit_btn" data-id="">邀请</button>
+                                        <button type="reset" class="btn white m-b">重置</button>
+                                    </form>
+                                </div>
+      <div role="tabpanel" class="tab-pane fade" id="import_data_div" aria-labelledby="import_data_tab">
+        <form role="form" is="ajax-form" id="import_data_form"
+                                        method="POST" enctype="multipart/form-data">
+                                        <label for="exampleInputFile">导入Excel文件</label>
+                                        <!-- # TODO 文件的规则帮助需要写个更加详细的table来展现。 -->
+                                        <i class="material-icons md=24" title="文件需要按照一定的规则(之后细化)"></i>
+                                        <input type="file" id="exampleInputFile" class= "form-control" name="excel_file" text="请选择文件"><br>
+                                        <input class="btn white m-b" type="submit" value="导入">
+                                    </form>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>
