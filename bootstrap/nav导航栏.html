@@ -15,5 +15,21 @@
   </head>
   <body>
     <h1>测试bootstrap的界面</h1>
+    <div class="bs-example bs-example-tabs" data-example-id="togglable-tabs">
+    <ul id="invite_tabs" class="nav nav-tabs">
+      <li  class="active">
+        <a href="#profile_form_div" data-toggle="tab">邀请</a>
+      </li>
+      <li ><a href="#import_data_div" data-toggle="tab">导入</a></li>
+    </ul>
+    <div id="myTabContent" class="tab-content">
+      <div role="tabpanel" class="tab-pane fade active in" id="profile_form_div">
+        第一页
+      </div>
+      <div role="tabpanel" class="tab-pane fade" id="import_data_div">
+        第二页
+      </div>
+    </div>
+  </div>
   </body>
 </html>

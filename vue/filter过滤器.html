@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script src="../source/vue.js"></script>
+    <meta http-equiv="refresh" content="30">
+  </head>
+  <body>
+    <div id="example">
+      <template v-if="show_tel">
+        电话: {{tel}}
+      </template>
+      朋友们:
+      <ul>
+      <li v-for="item in friends">
+        姓名: <span v-text="item.name | reverse"></span>{{item.name | capitalize}}
+        出生日期: {{ item.birth | timestamp_to_date}}
+      </li>
+      </ul>
+    </div>
+    <script>
+      Vue.filter('reverse', function(value) {
+        return value.split('').reverse().join('')
+      });
+      Vue.filter('timestamp_to_date', function(value) {
+        if (typeof(value) == 'string') {
+          value = parseInt(value);
+        }
+        if (value < 2073753874) {
+          value = 1000*value;
+        }
+        var date = new Date(value);
+        return date.toLocaleDateString();
+      });
+      var data = {
+        tel: 18888888,
+        friends: [
+          {name: "lily", birth: '1473753874', },
+          {name: "lucy", birth: '1473753874', },
+        ],
+      }
+      var vm = new Vue({
+        el: '#example',
+        data: data,
+        created: function (){
+        },
+      });
+      var MyComponent = Vue.extend({
+      });
+      var myComponentInstance = new MyComponent()
+    </script>
+    
+  </body>
+</html>

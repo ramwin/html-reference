@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script src="../source/vue.js"></script>
+    <meta http-equiv="refresh" content="30">
+  </head>
+  <body>
+    <ul id="example">
+      <li v-for="friend in friends">
+        {{friend.name}}
+        性别: {{friend.sex}}
+        <input type="button" v-on:click="test(friend)" value="更换性别"><br>
+        <span v-if="friend.address.country=='中国'"> 国籍: {{friend.address.country}}</span>
+        <input type="button" v-on:click="change_country(friend)" value="更换国籍"><br>
+      </li>
+    </ul>
+    <script>
+      var data = {
+        friends: [
+          {name: "lily", sex: "male", address:{country: "中国", },},
+          {name: "lucy", sex: "male", address:{country: "中国", },},
+        ],
+      }
+      var vm = new Vue({
+        el: '#example',
+        data: data,
+        created: function (){
+          console.log('a is:' + this.a)
+        },
+        computed: {
+          fullName: {
+            get: function () {
+              return this.first_name + " " + this.last_name;
+            },
+            set: function (newValue) {
+              var names = newValue.split(" ");
+              this.first_name = names[0];
+              this.last_name = names[names.length-1]
+            },
+          }
+        },
+        methods: {
+          test(friend) {
+            debugger;
+            alert(2);
+          },
+          change_country(friend) {
+            friend.address.country = friend.address.country == "中国" ? "美国" : "中国";
+          },
+        }
+      });
+    </script>
+    
+  </body>
+</html>

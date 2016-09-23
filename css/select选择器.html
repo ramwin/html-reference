@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title></title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  </head>
+  <style>
+    div { border: 1px solid red; min-width: 200px; min-height: 200px}
+    .div1 > .div2 { border: 1px solid green;}
+    .div1 > .div2 > p {color : yellow}
+    .basic {color: blue}
+    .basic.warning {color: black}
+    .warning {color: purple}
+  </style>
+  <body>
+    <div class="div1">
+      <p class="basic">.div1 .basic p</p>
+      <p class="warning">.div1 .basic p</p>
+      <div class="div2">
+        <p class="basic warning">.basic .warning p</p>
+        <p>.div2 p</p>
+      </div>
+    </div>
+  </body>
+</html>

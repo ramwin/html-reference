@@ -19,3 +19,15 @@
     [参考链接](http://www.runoob.com/jsref/dom-obj-fileupload.html)
     type=file
     accept="" # 接收类型, 已弃用
+
+
+## 单选框
+    type = "radio"
+    <input type="radio" name="gender" value="女">女<br>
+    <input type="radio" name="gender" value="男">男<br>
+
+
+## 多选框
+    type = checkbox
+    <input type="checkbox" name="gender" value="女">女<br>
+    <input type="checkbox" name="gender" value="男">男<br>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title></title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  </head>
+  <style>
+    div {
+    	display: flex;
+    	border: 1px solid green;
+    	}
+  	 .red {
+  	 border: 1px solid red;
+  	 justify-content: space-between;
+  	 height: 100px;
+  	 align-items: center;
+  	 }
+  	 .green {
+  	 border: 1px solid green;
+  	 width: 40px; height: 40px}
+  	 .double {
+  	 	flex-direction: column;
+  	 	align-items: flex-start;
+  	 }
+  	 .start {
+  	 flex-grow: 0.9;
+  	 }
+  	 .end {
+  	 flex-grow: 0.05;}
+  </style>
+  <body>
+  	 我的评论
+    <div class="red">
+    	<div class="start">小明给我的周报点赞</div>
+    	<div class="end">收藏</div>
+    	<div class="end">删除</div>
+    
+    </div>
+    <div class="red">
+    	<div class="start double">
+    		<div>小明给我的周报评论</div>
+    		<div>周报写的不错哦</div>
+    	</div>
+    	<div class="end">收藏</div>
+    	<div class="end">删除</div>
+    </div>
+  </body>
+</html>
