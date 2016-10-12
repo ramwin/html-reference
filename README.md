@@ -6,6 +6,8 @@
 ## 基本元素
 * 图片
     `<img border="1" src="smiley.gif" alt="图片未能显示" width="32" height="32">`
+* 输入文本框
+    `<textarea name="textarea" rows="10" cols="50">请在这输入</textarea>`
 
 ## 样式
 * [CSS](./css/README.md)
