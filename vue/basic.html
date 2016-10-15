@@ -8,6 +8,9 @@
   </head>
   <body>
     <template id="example">
+      <div style="height: 0px; width:100px; margin-bottom:100px" v-bind:style="{backgroundImage:'url(' + avatar + ')'}">
+      </div>
+      <br>
       basic:{{a}}<br>
       number: {{number+1}}<br>
       ok?: {{ok ? 'YES': 'NO' }}<br>
@@ -31,6 +34,7 @@
     </template>
     <script>
       var data = {
+        avatar: 'http://192.168.74.1:8000/static/img/%E5%8A%A8%E6%80%812.jpg',
         a: 1 ,ok:1, number: 1,
         pipe: 'a',
         greeting: true,
