@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script src="./source/jquery-3.1.0.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.js"></script>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+    <h1>测试datetables</h1>
+    <a href="https://datatables.net">官网</a>
+<table id="table_id" class="display">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>用户名</th>
+            <th>姓</th>
+            <th>名</th>
+            <th>完成待办事项数</th>
+            <th>未完成待办事项数</th>
+            <th>总待办事项数</th>
+        </tr>
+    </thead>
+</table>
+    <script>
+      $(document).ready(function(){
+        $('#table_id').DataTable({
+          "ajax": "http://localhost:8000/api/v1/analysis/todo/",
+          "lengthMenu": [[2,3,10,-1], [2,3,10,"ALL"]],
+          "columns": [
+            {"data": "id"},
+            {"data": "username"},
+            {"data": "first_name"},
+            {"data": "last_name"},
+            {"data": "todo_overview.done_cnt"},
+            {"data": "todo_overview.undone_cnt"},
+            {"data": "todo_overview.todo_cnt"},
+          ],
+        });
+      });
+    </script>
+  </body>
+</html>

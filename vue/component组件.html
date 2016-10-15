@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script src="../source/vue.js"></script>
+    <meta http-equiv="refresh" content="30">
+  </head>
+  <body>
+    <div id="example">
+      basic:{{a}}<br>
+      number: {{number+1}}<br>
+      ok?: {{ok ? 'YES': 'NO' }}<br>
+      pipe: {{ pipe | capitalize }}<br>
+      greetings: <span v-if="greeting">Hello!</span>
+      bind: <a v-bind:href="url">点我</a><br>
+      个人资料:name(computed): {{name}}<br>
+      性别: 
+      <span v-if="show_sex"> {{sex}}</span>
+      <span v-else>保密</span>
+      <br>
+      <template v-if="show_tel">
+        电话: {{tel}}
+      </template>
+      朋友们:
+      <ul>
+      使用组件生成我的好友
+      <my-friends a="ok" v-bind:friends='friends'></my-friends>
+      <li v-for="item in friends">
+        姓名: <span v-text="item.name"></span>{{item.name}}
+      </li>
+      </ul>
+    </div>
+    <script>
+      var data = {
+        a: 1 ,ok:1, number: 1,
+        pipe: 'a',
+        greeting: true,
+        url: "http://www.ramwin.com",
+        first_name: "walter",
+        last_name: "white",
+        sex: "男", show_sex: true,
+        tel: "123456789", show_tel: true,
+        friends: [
+          {name: "lily"}, {name: "lucy"},
+        ],
+      }
+
+      var FriendListComponent = Vue.extend({  // 朋友组件
+        props: ['a', 'friends'],
+        template: '<div>{{a}}我的好朋友们<ul v-for="friend in friends"><li>{{friend.name}}</li></ul></div>',
+      })
+      Vue.component("my-friends", FriendListComponent) // 注册组件
+
+      var vm = new Vue({
+        el: '#example',
+        data: data,
+        created: function (){
+          console.log("创建了vue对象")
+        },
+        computed: {
+          name: function() {
+            return this.first_name + " " + this.last_name;
+          },
+          fullName: {
+            get: function () {
+              return this.first_name + " " + this.last_name;
+            },
+            set: function (newValue) {
+              var names = newValue.split(" ");
+              this.first_name = names[0];
+              this.last_name = names[names.length-1]
+            },
+          }
+        }
+      })
+    </script>
+    
+  </body>
+</html>
