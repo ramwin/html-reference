@@ -2,4 +2,5 @@
 
 * [参考资料](https://www.douban.com/note/65562130/?type=like)
 * [背景background](background背景.md)
-
+* 鼠标样式
+    cursor: not-allowed  # 禁止
