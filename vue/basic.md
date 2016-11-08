@@ -46,6 +46,7 @@
     <li v-for="(index, item) in items" track_by="_uid"></li>
 
 ### 替换数组
+    example1.items.push({'name':'名字'});
     example1.items = exapmle1.items.filter(function (item) { return item.message.match(/Foo/) })
     example1.items[0] = {}  # 不会出发函数，改变dom
     exapmle1.items.$set(0, {name: 'Jake'})  # 用这种写法
