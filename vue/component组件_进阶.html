@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script src="../source/vue.js"></script>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <style>
+      small {
+        color: #ccc
+      }
+      .grey {
+        color: #ccc
+      }
+    </style>
+  </head>
+  <body>
+    <h1>测试组件内部的对象变更的时候，改变父元素</h1>
+    <div id="example">
+      <small>组件开始</small>
+      <my-component v-bind:profile.sync='profile'></my-component>
+      <small>组件结束</small>
+      <br>
+      <input v-model="profile.name">
+    </div>
+    <script>
+      var MyComponent = Vue.extend({
+        template: "<div>这是组件<input v-model='profile.name'></div>",
+        props: ["profile"],
+      });
+      Vue.component('my-component', MyComponent);
+      var vm = new Vue({
+        el: "#example",
+        data: {
+          "profile": {
+            "name": "ramwin"
+          }
+        },
+      });
+    </script>
+  </body>
+</html>
