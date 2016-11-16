@@ -12,10 +12,18 @@
         2. font-weigth: 700 字体粗细
 * 输入文本框
     `<textarea name="textarea" rows="10" cols="50">请在这输入</textarea>`
+* 表格
+    * 标签
+        * `<table> 表格`
+        * `<tr> 一行(table row)`
+            * <th> 标题
+            * <td> 一个单元格
+    * 属性
+        border=1 单元格的边框
+        cellspacing=0 单元格之间的间距
 
 ## 样式
 * [CSS](./css/README.md)
->>>>>>> b69244c5a7aa32ee7efd9bd5220af80b69d0bf0f
 
 
 ## 功能
