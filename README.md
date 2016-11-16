@@ -4,6 +4,16 @@
 这里主要存放html标签，属性。 css一类。 如果是和JavaScript有关的看[Javascript_tutorial](https://github.com/ramwin/javascript_tutorial.git/)
 
 ## 基本元素
+* 头部
+    <title>标题</title>
+    <script src="./source/index.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="./source/index.css">
+* Meta
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="30">  # 刷新频率
+    <meta name="author" content="ramwin">
+    <meta name="description" content="网页描述">
+    <meta name="keywords" content="搜索关键词">
 * 图片
     `<img border="1" src="smiley.gif" alt="图片未能显示" width="32" height="32">`
 * 文字
@@ -21,6 +31,12 @@
     * 属性
         border=1 单元格的边框
         cellspacing=0 单元格之间的间距
+* 输入框
+    [input](./input.md)
+* 超链接, [案例](./a.html)
+    <a href="www.baidu.com" target="_blank">访问百度</a>
+        target: _blank(新标签打开) | _top(跳出当前框架)
+    style: text-decoration: none 是否有下划线
 
 ## 样式
 * [CSS](./css/README.md)
@@ -28,8 +44,11 @@
 
 ## 功能
 * [截取图片](./cropper图片截取.html)
+* [下拉框选择搜索](./select搜索选择.html)
+* [根据页数自动分页](./page分页.html) [官方教程](https://esimakin.github.io/twbs-pagination/)
 
 
 ## 框架或其他
+* [bootstrap](./bootstrap)
 * [flex布局](./flex/README.md)
 * [vue框架](./vue/README.md)

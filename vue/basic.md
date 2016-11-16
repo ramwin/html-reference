@@ -1,6 +1,14 @@
 #### Xiang Wang @ 2016-09-12 11:02:16
 * <a href="#v-for">列表渲染</a>
 
+# 基础示例
+    var data = {
+        'name': '姓名'
+    }
+    var vm = new Vue({
+        el: "#profile",
+        data: data,
+    })
 # 实例方法
 * data: 数据
 * el: 绑定dom   `vm.$el === document.getElementById('example')`
@@ -12,7 +20,8 @@
 
 # 数据绑定
 * 基础绑定 `{{msg}}`
-* 一次性帮顶 `{{* msg }}`
+* 一次性帮定 `{{* msg }}`
+* 双向帮顶 `v-model="msg"`
 * 基础操作 `{{number +1}} {{ok? 'YES': 'NO' }}`
 * 过滤器 `{{ string | capitalize }}`
 * 指令 `<p v-if="greeting">Hello!</p>`
@@ -37,6 +46,7 @@
     <li v-for="(index, item) in items" track_by="_uid"></li>
 
 ### 替换数组
+    example1.items.push({'name':'名字'});
     example1.items = exapmle1.items.filter(function (item) { return item.message.match(/Foo/) })
     example1.items[0] = {}  # 不会出发函数，改变dom
     exapmle1.items.$set(0, {name: 'Jake'})  # 用这种写法

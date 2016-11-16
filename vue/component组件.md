@@ -13,4 +13,5 @@
     })
     Vue.component('my-component', MyComponent)
 
+    # 默认为单向绑定，父元素改变，组件就改变。如果是一次性，用 :mgs.once, 双向的用 :msg.sync
     <my-component title="标题" v-bind:friends='friends'></my-component>

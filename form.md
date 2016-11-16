@@ -31,3 +31,9 @@
     type = checkbox
     <input type="checkbox" name="gender" value="女">女<br>
     <input type="checkbox" name="gender" value="男">男<br>
+
+## 下拉列表
+    <select name="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab" selected>Saab</option>  # 默认选中
+    </select>

@@ -7,72 +7,94 @@
     <meta http-equiv="refresh" content="30">
   </head>
   <body>
+    <h1>最基础的组件</h1>
+      <div id="basic">
+        <my-component></my-component>
+      </div>
+      <script>
+        var MyComponent = Vue.extend({
+          template: '<div>自定义组件</div>',
+        })
+        Vue.component('my-component', MyComponent)
+        var basic = new Vue({
+          el: '#basic',
+          data: {},
+        })
+      </script>
+    <h1>局部注册的组件</h1>
+      <div id="local">
+        <my-component2></my-component2>
+      </div>
+      <script>
+        var MyComponent2 = Vue.extend({
+          template: '<div>自定义的局部组件</div>',
+        })
+        Vue.component('my-component2', MyComponent2)
+        var local = new Vue({
+          el: '#local',
+          data: {},
+        })
+      </script>
+    <h1>传递参数的组件</h1>
+      <div id="param">
+        <my-component3 foo='data' v-bind:foo1="name" v-bind:foo2.sync='foo2'></my-component3>
+        原来的名字: {{* name}}
+        单向绑定的名字:<input type="text" v-model="name">
+        双向绑定的名字:<input type="text" v-model="foo2">
+      </div>
+      <script>
+        var MyComponent3 = Vue.extend({
+          props: ['foo', 'foo1', 'foo2'],
+          template: '<div>静态数据foo的值是{{foo}}<br>动态数据foo1的数值是{{foo1}}<br>\
+            动态地变更组件元素<input v-model="foo1"><br>\
+            动态地变更组件和父组件元素<input v-model="foo2"><br>\
+            </div>\
+            '
+        })
+        Vue.component('my-component3', MyComponent3)
+        var param = new Vue({
+          el: '#param',
+          data: {'foo': 'bar', 'name':"ramwin", 'foo2':'foo2'},
+        })
+      </script>
     <div id="example">
-      basic:{{a}}<br>
-      number: {{number+1}}<br>
-      ok?: {{ok ? 'YES': 'NO' }}<br>
-      pipe: {{ pipe | capitalize }}<br>
-      greetings: <span v-if="greeting">Hello!</span>
-      bind: <a v-bind:href="url">点我</a><br>
-      个人资料:name(computed): {{name}}<br>
-      性别: 
-      <span v-if="show_sex"> {{sex}}</span>
-      <span v-else>保密</span>
-      <br>
-      <template v-if="show_tel">
-        电话: {{tel}}
-      </template>
-      朋友们:
+      朋友们,一共{{friends.length}}个好朋友:
       <ul>
       使用组件生成我的好友
-      <my-friends a="ok" v-bind:friends='friends'></my-friends>
+      <my-friends a="ok" v-bind:aafriends='friends'></my-friends>
       <li v-for="item in friends">
         姓名: <span v-text="item.name"></span>{{item.name}}
+        <my-friend v-bind:item='item'></my-friend>
       </li>
       </ul>
     </div>
     <script>
       var data = {
-        a: 1 ,ok:1, number: 1,
-        pipe: 'a',
-        greeting: true,
-        url: "http://www.ramwin.com",
-        first_name: "walter",
-        last_name: "white",
-        sex: "男", show_sex: true,
-        tel: "123456789", show_tel: true,
         friends: [
           {name: "lily"}, {name: "lucy"},
         ],
       }
 
       var FriendListComponent = Vue.extend({  // 朋友组件
-        props: ['a', 'friends'],
-        template: '<div>{{a}}我的好朋友们<ul v-for="friend in friends"><li>{{friend.name}}</li></ul></div>',
+        props: ['a', 'aafriends'],  // 传递过来的参数
+        template: '\
+            <div>直接传递的参数: a={{a}}<br>\
+            我的好朋友们(使用v-bind传递的参数):\
+              <ul v-for="friend in aafriends">\
+                <li>{{friend.name}}</li>\
+                <input type="button" value="删除好友" onclick="delete(this)">\
+              </ul></div>',
+      })
+      var FriendComponent = Vue.extend({  // 单个朋友的组件
+        props: ['item'],
+        template: '<div>我的一个好朋友组件: {{item.name}}</div>',
       })
       Vue.component("my-friends", FriendListComponent) // 注册组件
+      Vue.component("my-friend", FriendComponent) // 注册组件
 
       var vm = new Vue({
         el: '#example',
         data: data,
-        created: function (){
-          console.log("创建了vue对象")
-        },
-        computed: {
-          name: function() {
-            return this.first_name + " " + this.last_name;
-          },
-          fullName: {
-            get: function () {
-              return this.first_name + " " + this.last_name;
-            },
-            set: function (newValue) {
-              var names = newValue.split(" ");
-              this.first_name = names[0];
-              this.last_name = names[names.length-1]
-            },
-          }
-        }
       })
     </script>
     
