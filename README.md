@@ -22,6 +22,15 @@
         2. font-weigth: 700 字体粗细
 * 输入文本框
     `<textarea name="textarea" rows="10" cols="50">请在这输入</textarea>`
+* 表格
+    * 标签
+        * `<table> 表格`
+        * `<tr> 一行(table row)`
+            * <th> 标题
+            * <td> 一个单元格
+    * 属性
+        border=1 单元格的边框
+        cellspacing=0 单元格之间的间距
 * 输入框
     [input](./input.md)
 * 超链接, [案例](./a.html)
@@ -40,6 +49,6 @@
 
 
 ## 框架或其他
-* [bootstrap](./bootstrap)
+* [bootstrap](./bootstrap/README.md)
 * [flex布局](./flex/README.md)
 * [vue框架](./vue/README.md)
