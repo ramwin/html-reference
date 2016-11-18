@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script src="./source/jquery-3.1.0.js"></script>
+    <script src="./source/jquery-editable-select/jquery-editable-select.js"></script>
+    <link rel="stylesheet" type="text/css" href="./source/jquery-editable-select/jquery-editable-select.css">
+  </head>
+  <body>
+    <a href="https://github.com/indrimuska/jquery-editable-select">官网</a>
+    <select id="editable-select">
+      <option>大专</option>
+      <option>本科</option>
+      <option>研究生</option>
+      <option>博士</option>
+    </select>
+    <script>
+      $('#editable-select').editableSelect({
+        effects: "slide",
+        duration: 200,
+        appendTo: 'body'
+      });
+    </script>
+  </body>
+</html>
