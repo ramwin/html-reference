@@ -13,6 +13,13 @@
       <br>
       basic:{{a}}<br>
       number: {{number+1}}<br>
+      number: 变化<input type="number" v-model="number">
+      变化以后 {{cnumber}}
+      国家: <input type="text" v-model="address.country">
+      变化以后: {{ccountry}}
+      城市: <input type="text" v-model="address.city">
+      变化以后: {{ccity}}
+      <button v-on:click="number=34">点我</button>
       ok?: {{ok ? 'YES': 'NO' }}<br>
       pipe: {{ pipe | capitalize }}<br>
       greetings: <span v-if="greeting">Hello!</span>
@@ -43,6 +50,10 @@
         last_name: "white",
         sex: "男", show_sex: true,
         tel: "123456789", show_tel: true,
+        address: {
+          country: "中国",
+          city: "上海",
+        },
         friends: [
           {name: "lily"}, {name: "lucy"},
         ],
@@ -66,13 +77,22 @@
               this.first_name = names[0];
               this.last_name = names[names.length-1]
             },
-          }
+          },
+          cnumber: function() {
+            return this.number + 2
+          },
+          ccountry: function() {
+            return "国家" + this.address.country
+          },
+          ccity: function() {
+            this.address.country += "we"
+            return "城市"  + this.address.city;
+          },
         }
       });
       var MyComponent = Vue.extend({
       });
       var myComponentInstance = new MyComponent()
     </script>
-    
   </body>
 </html>
