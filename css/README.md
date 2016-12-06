@@ -15,3 +15,5 @@
 * [链接(link)](./link.html)
     select:hover: {color: red}  # 注意这个会影响所有的子元素
 * [before](./before伪类.html)
+* [表格](./table.html)
+    border-collapse: collapse(两个边框合并成1个) | seperate(默认的分别现实独立的边框)

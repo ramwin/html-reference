@@ -12,10 +12,16 @@
     <script src="./source/summernote/summernote-zh-CN.js"></script>
   </head>
   <body>
+    <p>试试在输入框按 ctry + y </p>
     <div id="summernote">Hello Summernote</div>
     <input type="button" value="查看值" onclick="show_value()">
     <input type="button" value="摧毁" onclick="destroy()">
     <input type="button" value="重置" onclick="create()">
+    <input type="text" placeholder="输入你要添加的数据" id="text">
+    <input type="button" value="添加数据" onclick="add()"><br>
+    <a href="http://summernote.org/">官网</a><br>
+    <a href="http://summernote.org/deep-dive/#onkeyup-onkeydown">回调事件</a><br>
+    <div id="summernote2">Hello Summernote</div>
 
 
     <script>
@@ -25,7 +31,20 @@
         height: 300,
         minHeight: null,
         maxHeight: null,
-        focus: true
+        focus: true,
+        callbacks: {
+          onKeydown: function(e) {
+            var select = window.getSelection()
+            node = select.focusNode
+            if (e.ctrlKey && e.keyCode==89) {
+              offset = select.focusOffset
+              node.textContent = node.textContent.slice(0, offset) + "你按了ctrl+y" + node.textContent.slice(offset)
+            }
+            code = $("#summernote").summernote("code");
+            $("#summernote2").summernote("destroy");
+            $("#summernote2").summernote("code", code)
+          }
+        }
       });
     });
     function show_value() {
@@ -37,6 +56,12 @@
     };
     function create() {
       $("#summernote").summernote("code", 'Hello Summernote<span style="background-color: rgb(255, 0, 0);">ewwewe</span>')
+    }
+    function add() {
+      var code = $("#summernote").summernote('code');
+      value = document.getElementById("text").value
+      $("#summernote").summernote("destroy");
+      $("#summernote").summernote("code", code+value)
     }
     </script>
   </body>
