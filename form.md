@@ -18,6 +18,7 @@
 ## 文件
     [参考链接](http://www.runoob.com/jsref/dom-obj-fileupload.html)
     type=file
+    [mime_type](http://www.w3school.com.cn/media/media_mimeref.asp)
     accept="" # 接收类型, 已弃用
 
 

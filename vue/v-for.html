@@ -14,6 +14,7 @@
         <input type="button" v-on:click="test(friend)" value="更换性别"><br>
         <span v-if="friend.address.country=='中国'"> 国籍: {{friend.address.country}}</span>
         <input type="button" v-on:click="change_country(friend)" value="更换国籍"><br>
+        <input type="button" v-on:click="$emit(\'remove\')" value="2.0自杀"><br>
       </li>
     </ul>
     <script>

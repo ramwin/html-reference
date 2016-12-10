@@ -87,7 +87,12 @@
       })
       var FriendComponent = Vue.extend({  // 单个朋友的组件
         props: ['item'],
-        template: '<div>我的一个好朋友组件: {{item.name}}</div>',
+        template: '<div>我的一个好朋友组件: {{item.name}}</div><button v-on:click="_delete()">删除</button>',
+        methods: {
+          _delete: function() {
+            debugger;
+          }
+        }
       })
       Vue.component("my-friends", FriendListComponent) // 注册组件
       Vue.component("my-friend", FriendComponent) // 注册组件

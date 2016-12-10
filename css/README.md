@@ -2,6 +2,9 @@
 
 * [参考资料](https://www.douban.com/note/65562130/?type=like)
 * [背景background](background背景.md)
+* a标签
+    target: _blank 新窗口 | _top 跳出当前框架
+    text-decoration: none 是否有下划线
 * 鼠标样式
     cursor: not-allowed  # 禁止
 * 超出范围[overflow]:
@@ -9,3 +12,8 @@
 * [display](./display.html)
 * word-break:
     keep-all: 总是不换行 | break-all: 总是换行 | normal: 看是不是一个单词
+* [链接(link)](./link.html)
+    select:hover: {color: red}  # 注意这个会影响所有的子元素
+* [before](./before伪类.html)
+* [表格](./table.html)
+    border-collapse: collapse(两个边框合并成1个) | seperate(默认的分别现实独立的边框)
