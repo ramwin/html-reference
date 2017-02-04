@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title></title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link href="./source/ztree/zTreeStyle.css" type="text/css" rel="stylesheet">
+  <script src="./source/jquery-3.1.0.js"></script>
+  <script src="./source/ztree/jquery.ztree.core.js"></script>
+  <script src="./source/ztree/jquery.ztree.excheck.js"></script>
+  </head>
+  <body onload="test()">
+    <div id="test" class="ztree">
+    </div>
+    <script>
+      function test() {
+        alert(2);
+        setting = {
+          check: {
+            enable: true
+          },
+          data: {
+            simpleData: {
+              enable: true,
+            }
+          }
+        }
+        data2 = [ 
+          { id:1, pId:0, name:"随意勾选 1", open:true},
+          { id:11, pId:1, name:"随意勾选 1", open:true},
+          { id:12, pId:1, name:"随意勾选 1", open:true},
+        ]
+        $.fn.zTree.init($("#test"), setting, data2);
+      }
+    </script>
+  </body>
+</html>
