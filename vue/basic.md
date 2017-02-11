@@ -21,7 +21,7 @@
 # 数据绑定
 * 基础绑定 `{{msg}}`
 * 一次性帮定 `{{* msg }}`
-* 双向帮顶 `v-model="msg"`
+* 双向帮顶 `v-model="msg"` 但是如果用js直接操作这个元素的值，并不会触发model的变化，需要手工修改
 * 基础操作 `{{number +1}} {{ok? 'YES': 'NO' }}`
 * 过滤器 `{{ string | capitalize }}`
 * 指令 `<p v-if="greeting">Hello!</p>`

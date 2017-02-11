@@ -17,3 +17,10 @@
 * [before](./before伪类.html)
 * [表格](./table.html)
     border-collapse: collapse(两个边框合并成1个) | seperate(默认的分别现实独立的边框)
+* [伪类]
+    select :last-child  最后一个子节点, 注意是选择出来的所有元素的最后一个
+* [文字](./text.html)
+    text-align: left|center|right|justify 靠左|居中|靠右|两端对其
+* [颜色](./color颜色.html)
+* [padding]
+    padding: 上 右 下 左 | 上 左右 下 | 上下 左右 | 上下左右

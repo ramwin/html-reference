@@ -38,3 +38,11 @@
         <option value="volvo">Volvo</option>
         <option value="saab" selected>Saab</option>  # 默认选中
     </select>
+
+
+## 文本编辑
+    <textarea name="textarea" rows="10" cols="50">write something</textarea>
+
+
+## 复选框
+    <input type="checkbox" name="fullday">
