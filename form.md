@@ -6,7 +6,7 @@
     action="" # 访问的url
     method="POST" # 访问的方法
     enctype="multipart/form-data" # 如果是上传文件的话需要这个
-    onsubmit="alert('I am goint to submit')" # 上传之前的做法
+    onsubmit="return alert('I am goint to submit')" # 上传之前的做法, 有了return 可以return false的时候组织提交
 
 ### input
     type="类型" # text, number, radio, checkbox, button, file
