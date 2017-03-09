@@ -2,7 +2,7 @@
 <html>
   <head>
     <title></title>
-    <script src="../source/vue.js"></script>
+    <script src="../source/vue-2.1.3.js"></script>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <style>
       small {
@@ -24,8 +24,14 @@
     </div>
     <script>
       var MyComponent = Vue.extend({
-        template: "<div>这是组件<input v-model='profile.name'></div>",
+        template: "<div>这是组件<input v-model='profile.name'><button v-on:click='update'>点我</button></div>",
         props: ["profile"],
+        methods: {
+          'update': function(){
+            alert("你点我了");
+            this.$emit("update");
+          }
+        }
       });
       Vue.component('my-component', MyComponent);
       var vm = new Vue({
@@ -35,6 +41,11 @@
             "name": "ramwin"
           }
         },
+        methods: {
+          update: function() {
+            alert("我是你爸爸");
+          }
+        }
       });
     </script>
   </body>

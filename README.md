@@ -5,15 +5,21 @@
 
 ## 基本元素
 * 头部
+```
     <title>标题</title>
     <script src="./source/index.js" type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="./source/index.css">
+```
+
 * Meta
+```
     <meta charset="utf-8">
     <meta http-equiv="refresh" content="30">  # 刷新频率
     <meta name="author" content="ramwin">
     <meta name="description" content="网页描述">
     <meta name="keywords" content="搜索关键词">
+```
+
 * 图片
     `<img border="1" src="smiley.gif" alt="图片未能显示" width="32" height="32">`
 * 文字
