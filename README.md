@@ -59,4 +59,5 @@
 * [flex布局](./flex/README.md)
 * [vue框架](./vue/README.md)
 * [富文本编辑器](./summernote网页编辑器.html)
+* [bootstrap-slider](./bootstrap-slider.html)
 * [ztree树状图](./ztree.html)
