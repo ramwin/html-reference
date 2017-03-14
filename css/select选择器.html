@@ -5,20 +5,24 @@
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   </head>
   <style>
-    div { border: 1px solid red; min-width: 200px; min-height: 200px}
-    .div1 > .div2 { border: 1px solid green;}
-    .div1 > .div2 > p {color : yellow}
-    .basic {color: blue}
-    .basic.warning {color: black}
-    .warning {color: purple}
+    div {
+      border: 1px solid black;
+      min-width: 50px;
+      min-height: 30px;
+    }
+    .select_first div:first-child {
+      border: 1px solid red;
+      color: red;
+    }
   </style>
   <body>
-    <div class="div1">
-      <p class="basic">.div1 .basic p</p>
-      <p class="warning">.div1 .basic p</p>
-      <div class="div2">
-        <p class="basic warning">.basic .warning p</p>
-        <p>.div2 p</p>
+    <h1>选择第一个元素</h1>
+    <div class="select_first">
+      <div>
+        第一个元素会有特效哦
+      </div>
+      <div>
+        第一个元素会有特效哦
       </div>
     </div>
   </body>
