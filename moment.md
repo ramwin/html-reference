@@ -5,6 +5,7 @@
 ```
     var now = moment(new Date())
     moment(new Date()).format("YYYY-MM-DD")
+    moment("20111031", "YYYYMMDD")  // 把字符串变成时间
 ```
 
 
@@ -17,5 +18,6 @@
     a.calendar()  // 显示方便看的字符串, Tomorrow at 4:32 PM
 ```
 
-## 计算
+## 时间计算
     a.add(1, 'days')  // 直接操作a， 不会生成新的对象
+    a2 - a1 // 返回两个时间的差，单位毫秒

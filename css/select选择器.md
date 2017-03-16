@@ -1,6 +1,12 @@
 #### Xiang Wang @ 2017-02-08 10:33:38
 
+# 基础
+[菜鸟网站参考](http://www.runoob.com/cssref/css-selectors.html)
 ```
+    a b // a的后代b
+    a > b // a的子元素b
+    a + b // a的兄弟元素b
+    a - b // a的相邻兄弟元素b
     // 伪类
     div:first-child {  // 这是first-child是指选择到的结果里面的first-child
         color: red

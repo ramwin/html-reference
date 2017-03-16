@@ -54,9 +54,20 @@
     select :last-child  最后一个子节点, 注意是选择出来的所有元素的最后一个
 ```
 * [文字](./text.html)
-
+    * [参考资料](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-overflow)
 ```
-    text-align: left|center|right|justify 靠左|居中|靠右|两端对其
+    text-align: left|center|right|justify 靠左|居中|靠右|两端对其(最后一行靠左)
+    word-break: keep-all 文字总是不换行
+    
+    // 设置超出范围就隐藏并显示省略号
+    .ellipsis-text {
+        white-space: nowrap;  // 要允许字符超出位置
+        overflow: hidden;  // 超出去后要隐藏
+        text-overflow: ellipsis;  // 隐藏以后要留下省略号, 如果是clip就是截断
+    }
+    .ellipsis-text:hover {
+        overflow: visible; // 超出去后显示出来
+    }
 ```
 * [颜色](./color颜色.html)
 
