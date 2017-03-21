@@ -12,6 +12,10 @@
     target: _blank 新窗口 | _top 跳出当前框架
     text-decoration: none 是否有下划线
 ```
+
+* ul列表
+    * `list-style: none|inside|outside|url` # 列表样式 
+
 * 鼠标样式
 
 ```
