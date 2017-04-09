@@ -1,15 +1,25 @@
 #### Xiang Wang @ 2016-09-14 15:05:53
 
+# 基础
 * [参考资料](https://www.douban.com/note/65562130/?type=like)
-
 * [背景background](background背景.md)
+* 选择器 [快速参考](./select选择器.md) [例子](./select选择器.html)
 
+# 示例
+* 盒子
+```
+    padding: 上 右 下 左 px;
+```
 * a标签
 
 ```
     target: _blank 新窗口 | _top 跳出当前框架
     text-decoration: none 是否有下划线
 ```
+
+* ul列表
+    * `list-style: none|inside|outside|url` # 列表样式 
+
 * 鼠标样式
 
 ```
@@ -52,9 +62,20 @@
     select :last-child  最后一个子节点, 注意是选择出来的所有元素的最后一个
 ```
 * [文字](./text.html)
-
+    * [参考资料](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-overflow)
 ```
-    text-align: left|center|right|justify 靠左|居中|靠右|两端对其
+    text-align: left|center|right|justify 靠左|居中|靠右|两端对其(最后一行靠左)
+    word-break: keep-all 文字总是不换行
+    
+    // 设置超出范围就隐藏并显示省略号
+    .ellipsis-text {
+        white-space: nowrap;  // 要允许字符超出位置
+        overflow: hidden;  // 超出去后要隐藏
+        text-overflow: ellipsis;  // 隐藏以后要留下省略号, 如果是clip就是截断
+    }
+    .ellipsis-text:hover {
+        overflow: visible; // 超出去后显示出来
+    }
 ```
 * [颜色](./color颜色.html)
 

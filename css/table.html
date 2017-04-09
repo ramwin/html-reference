@@ -4,6 +4,9 @@
     <title></title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <style>
+      * {
+        box-sizing: border-box;
+      }
       .c {
         border-collapse: collapse;
       }
@@ -14,10 +17,13 @@
   </head>
   <body>
     <p>通过设置 border-collspse可以设置边框不被变成2倍
-    <table class="c" border="10" cellpadding="0" cellspacing="0" style="border-collapse: collapse;">
+    <table class="c" >
+      <caption>
+        我是标题
+      </caption>
       <tr>
-        <td>标题1</td>
-        <td>标题2</td>
+        <th>标题1</th>
+        <th>标题2</th>
       </tr>
       <tr>
         <td>内容</td>
