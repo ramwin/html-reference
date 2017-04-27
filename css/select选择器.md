@@ -15,6 +15,8 @@
     // 属性选择器
     input[type=submit] {
     }
+    input[readonly] {
+    }
 ```
 
 
