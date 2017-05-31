@@ -74,6 +74,12 @@
     select :last-child  最后一个子节点, 注意是选择出来的所有元素的最后一个
     ::placeholder 提示文字
     :checked 被选择的
+    :before {  # 给元素之前添加元素
+      content: "9:00";
+      position: absolute;
+      left: -10px;
+      top: -10px;
+    }
 ```
 * [文字](./text.html)
     * [参考资料](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-overflow)
