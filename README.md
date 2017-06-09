@@ -72,3 +72,4 @@
 * [ztree树状图](./ztree.html)
 * [moment参考](./moment.md), [moment时间处理](./moment时间处理.html)
 * [wing简单的开源框架](./wing.html)
+* [sweetalert, 用来替换系统的alert](./sweetalert.html)
