@@ -17,6 +17,43 @@
       <input type="number">
       文件选择: <input type="file" name="file" value="filename" size=50><br>
       提交: <input type="submit" value="提交"><br>
+      <fieldset>
+        <legend>Order a T-Shirt</legend>
+        <p>Write your name (simple textbox):
+        <input type="text" /></p>
+        <p>Choose your size (simple select):
+        <select>
+            <option value="s">Small</option>
+            <option value="m">Medium</option>
+            <option value="l">Large</option>
+            <option value="xl">Extra Large</option>
+        </select></p>
+        <div>What address do you want to use?
+        (editable pseudoselect)
+      </fieldset>
+      <input list="browsers" name="mybrowser">
+      <datalist id="browsers">
+        <option value="Chrome">
+        <option value="Firefox">
+        <option value="Internet Explorer">
+        <option value="Opera">
+        <option value="Safari">
+        <option value="Microsoft Edge">
+      </datalist>
+      <select>
+        <optgroup label="Group 1">
+          <option>Option 1.1</option>
+        </optgroup> 
+        <optgroup label="Group 2">
+          <option>Option 2.1</option>
+          <option>Option 2.2</option>
+        </optgroup>
+        <optgroup label="Group 3" disabled>
+          <option>Option 3.1</option>
+          <option>Option 3.2</option>
+          <option>Option 3.3</option>
+        </optgroup>
+      </select>
     </form>
   </body>
 </html>

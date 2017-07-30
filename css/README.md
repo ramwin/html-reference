@@ -1,20 +1,30 @@
 #### Xiang Wang @ 2016-09-14 15:05:53
 
 # 基础
-* [参考资料](https://www.douban.com/note/65562130/?type=like)
+* [MDN Mozilla官方指南](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Reference)
+* [豆瓣快速参考](https://www.douban.com/note/65562130/?type=like)
 * [背景background](background背景.md)
 * 选择器 [快速参考](./select选择器.md) [例子](./select选择器.html)
 
 # 示例
-* 盒子
-```
-    padding: 上 右 下 左 px;
-```
 * a标签
 
 ```
     target: _blank 新窗口 | _top 跳出当前框架
     text-decoration: none 是否有下划线
+    cursor: pointer 鼠标移动上去后变成小手
+```
+* [border边框](./border.md)
+```
+    border: 1px solid red;
+```
+
+* [box-shadow阴影](https://developer.mozilla.org/zh-CN/docs/Web/CSS/box-shadow)
+```
+    box-shadow:  inset | offset-x | offset-y | blur-radius | spread-radius | color
+    inset: 不写就是外边框，否则就是内边框
+    blur-radius: 扩散程度(越大，阴影扩散得越开, 也就越淡)
+    spread-radius: 阴影放大比例(可以为负值)
 ```
 
 * ul列表
@@ -56,10 +66,20 @@
     border-collapse: collapse(两个边框合并成1个) | seperate(默认的分别现实独立的边框)
 ```
 
-* [伪类]
+* [伪类]()
+    * [参考资料](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-classes)
+    * [案例](./pseudo-class伪类.html)
 
 ```
     select :last-child  最后一个子节点, 注意是选择出来的所有元素的最后一个
+    ::placeholder 提示文字
+    :checked 被选择的
+    :before {  # 给元素之前添加元素
+      content: "9:00";
+      position: absolute;
+      left: -10px;
+      top: -10px;
+    }
 ```
 * [文字](./text.html)
     * [参考资料](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-overflow)
@@ -78,9 +98,11 @@
     }
 ```
 * [颜色](./color颜色.html)
+    * [关键字颜色参考](https://developer.mozilla.org/en/docs/Web/CSS/color_value#Color_keywords)
 
 * [padding]
 
 ```
     padding: 上 右 下 左 | 上 左右 下 | 上下 左右 | 上下左右
 ```
+

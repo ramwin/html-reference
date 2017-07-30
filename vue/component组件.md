@@ -15,3 +15,31 @@
 
     # 默认为单向绑定，父元素改变，组件就改变。如果是一次性，用 :mgs.once, 双向的用 :msg.sync
     <my-component title="标题" v-bind:friends='friends'></my-component>
+
+
+## props
+
+```
+    props: {
+        'name': {
+            type: String,
+            required: true,
+        },
+        'obj': {
+            type: Object,
+            required: false,
+            default: function() {
+                return {}
+            }
+        }
+    }
+```
+
+
+## nextTick
+```
+    # 用来做一些和dom有关的事，所以当dom被刷新完成后才触发这些事件
+    this.$nextTick(function() {
+        $('input', this.$el).focus();
+    })
+```
