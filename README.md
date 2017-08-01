@@ -62,6 +62,7 @@
 
 ## 样式
 * [CSS](./css/README.md)
+* [训练](https://flukeout.github.io/)
 
 
 ## 功能
