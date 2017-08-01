@@ -11,6 +11,7 @@
 ```
     <title>标题</title>
     <script src="./source/index.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
     <link rel="stylesheet" type="text/css" href="./source/index.css">
 ```
 
@@ -53,6 +54,12 @@
 * Form
     * [参考](./form.md) [案例](./form.html)
 
+## Response
+* 状态码
+    * 400: 参数错误
+    * 429: 请求过于频繁
+
+
 ## 样式
 * [CSS](./css/README.md)
 
@@ -73,3 +80,4 @@
 * [moment参考](./moment.md), [moment时间处理](./moment时间处理.html)
 * [wing简单的开源框架](./wing.html)
 * [sweetalert, 用来替换系统的alert](./sweetalert.html)
+* [select,选择，下拉，服务器获取](./select2.md)
