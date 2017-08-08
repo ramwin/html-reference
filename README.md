@@ -85,4 +85,4 @@
 * [wing简单的开源框架](./wing.html)
 * [sweetalert, 用来替换系统的alert](./sweetalert.html)
 * [select,选择，下拉，服务器获取](./select2.md)
-* [selectize 用于方便地选择和输入,](http://selectize.github.io/selectize.js/) [github链接](https://github.com/selectize/selectize.js)
+* [selectize 用于方便地选择和输入,](http://selectize.github.io/selectize.js/) [github链接,](https://github.com/selectize/selectize.js) [例子](./selectize.html)
