@@ -42,7 +42,8 @@
         border=1 单元格的边框
         cellspacing=0 单元格之间的间距
 * 输入框
-    [input](./input.md)
+    * [input](./input.md)
+    * [selectize](http://selectize.github.io/selectize.js/) *一款搜索选择输入的插件*
 * 超链接, [案例](./a.html)
 ```
     <a href="www.baidu.com" target="_blank">访问百度</a>
@@ -84,3 +85,4 @@
 * [wing简单的开源框架](./wing.html)
 * [sweetalert, 用来替换系统的alert](./sweetalert.html)
 * [select,选择，下拉，服务器获取](./select2.md)
+* [selectize 用于方便地选择和输入](http://selectize.github.io/selectize.js/)
