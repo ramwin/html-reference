@@ -16,13 +16,14 @@
       <option value="性别">性别</option>
       <option value="username">用户名</option>
     </select>
-    <select class="basic" style="width:100%;" multiple>
-      <option value="姓名">姓名</option>
-      <option value="性别">性别</option>
-      <option value="username">用户名</option>
-    </select>
     <script>
-      $(".basic").select2();
+      $(".basic").select2({
+        minimumResultsForSearch: Infinity,
+        // templateSelection: function(args) {
+        //     return args.element
+        //     return args;
+        // },
+      });
     </script>
     <h1>使用服务器配合的选择</h1>
     <a href="http://www.ramwin.com/testjs/select2/">需要后台配合</a>

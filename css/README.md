@@ -8,16 +8,14 @@
 
 # 示例
 * a标签
-
 ```
     target: _blank 新窗口 | _top 跳出当前框架
     text-decoration: none 是否有下划线
     cursor: pointer 鼠标移动上去后变成小手
 ```
-* [border边框](./border.md)
-```
-    border: 1px solid red;
-```
+* border边框 [示例](./border.html)
+    * border: `1px solid red;`
+    * [border-style](https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-style) *可以设置成虚线框，双实线*
 
 * [box-shadow阴影](https://developer.mozilla.org/zh-CN/docs/Web/CSS/box-shadow)
 ```

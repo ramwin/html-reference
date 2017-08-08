@@ -1,11 +1,11 @@
 #### Xiang Wang @ 2016-08-24 14:30:23
 
-## README
+### README
 * 这里主要存放html标签，属性。 css一类。 如果是和JavaScript有关的看[Javascript_tutorial](https://github.com/ramwin/javascript_tutorial.git/)
 * [mozilla web开发者资料](https://developer.mozilla.org/zh-CN/docs/Web)
 
 
-## 基本元素
+### 基本元素
 * [html参考资料](https://developer.mozilla.org/zh-CN/docs/Web/HTML)
 * 头部
 ```
@@ -44,34 +44,36 @@
 * 输入框
     [input](./input.md)
 * 超链接, [案例](./a.html)
+```
     <a href="www.baidu.com" target="_blank">访问百度</a>
         target: _blank(新标签打开) | _top(跳出当前框架)
     style: text-decoration: none 是否有下划线
     <a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>发送邮件
+```
 * 列表
     * 无序列表ul
         [参考](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/ul)
 * Form
     * [参考](./form.md) [案例](./form.html)
 
-## Response
+### Response
 * 状态码
     * 400: 参数错误
     * 429: 请求过于频繁
 
 
-## 样式
+### 样式
 * [CSS](./css/README.md)
 * [训练](https://flukeout.github.io/)
 
 
-## 功能
+### 功能
 * [截取图片](./cropper图片截取.html)
 * [下拉框选择搜索](./select搜索选择.html)
 * [根据页数自动分页](./page分页.html) [官方教程](https://esimakin.github.io/twbs-pagination/)
 
 
-## 框架或其他
+### 框架或其他
 * [bootstrap](./bootstrap/README.md)
 * [flex布局](./flex/README.md)
 * [vue框架](./vue/README.md)
