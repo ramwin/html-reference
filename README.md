@@ -5,6 +5,10 @@
 * [mozilla web开发者资料](https://developer.mozilla.org/zh-CN/docs/Web)
 
 
+### HTTP
+* User-Agent [查看自己的user-agent和IP](http://www.whoishostingthis.com/tools/user-agent/)
+
+
 ### 基本元素
 * [html参考资料](https://developer.mozilla.org/zh-CN/docs/Web/HTML)
 * 头部
