@@ -6,6 +6,9 @@
     <script src="./source/jquery-3.1.0.js"></script>
     <script src="./source/select2.full.js"></script>
     <link rel="stylesheet" href="./source/select2.css" />
+    <style>
+      .select2-container .select2-results {max-height: 300px;}
+    </style>
   </head>
   <body>
     <a href="https://select2.github.io/">官方文档</a>
@@ -14,11 +17,22 @@
     <select class="basic" style="width:100%;">
       <option value="姓名">姓名</option>
       <option value="性别">性别</option>
+      <option value="性别">性别</option>
+      <option value="性别">性别</option>
+      <option value="性别">性别</option>
+      <option value="性别">性别</option>
+      <option value="性别">性别</option>
+      <option value="性别">性别</option>
+      <option value="性别">性别</option>
+      <option value="性别">性别</option>
+      <option value="性别">性别</option>
+      <option value="性别">性别</option>
       <option value="username">用户名</option>
     </select>
     <script>
       $(".basic").select2({
         minimumResultsForSearch: Infinity,
+        dropdownCssClass: 'bigdrop',
         // templateSelection: function(args) {
         //     return args.element
         //     return args;

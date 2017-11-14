@@ -38,8 +38,8 @@
     `<textarea name="textarea" rows="10" cols="50">请在这输入</textarea>`
 * 表格
     * 标签
-        * `<table> 表格`
-        * `<tr> 一行(table row)`
+        * <table> 表格
+        * <tr> 一行(table row)
             * <th> 标题
             * <td> 一个单元格
     * 属性

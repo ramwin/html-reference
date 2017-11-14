@@ -1,12 +1,12 @@
 #### Xiang Wang @ 2016-09-14 15:05:53
 
-# 基础
+### 基础
 * [MDN Mozilla官方指南](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Reference)
 * [豆瓣快速参考](https://www.douban.com/note/65562130/?type=like)
 * [背景background](background背景.md)
 * 选择器 [快速参考](./select选择器.md) [例子](./select选择器.html)
 
-# 示例
+### 示例
 * a标签
 ```
     target: _blank 新窗口 | _top 跳出当前框架
@@ -18,12 +18,16 @@
     * [border-style](https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-style) *可以设置成虚线框，双实线*
 
 * [box-shadow阴影](https://developer.mozilla.org/zh-CN/docs/Web/CSS/box-shadow)
-```
+    ```
     box-shadow:  inset | offset-x | offset-y | blur-radius | spread-radius | color
     inset: 不写就是外边框，否则就是内边框
     blur-radius: 扩散程度(越大，阴影扩散得越开, 也就越淡)
     spread-radius: 阴影放大比例(可以为负值)
-```
+    ```
+* float [参考](https://developer.mozilla.org/en-US/docs/Web/CSS/float) [测试](float.html)
+    * value: left|right|none|inline-start|inline-end
+    * __float会把元素脱离当前的流，使得自身的高度无法撑开父元素__
+    * float的元素不仅仅会飘动，直到遇到了父元素的边框或者是其他的浮动元素
 
 * ul列表
     * `list-style: none|inside|outside|url` # 列表样式 
@@ -105,11 +109,11 @@
     }
 ```
 * [颜色](./color颜色.html)
-    * [关键字颜色参考](https://developer.mozilla.org/en/docs/Web/CSS/color_value#Color_keywords)
+    * [关键字颜色参考,尽量使用下面的这个链接](https://developer.mozilla.org/en/docs/Web/CSS/color_value#Color_keywords)
+    * [颜色示例](./color颜色.html)
 
 * [padding]
 
 ```
     padding: 上 右 下 左 | 上 左右 下 | 上下 左右 | 上下左右
 ```
-
