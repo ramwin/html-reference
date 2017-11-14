@@ -68,7 +68,8 @@
     * [参考资料](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-classes)
     * [案例](./pseudo-class伪类.html)
 
-```
+    * 基础
+    ```
     select :last-child  最后一个子节点, 注意是选择出来的所有元素的最后一个
     ::placeholder 提示文字
     :checked 被选择的
@@ -78,7 +79,15 @@
       left: -10px;
       top: -10px;
     }
-```
+    ```
+
+    * :focus  `input输入框变成焦点的时候`
+        ```
+        input:focus {
+            outline: none
+        }
+        ```
+
 * [文字](./text.html)
     * [参考资料](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-overflow)
 ```
