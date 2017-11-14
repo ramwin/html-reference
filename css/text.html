@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <style>
+      * {
+        box-sizing: border-box
+      }
+      .short {
+        max-width: 40px;
+      }
+      .ellipsis {
+        text-overflow: ellipsis
+      }
+      .red-border {
+        height: 100px;
+        width: 100px;
+        border: 1px solid red;
+      }
+      .ellipsis div {
+        border: 1px solid red;
+        width: 40px;
+        height: 40px;
+        text-overflow: ellipsis
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <div class="ellipsis"><p class="ellipsis">我是很长很长的一段文字</p></div>
+    <div class="red-border"></div>
+    <p class="short">最基础的文字,自动换行</p>
+    <span class="short" style="word-break: keep-all">总是不换行设置word-break: keep-all</span>
+    <h1 style="text-align:left">靠左</h1>
+    <h1 style="text-align:center">居中</h1>
+    <h1 style="text-align:right">靠右</h1>
+    <h1 style="text-align:justify">justify</h1>
+    <p style="text-align: left">Left: 这是很长很长的一段话: 当我年轻的时候，我梦想改变这个世界；当我成熟以后，我发现我不能够改变这个世界，我将目光缩短了些，决定只改变我的国家；当我进入暮年以后，我发现我不能够改变我们的国家，我的最后愿望仅仅是改变一下我的家庭，但是，这也不可能。当我现在躺在床上，行将就木时，我突然意识到：如果一开始我仅仅去改变我自己，然后，我可能改变我的家庭；在家人的帮助和鼓励下，我可能为国家做一些事情；然后，谁知道呢?我甚至可能改变这个世界。</P>
+    <p style="text-align: center">Center: 这是很长很长的一段话: 当我年轻的时候，我梦想改变这个世界；当我成熟以后，我发现我不能够改变这个世界，我将目光缩短了些，决定只改变我的国家；当我进入暮年以后，我发现我不能够改变我们的国家，我的最后愿望仅仅是改变一下我的家庭，但是，这也不可能。当我现在躺在床上，行将就木时，我突然意识到：如果一开始我仅仅去改变我自己，然后，我可能改变我的家庭；在家人的帮助和鼓励下，我可能为国家做一些事情；然后，谁知道呢?我甚至可能改变这个世界。</P>
+    <p style="text-align: right">Right: 这是很长很长的一段话: 当我年轻的时候，我梦想改变这个世界；当我成熟以后，我发现我不能够改变这个世界，我将目光缩短了些，决定只改变我的国家；当我进入暮年以后，我发现我不能够改变我们的国家，我的最后愿望仅仅是改变一下我的家庭，但是，这也不可能。当我现在躺在床上，行将就木时，我突然意识到：如果一开始我仅仅去改变我自己，然后，我可能改变我的家庭；在家人的帮助和鼓励下，我可能为国家做一些事情；然后，谁知道呢?我甚至可能改变这个世界。</P>
+    <p style="text-align: justify">Justify: 这是很长很长的一段话: 当我年轻的时候，我梦想改变这个世界；当我成熟以后，我发现我不能够改变这个世界，我将目光缩短了些，决定只改变我的国家；当我进入暮年以后，我发现我不能够改变我们的国家，我的最后愿望仅仅是改变一下我的家庭，但是，这也不可能。当我现在躺在床上，行将就木时，我突然意识到：如果一开始我仅仅去改变我自己，然后，我可能改变我的家庭；在家人的帮助和鼓励下，我可能为国家做一些事情；然后，谁知道呢?我甚至可能改变这个世界。</P>
+    <br>
+    <h1>测试文字自动省略</h1>
+    <style>
+      div.testellipsis {
+        width: 160px;
+      }
+      div.testellipsis > .el {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        border: 1px solid green;
+        display: inline-block;
+      }
+      div.testellipsis > .el:hover {
+        text-overflow: inherit;
+        overflow: visible;
+      }
+      span.el {
+        max-width: 100%;
+      }
+    </style>
+    <div class="red-border testellipsis" style="display: none">
+      <p class="el" style="text-align: justify">Justify: 这是很长很长的一段话: 当我年轻的时候，我梦想改变这个世界；当我成熟以后，我发现我不能够改变这个世界</p>
+      <p class="el" style="text-align: justify">Justify: 这</p>
+
+      <span class="el" style="text-align: justify">Justify: 这是很长很长的一段话: 当我年轻的时候，我梦想改变这个世界；当我成熟以后，我发现我不能够改变这个世界</span>
+      <span class="el" style="text-align: justify">Justify: 这</span>
+    </div>
+    <table>
+      <tr>
+      <td>
+    <div style="border: 1px solid;">
+      <div><span style="height: 30px; display: inline-block">我是span</span></div>
+    </div>
+    </td>
+    </tr>
+    </table>
+    <style>
+      .test-break {
+        width: 95px;
+        border: 1px solid green;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    </style>
+    <div class="test-break">
+      <span>I'm a very very very long centence</span>
+    </div>
+  </body>
+</html>

@@ -4,32 +4,51 @@
     <title></title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <script src="../source/jquery-3.1.0.js"></script>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../source/bootstrap/css/bootstrap.min.css">
+    <script src="../source/bootstrap/js/tether.min.js"></script>
+    <script src="../source/bootstrap/js/bootstrap.js"></script>
   </head>
   <body>
     <h1>测试bootstrap的界面</h1>
-    <div class="bs-example bs-example-tabs" data-example-id="togglable-tabs">
-    <ul id="invite_tabs" class="nav nav-tabs">
-      <li  class="active">
-        <a href="#profile_form_div" data-toggle="tab">邀请</a>
+    <p>在bootstrap4里面，li必须加上 class="nav-item" 才可以进行不断地切换了</p>
+    <ul id="invite_tabs" class="nav nav-tabs" role="tablist">
+      <li  class="nav-item">
+        <a href="#profile_form_div" data-toggle="tab" role="tab" class="nav-link" >邀请</a>
       </li>
-      <li ><a href="#import_data_div" data-toggle="tab">导入</a></li>
+      <li class="nav-item"><a href="#import_data_div" data-toggle="tab" role="tab" class="nav-link" >导入</a></li>
     </ul>
     <div id="myTabContent" class="tab-content">
-      <div role="tabpanel" class="tab-pane fade active in" id="profile_form_div">
+      <div role="tabpanel" class="tab-pane active" id="profile_form_div">
         第一页
       </div>
-      <div role="tabpanel" class="tab-pane fade" id="import_data_div">
+      <div role="tabpanel" class="tab-pane" id="import_data_div">
         第二页
       </div>
     </div>
+
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+  <li class="nav-item">
+    <a class="active" data-toggle="tab" href="#home" role="tab">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="" data-toggle="tab" href="#profile" role="tab">Profile</a>
+  </li>
+  <li class="nav-item">
+    <a class="" data-toggle="tab" href="#messages" role="tab">Messages</a>
+  </li>
+  <li class="nav-item">
+    <a class="" data-toggle="tab" href="#settings" role="tab">Settings</a>
+  </li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active" id="home" role="tabpanel">Home</div>
+  <div class="tab-pane" id="profile" role="tabpanel">profile</div>
+  <div class="tab-pane" id="messages" role="tabpanel">messages</div>
+  <div class="tab-pane" id="settings" role="tabpanel">settings</div>
+</div>
   </div>
   </body>
 </html>

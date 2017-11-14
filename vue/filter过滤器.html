@@ -8,14 +8,11 @@
   </head>
   <body>
     <div id="example">
-      <template v-if="show_tel">
-        电话: {{tel}}
-      </template>
-      朋友们:
       <ul>
       <li v-for="item in friends">
-        姓名: <span v-text="item.name | reverse"></span>{{item.name | capitalize}}
-        出生日期: {{ item.birth | timestamp_to_date}}
+        反向姓名: <span v-text="item.name | reverse"></span><br>
+        大写名字: {{item.name | capitalize}}<br>
+        出生日期: {{ item.birth | timestamp_to_date}}<br>
       </li>
       </ul>
     </div>
@@ -34,7 +31,6 @@
         return date.toLocaleDateString();
       });
       var data = {
-        tel: 18888888,
         friends: [
           {name: "lily", birth: '1473753874', },
           {name: "lucy", birth: '1473753874', },
@@ -48,7 +44,7 @@
       });
       var MyComponent = Vue.extend({
       });
-      var myComponentInstance = new MyComponent()
+      // var myComponentInstance = new MyComponent()
     </script>
     
   </body>

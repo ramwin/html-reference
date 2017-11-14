@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link  href="./source/summernote/summernote.css" rel="stylesheet">
+    <link rel="stylesheet" href="./source/bootstrap/css/bootstrap.min.css">
+    <script src="./source/jquery-3.1.0.js"></script>
+    <script src="./source/bootstrap/js/tether.min.js"></script>
+    <script src="./source/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./source/summernote/summernote.js"></script>
+    <script src="./source/summernote/summernote-zh-CN.js"></script>
+    <script src="./source/vue.js"></script>
+  </head>
+  <body>
+    <div id="test">
+      <p>测试用vue和summernote一起</p>
+      <input type="button" value="查看值" onclick="show_value()">
+      <input type="button" value="摧毁" onclick="destroy()">
+      <input type="button" value="重置" onclick="create()">
+      <input type="text" placeholder="输入你要添加的数据" id="text">
+      <input type="button" value="添加数据" onclick="add()"><br>
+      <div v-for="discussion in discussions">
+        <mycomponent v-bind:discussion='discussion'></mycomponent>
+      </div>
+      <div v-for="discussion in discussions">
+        <mycomponent v-bind:discussion='discussion'></mycomponent>
+      </div>
+    <template id="template">
+      <input v-model="discussion.content"></input>
+    </template>
+    </div>
+
+
+    <script>
+    $(document).ready(function() {
+      var MyComponent = Vue.extend({
+        template: "#template",
+        props: {
+          discussion: {
+            type: Object,
+          },
+        },
+      });
+      Vue.component("mycomponent", MyComponent);
+      var vm = new Vue({
+        el: "#test",
+        data: {
+          "discussions": [
+            {"content": "内容1", id: "1", "conclution": "结论1" },
+            {"content": "内容2", id: "2", "conclution": "结论2" },
+            {"content": "内容3", id: "3", "conclution": "结论3" },
+          ]
+        }
+      });
+      $('#summernote').summernote({
+        lang: 'zh-CN',
+        height: 300,
+        minHeight: null,
+        maxHeight: null,
+        focus: true,
+        callbacks: {
+          onKeydown: function(e) {
+            var select = window.getSelection()
+            node = select.focusNode
+            if (e.ctrlKey && e.keyCode==89) {
+              offset = select.focusOffset
+              node.textContent = node.textContent.slice(0, offset) + "你按了ctrl+y" + node.textContent.slice(offset)
+            }
+            code = $("#summernote").summernote("code");
+            $("#summernote2").summernote("destroy");
+            $("#summernote2").summernote("code", code)
+          }
+        }
+      });
+    });
+    function show_value() {
+      var code = $("#summernote").summernote('code');
+      alert(code);
+    };
+    function destroy() {
+      $("#summernote").summernote("destroy");
+    };
+    function create() {
+      $("#summernote").summernote("code", 'Hello Summernote<span style="background-color: rgb(255, 0, 0);">ewwewe</span>')
+    }
+    function add() {
+      var code = $("#summernote").summernote('code');
+      value = document.getElementById("text").value
+      $("#summernote").summernote("destroy");
+      $("#summernote").summernote("code", code+value)
+    }
+    </script>
+  </body>
+</html>

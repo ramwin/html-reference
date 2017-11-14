@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <!-- 引入Vue -->
+    <script src="https://vuejs.org/js/vue.min.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/iview/dist/styles/iview.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/iview/dist/iview.min.js"></script>
+    <style>
+      .b {
+        border: 0px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>h1</h1>
+    <div id="example">
+      <h1 v-text="pipe"></h1>
+      <Input v-model="pipe"></Input>
+      <i-table class='b' :columns="columns1" :data="data1"></i-table>
+    </div>
+    <script>
+      var data = {
+        columns1: [
+          {
+            title: "姓名",
+            key: 'name',
+            render: function(h, params) {
+              return h('div', [
+                h('Button', {
+                  props: {
+                    'text': params['row'].age,
+                  }
+                }, [
+                  h('a',
+                    {
+                      'attrs': {
+                        'href': params['row'].href,
+                      }
+                    },
+                  'helloworld'),
+                ]),
+              ])
+            },
+          }
+        ],
+        data1: [
+          {
+            name: '王晓明',
+            age: 18,
+            href: 'http://www.baidu.com',
+          }
+        ],
+        avatar: 'http://192.168.74.1:8000/static/img/%E5%8A%A8%E6%80%812.jpg',
+        a: 1 ,ok:1, number: 1,
+        pipe: 'a',
+        greeting: true,
+        url: "http://www.ramwin.com",
+        first_name: "walter",
+        last_name: "white",
+        sex: "男", show_sex: true,
+        tel: "123456789", show_tel: true,
+        address: {
+          country: "中国",
+          city: "上海",
+        },
+        friends: [
+          {name: "lily"}, {name: "lucy"},
+        ],
+      }
+      var vm = new Vue({
+        el: '#example',
+        data: data,
+      })
+    </script>
+  </body>
+</html>

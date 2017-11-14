@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script src="./source/jquery-3.1.0.js"></script>
+    <script src="./source/jquery.twbsPagination.js"></script>
+    <style>
+      .active {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://esimakin.github.io/twbs-pagination/">官方文档</a>
+    <a href="https://esimakin.github.io/twbs-pagination/#options-and-events">参数配置</a>
+    <ul class="pagination" id="pagination"></ul>
+    <input type="button" value="重新做出分页栏" onclick="test()">
+  </body>
+  <script>
+    var obj = $('#pagination').twbsPagination({
+      first: "第一页",
+      prev: "上一页",
+      next: "下一页",
+      last: "最后一页",
+      initiateStartPageClick: false, // 载入后是否出发点击第一页的事件
+      
+      totalPages: 35,  // 一共的页数
+      visiblePages: 5,
+      onPageClick: function (event, page) {
+          console.info(page);
+      }
+    });
+    console.info(obj.data());
+    function test() {
+      console.log("重新绘图");
+      $('#pagination').twbsPagination('destroy');
+      var obj = $('#pagination').twbsPagination({
+        totalPages: 100,  // 一共的页数
+        startPage: 13, // 当前页数
+        visiblePages: 13,  // 显示几个页码
+        onPageClick: function (event, page) {
+            console.info(page);
+        }
+      });
+    }
+  </script>
+</html>

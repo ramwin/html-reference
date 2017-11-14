@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./source/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./source/datetimepicker/bootstrap-datetimepicker.min.css">
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
+    <input type="text" id="test">
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="./source/jquery-3.1.0.js"></script>
+    <script src="./source/bootstrap/js/tether.min.js"></script>
+    <script src="./source/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./source/datetimepicker/bootstrap-datetimepicker.js"></script>
+    <script src="./source/datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script>
+    <script>
+      $("#test").datetimepicker({
+        format: 'yyyy-mm-dd hh:ii',
+        autoclose: true,
+        startView: 'month',
+        minView: 'month',
+      })
+    </script>
+  </body>
+</html>

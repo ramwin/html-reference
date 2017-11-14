@@ -18,4 +18,5 @@
 * flex-shrinik: 项目缩小比例，默认是1
 * flex-basis: 计算多余空间是，项目占用的空间，默认auto
 * flex: <flex-grow> <flex-shrink> <flex-basis>
-* align-self: auto | flex-start | ... |  # 设定单个item和是否继承父级元素
+* align-self: auto | flex-start | ... |  # 设定单个item和是否继承父级元素还是使用自己的方式展示
+* 最后一个元素靠右: margin-left:auto

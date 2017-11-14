@@ -3,16 +3,23 @@
   <head>
     <title></title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <script src="../source/vue.js"></script>
+    <script src="../source/vue-2.1.3.js"></script>
     <meta http-equiv="refresh" content="30">
   </head>
   <body>
-    <template id="example">
+    <div id="example">
       <div style="height: 0px; width:100px; margin-bottom:100px" v-bind:style="{backgroundImage:'url(' + avatar + ')'}">
       </div>
       <br>
       basic:{{a}}<br>
       number: {{number+1}}<br>
+      number: 变化<input type="number" v-model="number">
+      变化以后 {{cnumber}}
+      国家: <input type="text" v-model="address.country">
+      变化以后: {{ccountry}}
+      城市: <input type="text" v-model="address.city">
+      变化以后: {{ccity}}
+      <button v-on:click="number=34">点我</button>
       ok?: {{ok ? 'YES': 'NO' }}<br>
       pipe: {{ pipe | capitalize }}<br>
       greetings: <span v-if="greeting">Hello!</span>
@@ -27,14 +34,18 @@
       </template>
       朋友们:
       <ul>
-      <li v-for="item in friends">
-        姓名: <span v-text="item.name"></span>{{item.name}}
-      </li>
+        <li v-for="item in friends">
+          姓名: <span v-text="item.name"></span>{{item.name}}
+        </li>
       </ul>
-    </template>
+      <h2>测试输入框的focus如何变化</h2>
+      {{focus}}
+      <input type="text" id='focus' placeholder='输入' v-on:focus='focus=true'
+             v-on:blur='focus=false'/>
+    </div>
     <script>
       var data = {
-        avatar: 'http://192.168.74.1:8000/static/img/%E5%8A%A8%E6%80%812.jpg',
+        avatar: 'http://www.ramwin.com/media/portrait.png',
         a: 1 ,ok:1, number: 1,
         pipe: 'a',
         greeting: true,
@@ -43,9 +54,14 @@
         last_name: "white",
         sex: "男", show_sex: true,
         tel: "123456789", show_tel: true,
+        address: {
+          country: "中国",
+          city: "上海",
+        },
         friends: [
           {name: "lily"}, {name: "lucy"},
         ],
+        focus: false,
       }
       var vm = new Vue({
         el: '#example',
@@ -66,13 +82,27 @@
               this.first_name = names[0];
               this.last_name = names[names.length-1]
             },
-          }
+          },
+          cnumber: function() {
+            return this.number + 2
+          },
+          ccountry: function() {
+            return "国家" + this.address.country
+          },
+          ccity: function() {
+            this.address.country += "we"
+            return "城市"  + this.address.city;
+          },
+        },
+        filters: {
+            capitalize: function(value) {
+                return value.charAt(0).toUpperCase() + value.slice(1)
+            }
         }
       });
       var MyComponent = Vue.extend({
       });
       var myComponentInstance = new MyComponent()
     </script>
-    
   </body>
 </html>

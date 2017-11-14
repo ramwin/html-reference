@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body > table {
+        width: 100%;
+        border: 1px solid red;
+      }
+      table input {
+        border: 1px solid blue;
+      }
+      tr {
+        display: flex;
+        justify-content: space-between;
+      }
+      td {
+        flex-grow: 1
+      }
+      input {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>在table里面使用Input并使其占满空间</h1>
+    <table>
+      <tr>
+        <td><input type="text" value="1"></td>
+        <td><input type="number" value="1"></td>
+        <td><input type="number" value="1"></td>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link href="./source/bootstrap-slider/bootstrap-slider.css" rel="stylesheet">
+    <link rel="stylesheet" href="./source/bootstrap/css/bootstrap.min.css">
+  </head>
+  <body>
+    <h1>滑块</h1>
+    <input id="demo" type="text"
+      data-slider-max='100'
+      data-slider-step='1'
+      data-slider-tooltip='show' 是否显示数字('hide', 'show')
+    >
+    <button id="button" onclick="show_value()">点我</button>
+    <script src="./source/jquery-3.1.0.js"></script>
+    <script src="./source/bootstrap/js/tether.min.js"></script>
+    <script src="./source/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./source/bootstrap-slider/bootstrap-slider.js"></script>
+    <script>
+      var mySlider = $("#demo").slider();
+      var show_value = function() {
+        console.log("你点击了");
+        var wx = mySlider.bootstrapSlider('getValue')
+        alert(wx[0].value);
+      }
+    </script>
+  </body>
+</html>
