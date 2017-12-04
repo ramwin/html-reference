@@ -54,7 +54,7 @@
         * `<table> 表格`
         * `<caption>标题</caption>`
         * `<tr> 一行(table row)`
-            * <th> 表头
+            * <th> 标题
             * <td> 一个单元格
     * 属性
         border=1 单元格的边框
