@@ -15,6 +15,8 @@
 
 
 ### 通用参数
+* allowClear: false  *是否允许清空*
+* placeholder: '请选择' *注释*
 * 多选
     1. 直接在html里面添加 `multiple`
     2. 使用参数 `multiple: true`
