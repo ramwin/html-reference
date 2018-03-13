@@ -3,6 +3,7 @@
 ### README
 * 这里主要存放html标签，属性。 css一类。 如果是和JavaScript有关的看[Javascript_tutorial](https://github.com/ramwin/javascript_tutorial.git/)
 * [mozilla web开发者资料](https://developer.mozilla.org/zh-CN/docs/Web)
+* [mozilla HTML参考](https://developer.mozilla.org/zh-CN/docs/Web/HTML)
 
 
 ### HTTP
@@ -12,12 +13,21 @@
 ### 基本元素
 * [html参考资料](https://developer.mozilla.org/zh-CN/docs/Web/HTML)
 * 超链接, [案例](./a.html)
+    * [参考](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a)
+    * [示例]
     ```
     <a href="www.baidu.com" target="_blank">访问百度</a>
         target: _blank(新标签打开) | _top(跳出当前框架)
     style: text-decoration: none 是否有下划线
-    <a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>发送邮件
     ```
+    * 参数
+        * target: `_self | _blank | _parent | _top`: 当前 | 新窗口 | 父浏览器的加载 | 响应成完整的窗口，后两个用于iframe或者上下文
+    * 其他:
+        ```
+        <a href="mailto:ramwin@qq.com">发送邮箱</a>
+        <a href="tel:+491570156">拨打电话: +49 157 0156</a>
+        ```
+
 * Form
     * [参考](./form.md) [案例](./form.html)
 * iframe
