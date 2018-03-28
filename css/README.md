@@ -96,6 +96,7 @@
     * [参考资料](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-overflow)
 ```
     text-align: left|center|right|justify 靠左|居中|靠右|两端对其(最后一行靠左)
+    line-height: 100px; 配合line-height可以让文字处于正中间
     word-break: keep-all 文字总是不换行
     
     // 设置超出范围就隐藏并显示省略号
@@ -108,6 +109,8 @@
         overflow: visible; // 超出去后显示出来
     }
 ```
+    * word-spacing: 单词之间的尺寸
+    * letter-spacing: 字母之间的尺寸
 * [颜色](./color颜色.html)
     * [关键字颜色参考,尽量使用下面的这个链接](https://developer.mozilla.org/en/docs/Web/CSS/color_value#Color_keywords)
     * [颜色示例](./color颜色.html)

@@ -8,7 +8,10 @@
     div {
       padding: 20px;
       margin: 20px;
-      background-image: url('../source/image.jpg');
+      border: 1px solid black;
+      height:200px;
+      width:200px;
+      /* background-image: url('../source/image.jpg');*/
     }
     #size {
       height: 20px;
@@ -18,14 +21,42 @@
       background-position: right;
       background-repeat: no-repeat;
     }
+    #pure {
+      border: 1px solid black;
+      height: 100px;
+      width: 100px;
+
+      /* background:  linear-gradient(90deg, red 33%, yellow 33%, white 100%);*/
+      background:  linear-gradient(red 30%, yellow 30% , yellow 70%, white 70%);
+    }
+    #multi {
+      background-image: url('../source/image.jpg'), url('../source/image.jpg');
+      background-size: 100px 100px, 100px 100px;
+      background-position: 0px 0px, 100px 150px;
+      background-repeat: no-repeat, no-repeat;
+    }
   </style>
   <body>
-    这是一个div
-    <div>
-    </div>
-
     这个div的背景设置了大小
     <div id="size">
+    </div>
+    这个div的背景纯色设置了大小
+    <div id="pure">
+    </div>
+
+    这个div我要有多个背景
+    <div id="multi">
+    </div>
+
+    <style>
+      #base {
+        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAMSURBVBhXYzA+PRMAAswBmAwOsnsAAAAASUVORK5CYII='), red;
+        background-size: 100px 100px, 200px 200px;
+        background-repeat: no-repeat, no-repeat;
+      }
+    </style>
+    这个div我要用base64当做背景
+    <div id="base">
     </div>
   </body>
 </html>
