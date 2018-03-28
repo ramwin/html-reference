@@ -42,9 +42,16 @@
       {{focus}}
       <input type="text" id='focus' placeholder='输入' v-on:focus='focus=true'
              v-on:blur='focus=false'/>
+      <h2>测试时间输入</h2>
+      <input type="date" v-model="date">{{date}}<br>
+      <input type="time" v-model="time">{{time}}<br>
+      <input type="datetime-local" v-bind:value="datetime" v-model="datetime">{{datetime}}<br>
     </div>
     <script>
       var data = {
+        date: "2017-01-01",
+        time: "08:00",
+        datetime: "2017-01-01T08:00.000Z",
         avatar: 'http://www.ramwin.com/media/portrait.png',
         a: 1 ,ok:1, number: 1,
         pipe: 'a',
