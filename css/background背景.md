@@ -14,6 +14,7 @@
     background-size: cover;  /* 背景图片自动缩放 */
     background-repeat:repeat-y;    /*只在y轴上进行重复*/
     background-position: 0px 0px  /*背景显示的区域设定*/
+    background:  linear-gradient(90deg, #FFC0CB 50%, #00FFFF 50%);  /*渐变*/
 ```
 
 ## 相关属性:
@@ -24,3 +25,8 @@
     * no-repeat: 不重复
 * `background-position`: 背景图片的位置
     * top | bottom | left | right 上下左右
+
+
+## 多重背景
+* [参考文档](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+* **多重背景必须赋值给图片，只有最后一个背景可以是纯色**

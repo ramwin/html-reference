@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <style>
+      .red {
+        border: 1px solid red;
+      }
+      .green {
+        border: 1px solid lime;
+      }
+      .yellow {
+        border: 1px solid gold;
+      }
+      div {
+        min-width: 100px;
+        min-height: 100px;
+        padding: 10px;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>测试不同的高度</h2>
+    <div class="red" style="width: 700px">
+      <div class="green" style="width: 50%; display: inline-block">
+      </div>
+      <div class="yellow" style="float: right; width: 10%; height: 200px">
+        我是yellow的div
+      </div>
+      <div style="width: 100%; height: 100%;"></div>
+      <div style="clear: both; min-height: 0px"></div>
+    </div>
+    <div class="red">
+      <div class="green">
+        最普通
+      </div>
+      <div class="yellow">
+        最普通
+      </div>
+    </div>
+    <div class="red">
+      <div class="green" style="float: left">
+        float: left
+      </div>
+      <div class="yellow">
+        最普通
+      </div>
+    </div>
+    <div class="red">
+      <div class="green" style="float: left; height: 200px">
+        float: left, 我很高。但是因为我是float，所以无法撑开
+      </div>
+      <div class="yellow">
+        最普通
+      </div>
+    </div>
+    <div class="red" style="margin-top: 100px">
+      <div class="green" style="float: left;">
+        float: left, 我很高。但是因为我是float，所以无法撑开
+      </div>
+      <div class="yellow" style="height: 200px">
+        我很高，可以撑开高度
+      </div>
+    </div>
+  </body>
+</html>

@@ -3,11 +3,11 @@
   <head>
     <title></title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <script src="../source/vue.js"></script>
+    <script src="../source/vue-2.1.3.js"></script>
     <meta http-equiv="refresh" content="30">
   </head>
   <body>
-    <template id="example">
+    <div id="example">
       <div style="height: 0px; width:100px; margin-bottom:100px" v-bind:style="{backgroundImage:'url(' + avatar + ')'}">
       </div>
       <br>
@@ -34,14 +34,25 @@
       </template>
       朋友们:
       <ul>
-      <li v-for="item in friends">
-        姓名: <span v-text="item.name"></span>{{item.name}}
-      </li>
+        <li v-for="item in friends">
+          姓名: <span v-text="item.name"></span>{{item.name}}
+        </li>
       </ul>
-    </template>
+      <h2>测试输入框的focus如何变化</h2>
+      {{focus}}
+      <input type="text" id='focus' placeholder='输入' v-on:focus='focus=true'
+             v-on:blur='focus=false'/>
+      <h2>测试时间输入</h2>
+      <input type="date" v-model="date">{{date}}<br>
+      <input type="time" v-model="time">{{time}}<br>
+      <input type="datetime-local" v-bind:value="datetime" v-model="datetime">{{datetime}}<br>
+    </div>
     <script>
       var data = {
-        avatar: 'http://192.168.74.1:8000/static/img/%E5%8A%A8%E6%80%812.jpg',
+        date: "2017-01-01",
+        time: "08:00",
+        datetime: "2017-01-01T08:00.000Z",
+        avatar: 'http://www.ramwin.com/media/portrait.png',
         a: 1 ,ok:1, number: 1,
         pipe: 'a',
         greeting: true,
@@ -57,6 +68,7 @@
         friends: [
           {name: "lily"}, {name: "lucy"},
         ],
+        focus: false,
       }
       var vm = new Vue({
         el: '#example',
@@ -88,6 +100,11 @@
             this.address.country += "we"
             return "城市"  + this.address.city;
           },
+        },
+        filters: {
+            capitalize: function(value) {
+                return value.charAt(0).toUpperCase() + value.slice(1)
+            }
         }
       });
       var MyComponent = Vue.extend({

@@ -1,31 +1,33 @@
 #### Xiang Wang @ 2016-09-14 15:05:53
 
-# 基础
+### 基础
 * [MDN Mozilla官方指南](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Reference)
 * [豆瓣快速参考](https://www.douban.com/note/65562130/?type=like)
 * [背景background](background背景.md)
 * 选择器 [快速参考](./select选择器.md) [例子](./select选择器.html)
 
-# 示例
+### 示例
 * a标签
-
 ```
     target: _blank 新窗口 | _top 跳出当前框架
     text-decoration: none 是否有下划线
     cursor: pointer 鼠标移动上去后变成小手
 ```
-* [border边框](./border.md)
-```
-    border: 1px solid red;
-```
+* border边框 [示例](./border.html)
+    * border: `1px solid red;`
+    * [border-style](https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-style) *可以设置成虚线框，双实线*
 
 * [box-shadow阴影](https://developer.mozilla.org/zh-CN/docs/Web/CSS/box-shadow)
-```
+    ```
     box-shadow:  inset | offset-x | offset-y | blur-radius | spread-radius | color
     inset: 不写就是外边框，否则就是内边框
     blur-radius: 扩散程度(越大，阴影扩散得越开, 也就越淡)
     spread-radius: 阴影放大比例(可以为负值)
-```
+    ```
+* float [参考](https://developer.mozilla.org/en-US/docs/Web/CSS/float) [测试](float.html)
+    * value: left|right|none|inline-start|inline-end
+    * __float会把元素脱离当前的流，使得自身的高度无法撑开父元素__
+    * float的元素不仅仅会飘动，直到遇到了父元素的边框或者是其他的浮动元素
 
 * ul列表
     * `list-style: none|inside|outside|url` # 列表样式 
@@ -70,7 +72,8 @@
     * [参考资料](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-classes)
     * [案例](./pseudo-class伪类.html)
 
-```
+    * 基础
+    ```
     select :last-child  最后一个子节点, 注意是选择出来的所有元素的最后一个
     ::placeholder 提示文字
     :checked 被选择的
@@ -80,11 +83,20 @@
       left: -10px;
       top: -10px;
     }
-```
+    ```
+
+    * :focus  `input输入框变成焦点的时候`
+        ```
+        input:focus {
+            outline: none
+        }
+        ```
+
 * [文字](./text.html)
     * [参考资料](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-overflow)
 ```
     text-align: left|center|right|justify 靠左|居中|靠右|两端对其(最后一行靠左)
+    line-height: 100px; 配合line-height可以让文字处于正中间
     word-break: keep-all 文字总是不换行
     
     // 设置超出范围就隐藏并显示省略号
@@ -97,12 +109,14 @@
         overflow: visible; // 超出去后显示出来
     }
 ```
+    * word-spacing: 单词之间的尺寸
+    * letter-spacing: 字母之间的尺寸
 * [颜色](./color颜色.html)
-    * [关键字颜色参考](https://developer.mozilla.org/en/docs/Web/CSS/color_value#Color_keywords)
+    * [关键字颜色参考,尽量使用下面的这个链接](https://developer.mozilla.org/en/docs/Web/CSS/color_value#Color_keywords)
+    * [颜色示例](./color颜色.html)
 
 * [padding]
 
 ```
     padding: 上 右 下 左 | 上 左右 下 | 上下 左右 | 上下左右
 ```
-

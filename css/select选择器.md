@@ -1,6 +1,6 @@
 #### Xiang Wang @ 2017-02-08 10:33:38
 
-# 基础
+### 基础
 [菜鸟网站参考](http://www.runoob.com/cssref/css-selectors.html)
 ```
     a b // a的后代b
@@ -17,10 +17,12 @@
     }
     input[readonly] {
     }
+    div span:nth-child(2n+1) {  // div下面的第2n+1个span
+    }
 ```
 
 
-# 进阶
+### 进阶
 ```
     [父选择器](https://developer.mozilla.org/en-US/docs/Web/CSS/:has)
 ```

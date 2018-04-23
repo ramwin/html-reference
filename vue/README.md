@@ -1,6 +1,30 @@
 #### Xiang Wang @ 2016-09-30 10:34:15
 
+### 教程
+* 安装
+```
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.0/vue.js" type="text/javascript"></script>
+```
 * [基础](basic.md), [示例](basic.html)
+    * 基础
+        ```
+        var vm = new Vue({
+            el: '#选择元素渲染',
+            data: '渲染数据',
+            delimiters: ['${', '}$'],  // 标签
+        })
+        ```
+    * 选项数据 [官网](https://cn.vuejs.org/v2/api/#选项-数据)
+        ```
+        watch: {
+            a: function(val, oldval) {}
+            b: 'someMethod',
+            c: {
+                handler: function(val, oldval) {},
+                deep: true,
+            }
+        }
+        ```
 * [v-for循环](v-for.md), [示例](v-for.html)
 * [过滤器](filter过滤器.md), [示例](filter过滤器.html)
 * [指令](directive指令.md), [示例](directive指令.html)

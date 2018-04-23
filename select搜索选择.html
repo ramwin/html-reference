@@ -6,6 +6,9 @@
     <script src="./source/jquery-3.1.0.js"></script>
     <script src="./source/select2.full.js"></script>
     <link rel="stylesheet" href="./source/select2.css" />
+    <style>
+      .select2-container .select2-results {max-height: 300px;}
+    </style>
   </head>
   <body>
     <a href="https://select2.github.io/">官方文档</a>
@@ -14,15 +17,27 @@
     <select class="basic" style="width:100%;">
       <option value="姓名">姓名</option>
       <option value="性别">性别</option>
-      <option value="username">用户名</option>
-    </select>
-    <select class="basic" style="width:100%;" multiple>
-      <option value="姓名">姓名</option>
+      <option value="性别">性别</option>
+      <option value="性别">性别</option>
+      <option value="性别">性别</option>
+      <option value="性别">性别</option>
+      <option value="性别">性别</option>
+      <option value="性别">性别</option>
+      <option value="性别">性别</option>
+      <option value="性别">性别</option>
+      <option value="性别">性别</option>
       <option value="性别">性别</option>
       <option value="username">用户名</option>
     </select>
     <script>
-      $(".basic").select2();
+      $(".basic").select2({
+        minimumResultsForSearch: Infinity,
+        dropdownCssClass: 'bigdrop',
+        // templateSelection: function(args) {
+        //     return args.element
+        //     return args;
+        // },
+      });
     </script>
     <h1>使用服务器配合的选择</h1>
     <a href="http://www.ramwin.com/testjs/select2/">需要后台配合</a>
