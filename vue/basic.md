@@ -2,6 +2,7 @@
 * <a href="#v-for">列表渲染</a>
 
 # 基础示例
+    <script src="https://unpkg.com/vue" type="text/javascript"></script>
     var data = {
         'name': '姓名'
     }
@@ -36,24 +37,34 @@
 * 样式绑定: `v-bind:style="styleObject" data: {styleObject: {color:'red', 'fontSize:'13px'}}`
 
 # 条件渲染
+```
     <h1 v-if="ok">Yes</h1>
     <h1 v-else>No</h1>
-    <template v-if="ok"></template> # 这样在template里面就可以添加很多 dom 了
+    <template v-if="ok"></template> # 这样在template里面就可以添加很多 dom 了  
+```
 
-<div id="v-for"></div>
-# 列表渲染
+
+
+
+# 列表渲染 <div id="v-for"></div>  
+```
     <li v-for="friend in friends">{{$index}}: {{friend.name}}</li>
     <li v-for="(index, item) in items" track_by="_uid"></li>
+```
 
 ### 替换数组
+```
     example1.items.push({'name':'名字'});
     example1.items = exapmle1.items.filter(function (item) { return item.message.match(/Foo/) })
     example1.items[0] = {}  # 不会出发函数，改变dom
     exapmle1.items.$set(0, {name: 'Jake'})  # 用这种写法
+```
 
 # 事件绑定
+```
     <button v-on:click="say('hi')">Say Hi</button>
     <button v-on:click="say2('hi', $event)">Say Hi2</button>
+```
 
 ### 修饰符
 * v-on:click:stop="doSth"  # 组织单击事件冒泡
