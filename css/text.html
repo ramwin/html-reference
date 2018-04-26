@@ -24,9 +24,20 @@
         height: 40px;
         text-overflow: ellipsis
       }
+      .small {
+        font-size: small;
+      }
+      .large {
+        font-size: large;
+      }
     </style>
   </head>
   <body>
+    <h1>我要测试文字居上或者句下</h1>
+    <p class="small">我的小字<span class="large">我是大字</span>我是小字</p>
+    <p class="large">我的大字<span class="small">我是小字</span>我是大字</p>
+    <p class="small">我的小字<span class="large">我是大字</span>我是小字</p>
+    <p class="large">我的大字<span class="small">我是小字</span>我是大字</p>
     <div></div>
     <div class="ellipsis"><p class="ellipsis">我是很长很长的一段文字</p></div>
     <div class="red-border"></div>
@@ -87,6 +98,27 @@
     </style>
     <div class="test-break">
       <span>I'm a very very very long centence</span>
+    </div>
+    <style>
+      .out {
+        border: 1px solid red;
+        max-width: 100px;
+        min-width: 10px;
+        word-break: keep-all;
+        overflow: hidden;
+      }
+      .first {
+      }
+      .out div {
+        display: inline;
+      }
+    </style>
+    <p>测试如果一个div里面有两个div，如何缩略</p>
+    <div class="out">
+      <span>我是第一段文字</span><span>我是第二段文字</span>
+    </div>
+    <div class="out">
+      <div>我是第一段文字</div><div>我是第二段文字</div>
     </div>
   </body>
 </html>
