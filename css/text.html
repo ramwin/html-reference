@@ -33,7 +33,48 @@
     </style>
   </head>
   <body>
+    <h1>我要测试两行</h1>
+    <style>
+      .max-2-line {
+        overflow: hidden;
+        line-height: 16px;
+        max-height: 32px;
+        border: 1px solid red;
+      }
+    </style>
+    <div class="max-2-line">
+      This is a very long cen, But only the first two line will show.
+      This is a very long cen, But only the first two line will show.
+      This is a very long cen, But only the first two line will show.
+      This is a very long cen, But only the first two line will show.
+      This is a very long cen, But only the first two line will show.
+    </div>
+    <div class="max-2-line">
+      This is a very long cen, But only the first two line will show.
+    </div>
+    <h1><a href="http://jsfiddle.net/csYjC/1131/">用jsfiddle</a></h1>
     <h1>我要测试文字居上或者句下</h1>
+    <style>
+      .text {
+         overflow: hidden;
+         text-overflow: ellipsis;
+         display: -webkit-box;
+         /* line-height: 16px;  教程有，但是不知道有什么用
+         max-height: 32px;      fallback */
+         -webkit-line-clamp: 2; /* number of lines to show */
+         -webkit-box-orient: vertical;
+      }
+    </style>
+    <p class="text">
+      This is a very long cen, But only the first two line will show.
+      This is a very long cen, But only the first two line will show.
+      This is a very long cen, But only the first two line will show.
+      This is a very long cen, But only the first two line will show.
+      This is a very long cen, But only the first two line will show.
+    </p>
+    <p class="text">
+      This is a very long cen, But only the first two line will show.
+    </p>
     <p class="small">我的小字<span class="large">我是大字</span>我是小字</p>
     <p class="large">我的大字<span class="small">我是小字</span>我是大字</p>
     <p class="small">我的小字<span class="large">我是大字</span>我是小字</p>

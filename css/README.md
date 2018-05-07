@@ -112,8 +112,8 @@
 * letter-spacing: 字母之间的尺寸
 
 # [颜色](./color颜色.html)
-    * [关键字颜色参考,尽量使用下面的这个链接](https://developer.mozilla.org/en/docs/Web/CSS/color_value#Color_keywords)
-    * [颜色示例](./color颜色.html)
+* [关键字颜色参考,尽量使用下面的这个链接](https://developer.mozilla.org/en/docs/Web/CSS/color_value#Color_keywords)
+* [颜色示例](./color颜色.html)
 
 # [padding]
 
