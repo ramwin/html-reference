@@ -1,10 +1,134 @@
 **Xiang Wang @ 2016-11-16 23:11:08**
 
-# 基础
+
+# get started
 * [starter template](./basic.html)
 * [Official documentation](https://getbootstrap.com/docs/4.1/getting-started/introduction/)
 
+
+# Content  
+## Reboot  
+
+## [typography](https://getbootstrap.com/docs/4.1/content/typography/)
+the look of text
+* Heading
+* display heading
+* lead
+* inline text elements
+    * mark
+    * del
+    * s
+    * ins
+    * u
+    * small
+    * strong
+    * em
+* abbreviations
+* [blockquotes](https://getbootstrap.com/docs/4.1/content/typography/#blockquotes)  
+use `blockquotes` to represent blockquote
+    * example
+    ```
+    <blockquote class="blockquote">
+      <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+    </blockquote>
+    ```
+    * naming a source
+    ```
+    <blockquote class="blockquote">
+      <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+    </blockquote>
+    ```
+    * alignment
+    ```
+    <blockquote class="blockquote text-right">
+      <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+    </blockquote>
+    ```
+
+## Code
+
+## Images
+* use `.img-fluid` to make a responsive image
+```
+<img src="..." class="img-fluid" alt="Responsive image">
+```
+* user `.img-thumbnail` to make a image rounded by 1px
+<img src="..." class="img-thumbnail" alt="thunmbnail">
+* Aligning Images
+    * rounded
+    * float-left|float-right
+    * mx-auto
+    * d-block
+
+## Tables
+## Figures
+
+
 # [Components](https://getbootstrap.com/docs/4.1/components/alerts/)
+
+## [List group](https://getbootstrap.com/docs/4.1/components/list-group/)
+* [custom content](https://getbootstrap.com/docs/4.1/components/list-group/#custom-content)
+```
+<div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">List group item heading</h5>
+      <small>3 days ago</small>
+    </div>
+    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+    <small>Donec id elit non mi porta.</small>
+  </a>
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">List group item heading</h5>
+      <small class="text-muted">3 days ago</small>
+    </div>
+    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+    <small class="text-muted">Donec id elit non mi porta.</small>
+  </a>
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">List group item heading</h5>
+      <small class="text-muted">3 days ago</small>
+    </div>
+    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+    <small class="text-muted">Donec id elit non mi porta.</small>
+  </a>
+</div>
+```
+
+## [Modal](https://getbootstrap.com/docs/4.1/components/modal/)
+* example
+	```
+	<!-- Button trigger modal -->
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+	  Launch demo modal
+	</button>
+
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			  <span aria-hidden="true">&times;</span>
+			</button>
+		  </div>
+		  <div class="modal-body">
+			...
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			<button type="button" class="btn btn-primary">Save changes</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	```
+
 ## [Navs](https://getbootstrap.com/docs/4.1/components/navs/)
 * [example](./navs.html)
 ```html
@@ -71,7 +195,11 @@ You can get more information from [here](https://stackoverflow.com/questions/140
 ```
 
 
-## 其他
+# Utilities
+* [ ] Float
+
+
+# 其他
 * 通用
     * `m-a m-l/r/t/b p-a-sm` 设置margin
     * `p-a p-l/r/t/b p-a-sm` 设置padding

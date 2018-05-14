@@ -1,16 +1,16 @@
-#### Xiang Wang @ 2016-08-24 14:30:23
+**Xiang Wang @ 2016-08-24 14:30:23**
 
-### README
+# README
 * 这里主要存放html标签，属性。 css一类。 如果是和JavaScript有关的看[Javascript-tutorial](https://github.com/ramwin/javascript-tutorial.git/)
 * [mozilla web开发者资料](https://developer.mozilla.org/zh-CN/docs/Web)
 * [mozilla HTML参考](https://developer.mozilla.org/zh-CN/docs/Web/HTML)
 
 
-### HTTP
+# HTTP
 * User-Agent [查看自己的user-agent和IP](http://www.whoishostingthis.com/tools/user-agent/)
 
 
-### 基本元素
+# 基本元素
 * [html参考资料](https://developer.mozilla.org/zh-CN/docs/Web/HTML)
 * 超链接, [案例](./a.html)
     * [参考](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a)
@@ -73,24 +73,24 @@
     * 无序列表ul
         [参考](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/ul)
 
-### Response
+# Response
 * 状态码
     * 400: 参数错误
     * 429: 请求过于频繁
 
 
-### 样式
+# 样式
 * [CSS](./css/README.md)
 * [训练](https://flukeout.github.io/)
 
 
-### 功能
+# 功能
 * [截取图片](./cropper图片截取.html)
 * [下拉框选择搜索](./select搜索选择.html)
 * [根据页数自动分页](./page分页.html) [官方教程](https://esimakin.github.io/twbs-pagination/)
 
 
-### 框架或其他
+# 框架或其他
 * [bootstrap](./bootstrap/README.md)
 * [flex布局](./flex/README.md)
 * [vue框架](./vue/README.md)
@@ -102,3 +102,10 @@
 * [sweetalert, 用来替换系统的alert](./sweetalert.html)
 * [select,选择，下拉，服务器获取](./select2.md)
 * [selectize 用于方便地选择和输入,](http://selectize.github.io/selectize.js/) [github链接,](https://github.com/selectize/selectize.js) [例子](./selectize.html)
+
+# [jquery](http://api.jquery.com/)
+## [Ajax](http://api.jquery.com/category/ajax/)
+    * [jQuery.getJSON](http://api.jquery.com/jQuery.getJSON/)
+        ```
+        $.ajax(url, data, success)
+        ```
