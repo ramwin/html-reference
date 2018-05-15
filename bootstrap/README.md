@@ -49,13 +49,13 @@ use `blockquotes` to represent blockquote
 
 ## Code
 
-## Images
+## [Images](https://getbootstrap.com/docs/4.1/content/images/)
 * use `.img-fluid` to make a responsive image
 ```
 <img src="..." class="img-fluid" alt="Responsive image">
 ```
-* user `.img-thumbnail` to make a image rounded by 1px
-<img src="..." class="img-thumbnail" alt="thunmbnail">
+* user `.img-thumbnail` to make a image rounded by 1px  
+`<img src="..." class="img-thumbnail" alt="thunmbnail">`
 * Aligning Images
     * rounded
     * float-left|float-right
@@ -194,8 +194,96 @@ You can get more information from [here](https://stackoverflow.com/questions/140
 </nav>
 ```
 
+## [Scrollspy](https://getbootstrap.com/docs/4.0/components/scrollspy/)
+* [example](./scrollsby.html)
+```
+<nav id="navbar-example2" class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link" href="#fat">@fat</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#mdo">@mdo</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#one">one</a>
+        <a class="dropdown-item" href="#two">two</a>
+        <div role="separator" class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#three">three</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+<div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+  <h4 id="fat">@fat</h4>
+  <p>...</p>
+  <h4 id="mdo">@mdo</h4>
+  <p>...</p>
+  <h4 id="one">one</h4>
+  <p>...</p>
+  <h4 id="two">two</h4>
+  <p>...</p>
+  <h4 id="three">three</h4>
+  <p>...</p>
+</div>
+```
+* How it works:  
+When spying on elements other than the `<body>`, be sure to have a `height` set and `overflow-y: scroll;` applied.
+
 
 # Utilities
+
+## [Colors](https://getbootstrap.com/docs/4.0/utilities/colors/)
+
+## [Display](https://getbootstrap.com/docs/4.1/utilities/display/)
+* inline
+
+## [flex](https://getbootstrap.com/docs/4.1/utilities/flex/)
+* example:
+```
+format: d(-breakpoint)(-inline)?-flex
+<div class="d-flex p-2 bd-highlight">I'm a flexbox container!</div>
+<div class="d-inline-flex p-2 bd-highlight">I'm and inline flexbox container!</div>
+```
+* direction:
+    * `flex(-breakpoint)-row(-reverse)?`: `flex-sm-row-rever`
+    * `flex(-breakpoint)-column(-reverse)?`: `flex-md-column`
+* Justify-content: *how the display in the main axis*
+    * `.justify-content(-breakpoint)-|end|center|between|around`
+* Align-items: *how the display in the multi main axis*
+    * `.align-items(-breakpoint)-start|end|center|baseline|stretch`
+* fill: *use .flex-fill to fore them into equal widths* `.flex(-breakpoint)-fill`
+* todolist:
+    * [ ] grow and shrink
+    * [ ] auto margins
+    * [ ] wrap
+    * [ ] order
+    * [ ] align content
+
+## [Position](https://getbootstrap.com/docs/4.1/utilities/position/)
+* Common values:
+    * position-static|relative|absolute|fixed|sticky
+    * fixed-top
+    * fixed-bottom
+    * sticky-top: the element will only be fixed after you scroll past it
+
+## [Spacing](https://getbootstrap.com/docs/4.1/utilities/spacing/)
+format: `{property}{sides}-{breakpoint}-{size} | {property}{sides}-{size}`
+* property:
+    * m - margin
+    * p - padding
+* sides:
+    * t|b|l|r top|bottom|left|right
+    * x|y left and right | top and bottom
+    * blank set margin and padding on all 4 sides
+* size:
+    * 0|1|2|3|4|5|auto
+* mx-auto: horizontally centering fixed
+
+## todo list
 * [ ] Float
 
 
