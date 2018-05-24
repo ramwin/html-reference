@@ -4,13 +4,79 @@
 * 这里主要存放html标签，属性。 css一类。 如果是和JavaScript有关的看[Javascript-tutorial](https://github.com/ramwin/javascript-tutorial.git/)
 * [mozilla web开发者资料](https://developer.mozilla.org/zh-CN/docs/Web)
 * [mozilla HTML参考](https://developer.mozilla.org/zh-CN/docs/Web/HTML)
+* [Bootstrap参考](./bootstrap/README.md)
 
 
 # HTTP
-* User-Agent [查看自己的user-agent和IP](http://www.whoishostingthis.com/tools/user-agent/)
+* User-Agent:  
+[在www.ramwin.com查看自己的user-agent和IP](https://www.ramwin.com/reqres/meta/), **推荐**，因为信息更多更详细  
+[在whoisshostingthing.com查看自己的user-agent和IP](http://www.whoishostingthis.com/tools/user-agent/)  
 
 
-# 基本元素
+# [Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
+## Main Root
+## Document metadata
+* link
+* meta
+* style
+* title
+## Sectioning root
+* body
+## Content sectioning
+* address
+* article
+* aside
+* footer
+* header
+* h1, h2, h3, h4, h5, h6
+* hgroup
+* nav
+* section
+## Text content
+## Inline text semantics
+## Image and multimedia
+## Embedded content
+## Scriping
+## Demarcating edits
+## Table content
+## [Forms](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Forms)
+* [ ] button
+* [ ] datalist
+* [ ] fieldset
+* [ ] form
+* [input](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
+    * type=image
+    this is used to replace a submit button with image instead of text. **It doen't mean select a image**
+    * [type=file](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file)
+    `<input name="myFile" type="file">`  
+    if you use file input, you should add `enctype="multipart/form-data"` property to form
+        * multiple
+        * accept
+            * `image/png|.png` only the PNG files
+            * `accept="image/png, image/jpeg"` or `accept=".png, .jpg, .jpeg"`: accept PNG or JPEG files
+            * `accept="image/*"`: accept any file with an image/* MIME type
+        * required
+* [ ] label
+* [ ] legend
+* [ ] meter
+* [ ] optgroup
+* [ ] option
+* [ ] output
+* [ ] progress
+* [select](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select)
+```
+<!-- The second value will be selected initially -->
+<select name="text"> <!--Supplement an id here instead of using 'text'-->
+  <option value="first">First Value</option>
+  <option value="second" selected>Second Value</option>
+  <option value="third">Third Value</option>
+</select>
+```
+* [ ] textarea
+
+## Interactive elements
+## Web Components
+
 * [html参考资料](https://developer.mozilla.org/zh-CN/docs/Web/HTML)
 * 超链接, [案例](./a.html)
     * [参考](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a)
@@ -91,17 +157,18 @@
 
 
 # 框架或其他
-* [bootstrap](./bootstrap/README.md)
-* [flex布局](./flex/README.md)
-* [vue框架](./vue/README.md)
-* [富文本编辑器](./summernote网页编辑器.html)
-* [bootstrap-slider](./bootstrap-slider.html)
-* [ztree树状图](./ztree.html)
-* [moment参考](./moment.md), [moment时间处理](./moment时间处理.html)
-* [wing简单的开源框架](./wing.html)
-* [sweetalert, 用来替换系统的alert](./sweetalert.html)
-* [select,选择，下拉，服务器获取](./select2.md)
-* [selectize 用于方便地选择和输入,](http://selectize.github.io/selectize.js/) [github链接,](https://github.com/selectize/selectize.js) [例子](./selectize.html)
+* ## [bootstrap](./bootstrap/README.md)
+* ## [flex布局](./flex/README.md)
+* ## [vue框架](./vue/README.md)
+* ## [富文本编辑器](./summernote网页编辑器.html)
+* ## [bootstrap-slider](./bootstrap-slider.html)
+* ## [ztree树状图](./ztree.html)
+* ## [moment参考](./moment.md), [moment时间处理](./moment时间处理.html)
+* ## [wing简单的开源框架](./wing.html)
+* ## [sweetalert, 用来替换系统的alert](./sweetalert.html)
+* ## [select,选择，下拉，服务器获取](./select2.md)
+* ## [selectize 用于方便地选择和输入,](http://selectize.github.io/selectize.js/) [github链接,](https://github.com/selectize/selectize.js) [例子](./selectize.html)
+* ## [jquery datetimepicker](https://github.com/xdan/datetimepicker) [example](./datetimepicker.html)
 
 # [jquery](http://api.jquery.com/)
 ## [Ajax](http://api.jquery.com/category/ajax/)
