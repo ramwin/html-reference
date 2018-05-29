@@ -65,6 +65,38 @@ use `blockquotes` to represent blockquote
     * d-block
 
 ## Tables
+```
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+```
 ## Figures
 
 
@@ -318,9 +350,18 @@ You can get more information from [here](https://stackoverflow.com/questions/140
 When spying on elements other than the `<body>`, be sure to have a `height` set and `overflow-y: scroll;` applied.
 
 
-# Utilities
+# [Utilities](https://getbootstrap.com/docs/4.0/utilities/borders/)
+
+## [Borders](https://getbootstrap.com/docs/4.0/utilities/borders/)
+* Border-radius:
+    * rounded
+    * rounded-circle
 
 ## [Colors](https://getbootstrap.com/docs/4.0/utilities/colors/)
+* Color  
+![./img/bootstrap-color.png](./img/bootstrap-color.png)
+* Background  
+![./img/bootstrap-background.png](./img/bootstrap-background.png)
 
 ## [Display](https://getbootstrap.com/docs/4.1/utilities/display/)
 * inline

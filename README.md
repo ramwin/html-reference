@@ -169,10 +169,11 @@
 * ## [select,选择，下拉，服务器获取](./select2.md)
 * ## [selectize 用于方便地选择和输入,](http://selectize.github.io/selectize.js/) [github链接,](https://github.com/selectize/selectize.js) [例子](./selectize.html)
 * ## [jquery datetimepicker](https://github.com/xdan/datetimepicker) [example](./datetimepicker.html)
+* ## [DateRangePicker, bootstrap4](http://www.daterangepicker.com/#options)
 
 # [jquery](http://api.jquery.com/)
 ## [Ajax](http://api.jquery.com/category/ajax/)
-    * [jQuery.getJSON](http://api.jquery.com/jQuery.getJSON/)
-        ```
-        $.ajax(url, data, success)
-        ```
+* [jQuery.getJSON](http://api.jquery.com/jQuery.getJSON/)
+    ```
+    $.getJSON("/text/", {}, Function( PlainObject data, String textStatus, jqXHR jqXHR ))
+    ```
