@@ -380,13 +380,23 @@ format: d(-breakpoint)(-inline)?-flex
     * `.justify-content(-breakpoint)-|end|center|between|around`
 * Align-items: *how the display in the multi main axis*
     * `.align-items(-breakpoint)-start|end|center|baseline|stretch`
+* auto margins
+    * `mr-auto`: pushing items to the right
+    * `ml-auto`: pushing items to the left
 * fill: *use .flex-fill to fore them into equal widths* `.flex(-breakpoint)-fill`
 * todolist:
     * [ ] grow and shrink
-    * [ ] auto margins
     * [ ] wrap
     * [ ] order
     * [ ] align content
+
+## [Float](https://getbootstrap.com/docs/4.0/utilities/float/)
+```
+<div class="float-sm-left">Float left on viewports sized SM (small) or wider</div><br>
+<div class="float-md-left">Float left on viewports sized MD (medium) or wider</div><br>
+<div class="float-lg-left">Float left on viewports sized LG (large) or wider</div><br>
+<div class="float-xl-left">Float left on viewports sized XL (extra-large) or wider</div><br>
+```
 
 ## [Position](https://getbootstrap.com/docs/4.1/utilities/position/)
 * Common values:
@@ -415,9 +425,6 @@ format: `{property}{sides}-{breakpoint}-{size} | {property}{sides}-{size}`
 * size:
     * 0|1|2|3|4|5|auto
 * mx-auto: horizontally centering fixed
-
-## todo list
-* [ ] Float
 
 # [Extend](https://getbootstrap.com/docs/4.1/extend/approach/)
 * [ ] Approach
