@@ -353,9 +353,14 @@ When spying on elements other than the `<body>`, be sure to have a `height` set 
 # [Utilities](https://getbootstrap.com/docs/4.0/utilities/borders/)
 
 ## [Borders](https://getbootstrap.com/docs/4.0/utilities/borders/)
+* Border-color:
+![./img/border-color.png](./img/border-color.png)
 * Border-radius:
     * rounded
+    * rounded-top
+    * rounded-left
     * rounded-circle
+    * rounded-0
 
 ## [Colors](https://getbootstrap.com/docs/4.0/utilities/colors/)
 * Color  
