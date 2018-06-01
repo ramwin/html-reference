@@ -5,6 +5,7 @@
 * [mozilla web开发者资料](https://developer.mozilla.org/zh-CN/docs/Web)
 * [mozilla HTML参考](https://developer.mozilla.org/zh-CN/docs/Web/HTML)
 * [Bootstrap参考](./bootstrap/README.md)
+* [glossary](https://developer.mozilla.org/en-US/docs/Glossary)
 
 
 # HTTP
@@ -20,8 +21,10 @@
 * meta
 * style
 * title
+
 ## Sectioning root
 * body
+
 ## Content sectioning
 * address
 * article
@@ -32,7 +35,10 @@
 * hgroup
 * nav
 * section
+
 ## Text content
+    * [Character Entity](https://developer.mozilla.org/en-US/docs/Glossary/Entity)
+
 ## Inline text semantics
 ## Image and multimedia
 ## Embedded content
