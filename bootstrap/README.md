@@ -102,6 +102,25 @@ use `blockquotes` to represent blockquote
 
 # [Components](https://getbootstrap.com/docs/4.1/components/alerts/)
 
+## [Dropdowns](https://getbootstrap.com/docs/4.1/components/dropdowns/)
+* Example
+```
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown button
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
+```
+* Methods
+```
+$().dropdown('toggle')
+```
+
 ## [Forms](https://getbootstrap.com/docs/4.1/components/forms/)
 
 ## [List group](https://getbootstrap.com/docs/4.1/components/list-group/)

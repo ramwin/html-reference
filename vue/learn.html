@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>learn vue</title>
+    <script src="../source/vue-2.1.3.js"></script>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+    <div id="app">
+      <h1>测试绑定事件</h1>
+      <input type="text" v-on:keyup="inputkey" v-model="text"/>
+    </div>
+    <script>
+      var vm = new Vue({
+        el: "#app",
+        data: {
+          "text": "",
+        },
+        methods: {
+          "inputkey": function() {
+            console.log("输入了")
+            console.log(this.text)
+          }
+        },
+      });
+    </script>
+  </body>
+</html>

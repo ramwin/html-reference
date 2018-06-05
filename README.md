@@ -162,17 +162,58 @@
 * [根据页数自动分页](./page分页.html) [官方教程](https://esimakin.github.io/twbs-pagination/)
 
 
-# 框架或其他
+# [vue框架](./vue/README.md)
+* ## 参考
+    * ### [官网教程](https://cn.vuejs.org/v2/guide/)
+    * ### [learn test](./vue/learn.html)
+    * ### [old reference](./vue/README.md)
+* ## 基础
+    * ### [事件处理](https://cn.vuejs.org/v2/guide/events.html)
+        * `v-on:keyup`:
+        用户输入文字后触发，此时`v-model`的数值已经变化了
+
+# other framework or useful repository
 * ## [bootstrap](./bootstrap/README.md)
 * ## [flex布局](./flex/README.md)
-* ## [vue框架](./vue/README.md)
 * ## [富文本编辑器](./summernote网页编辑器.html)
 * ## [bootstrap-slider](./bootstrap-slider.html)
 * ## [ztree树状图](./ztree.html)
 * ## [moment参考](./moment.md), [moment时间处理](./moment时间处理.html)
 * ## [wing简单的开源框架](./wing.html)
 * ## [sweetalert, 用来替换系统的alert](./sweetalert.html)
-* ## [select,选择，下拉，服务器获取](./select2.md)
+* ## [select2](./select2.md)
+*Select2 is a jQuery based replacement for select boxes. It supports searching, remote data sets, and infinite scrolling of results.*  
+    1. get started, installation
+    ```
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <select></select>
+    $("#id").select2()
+    ```
+    6. data source
+    ```
+    $('.js-data-example-ajax').select2({
+      ajax: {
+        url: 'https://api.github.com/search/repositories',  // the url can also be dynamic
+        dataType: 'json'
+      },
+      processResults: function (data) {
+        // Tranforms the top-level key of the response object from 'items' to 'results'
+        // you can also add some other tranforms to ensure the results is kind of [{"id": 1, "text": "text"}, {"id": 2, "text": "text2"}]
+        return {
+          results: data.items
+        };
+      },
+    });
+    ```
+
+    9. [Dynamic option create](https://select2.org/tagging)
+    ```
+    tags: true,  // add the tag whose value is the input value
+    createTag: function(params) {return {"id": null, "text": params.term}}  // customer the tag created
+    insertTag: function(data, tag) {data.push(tag)}  // determine where the tag should be placed
+    ```
+
 * ## [selectize 用于方便地选择和输入,](http://selectize.github.io/selectize.js/) [github链接,](https://github.com/selectize/selectize.js) [例子](./selectize.html)
 * ## [jquery datetimepicker](https://github.com/xdan/datetimepicker) [example](./datetimepicker.html)
 * ## [DateRangePicker, bootstrap4](http://www.daterangepicker.com/#options)
