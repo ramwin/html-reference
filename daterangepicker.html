@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+  </head>
+  <body>
+    <input>
+    <script>
+      $('input').daterangepicker({
+        // "singleDatePicker": true,
+        "showDropdowns": true,
+        "minYear": 2014,
+        "maxYear": 2033,
+        "showWeekNumbers": true,
+        "timePicker": true,
+        "timePickerIncrement": 5,
+      });
+    </script>
+  </body>
+</html>
