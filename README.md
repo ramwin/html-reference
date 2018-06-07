@@ -37,6 +37,7 @@
 * section
 
 ## Text content
+    * `Chinese Space`: `　`
     * [Character Entity](https://developer.mozilla.org/en-US/docs/Glossary/Entity)
 
 ## Inline text semantics
@@ -168,6 +169,47 @@
     * ### [learn test](./vue/learn.html)
     * ### [old reference](./vue/README.md)
 * ## 基础
+    * ### [bind class and style](https://cn.vuejs.org/v2/guide/class-and-style.html)
+        * #### 绑定HTML Class
+            * 对象语法
+            可以绑定多个，并且和原有的class属性共存
+            ```
+            <div v-bind:class="{active: isActive}"></div>
+            <div class="static"
+               v-bind:class="{ active: isActive, 'text-danger': hasError }">
+            </div>
+            ```
+            * 数组
+            ```
+            <div v-bind:class="[activeClass, errorClass]"></div>
+            data: {
+                activeClass: 'active',
+                errorClass: 'text-danger',
+            }
+            ```
+            * 绑定在组件上
+            ```
+            Vue.component('my-component', {
+                template: '<p class="foo bar">hi</p>'
+            })
+            <my-component class="baz boo"></my-component>
+            ```
+        * #### 绑定内联样式
+            * 对象语法
+            ```
+            <div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }"></div>
+            // 绑定到一个对象更好
+            <div v-bind:style="styleObject"></div>
+            ```
+            * 数组语法
+            ```
+            <div v-bind:style="[baseStyles, overridingStyles]"></div>
+            ```
+            * 自动添加前缀  
+            当 v-bind:style 使用需要添加浏览器引擎前缀的 CSS 属性时，如 transform，Vue.js 会自动侦测并添加相应的前缀。
+            * 多重值  
+            `<div :style="{ display: ['-webkit-box', '-ms-flexbox', 'flex'] }"></div>`只会渲染数组中最后一个被浏览器支持的值
+
     * ### [事件处理](https://cn.vuejs.org/v2/guide/events.html)
         * `v-on:keyup`:
         用户输入文字后触发，此时`v-model`的数值已经变化了
@@ -259,7 +301,7 @@
         * `singleDatePicker`:  Show only a single calendar to choose one date, instead of a range picker with two calendars.
         * `autoApply`: 
         * `linkedCalendars`: When enabled, the two calendars displayed will always be for two sequential months
-        * `autoUpdateInput`: whether the date range picker should automatically update the value of the <input> element it's attached to at initialization and when the selected dates change
+        * `autoUpdateInput`: whether the date range picker should automatically update the value of the `<input>` element it's attached to at initialization and when the selected dates change
         * `parentEl`: (string) jQuery selector of the parent element that the date range picker will be added to, if not provided this will be 'body'
     * [ ] [methods](http://www.daterangepicker.com/#methods)
     * [ ] [events](http://www.daterangepicker.com/#events)
@@ -295,5 +337,11 @@
 ## [Ajax](http://api.jquery.com/category/ajax/)
 * [jQuery.getJSON](http://api.jquery.com/jQuery.getJSON/)
     ```
-    $.getJSON("/text/", {}, Function( PlainObject data, String textStatus, jqXHR jqXHR ))
+    $.getJSON("/text/", {}, Function( PlainObject data, String textStatus, jqXHR jqXHR )).fail(function(res) {
+        toastr.error(res.responseText);
+    })
+    ```
+* [jQuery.post](http://api.jquery.com/jQuery.post/)
+    ```
+    jQuery.post( url [, data ] [, success ] [, dataType ] )
     ```
