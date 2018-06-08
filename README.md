@@ -244,36 +244,38 @@ Parse, validate, manipulate, and display dates and times in JavaScript.
 ## [sweetalert, 用来替换系统的alert](./sweetalert.html)
 ## [select2](./select2.md)
 *Select2 is a jQuery based replacement for select boxes. It supports searching, remote data sets, and infinite scrolling of results.*  
-    1. get started, installation
-    ```
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
-    <select></select>
-    $("#id").select2()
-    ```
-    6. data source
-    ```
-    $('.js-data-example-ajax').select2({
-      ajax: {
-        url: 'https://api.github.com/search/repositories',  // the url can also be dynamic
-        dataType: 'json'
-      },
-      processResults: function (data) {
-        // Tranforms the top-level key of the response object from 'items' to 'results'
-        // you can also add some other tranforms to ensure the results is kind of [{"id": 1, "text": "text"}, {"id": 2, "text": "text2"}]
-        return {
-          results: data.items
-        };
-      },
-    });
-    ```
 
-    9. [Dynamic option create](https://select2.org/tagging)
-    ```
-    tags: true,  // add the tag whose value is the input value
-    createTag: function(params) {return {"id": null, "text": params.term}}  // customer the tag created
-    insertTag: function(data, tag) {data.push(tag)}  // determine where the tag should be placed
-    ```
+1. get started, installation
+```
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+<select></select>
+$("#id").select2()
+```
+
+6. data source
+```
+$('.js-data-example-ajax').select2({
+  ajax: {
+    url: 'https://api.github.com/search/repositories',  // the url can also be dynamic
+    dataType: 'json'
+  },
+  processResults: function (data) {
+    // Tranforms the top-level key of the response object from 'items' to 'results'
+    // you can also add some other tranforms to ensure the results is kind of [{"id": 1, "text": "text"}, {"id": 2, "text": "text2"}]
+    return {
+      results: data.items
+    };
+  },
+});
+```
+
+9. [Dynamic option create](https://select2.org/tagging)
+```
+tags: true,  // add the tag whose value is the input value
+createTag: function(params) {return {"id": null, "text": params.term}}  // customer the tag created
+insertTag: function(data, tag) {data.push(tag)}  // determine where the tag should be placed
+```
 
 ## [selectize 用于方便地选择和输入,](http://selectize.github.io/selectize.js/) [github链接,](https://github.com/selectize/selectize.js) [例子](./selectize.html)
 ## [jquery datetimepicker](https://github.com/xdan/datetimepicker) [example](./datetimepicker.html)
