@@ -215,32 +215,34 @@
         用户输入文字后触发，此时`v-model`的数值已经变化了
 
 # other framework or useful repository
-* ## [bootstrap](./bootstrap/README.md)
-* ## [flex布局](./flex/README.md)
-* ## [富文本编辑器](./summernote网页编辑器.html)
-* ## [bootstrap-slider](./bootstrap-slider.html)
-* ## [ztree树状图](./ztree.html)
-* ## [moment](./moment.md)
-    Parse, validate, manipulate, and display dates and times in JavaScript.
-    * example
-    ```
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
-    <script>
-      var now = moment(new Date())
-      console.log(now.format("YYYY-MM-DD"))
-      console.log(now.add(12, 'days').calendar());
-      moment("20111031", "YYYYMMDD")
-    </script>
-    ```
-    * [docs](https://momentjs.com/docs/)
-    * [manipulating](https://momentjs.com/docs/#/manipulating/)  
-        It should be noted that moments are mutable. Calling any of the manipulation methods will **change** the original moment.
-        * add: `moment().add(7, 'days|d|weeks|w|months|M|years|y')`
+## [Baidu Map API](http://lbsyun.baidu.com/index.php?title=jspopular3.0)
+* [测试页面](./test/baidu.html)
 
+## [bootstrap](./bootstrap/README.md)
+## [flex布局](./flex/README.md)
+## [富文本编辑器](./summernote网页编辑器.html)
+## [bootstrap-slider](./bootstrap-slider.html)
+## [ztree树状图](./ztree.html)
+## [moment](./moment.md)
+Parse, validate, manipulate, and display dates and times in JavaScript.
+* example
+```
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+<script>
+  var now = moment(new Date())
+  console.log(now.format("YYYY-MM-DD"))
+  console.log(now.add(12, 'days').calendar());
+  moment("20111031", "YYYYMMDD")
+</script>
+```
+* [docs](https://momentjs.com/docs/)
+* [manipulating](https://momentjs.com/docs/#/manipulating/)  
+    It should be noted that moments are mutable. Calling any of the manipulation methods will **change** the original moment.
+    * add: `moment().add(7, 'days|d|weeks|w|months|M|years|y')`
 
-* ## [wing简单的开源框架](./wing.html)
-* ## [sweetalert, 用来替换系统的alert](./sweetalert.html)
-* ## [select2](./select2.md)
+## [wing简单的开源框架](./wing.html)
+## [sweetalert, 用来替换系统的alert](./sweetalert.html)
+## [select2](./select2.md)
 *Select2 is a jQuery based replacement for select boxes. It supports searching, remote data sets, and infinite scrolling of results.*  
     1. get started, installation
     ```
@@ -273,9 +275,9 @@
     insertTag: function(data, tag) {data.push(tag)}  // determine where the tag should be placed
     ```
 
-* ## [selectize 用于方便地选择和输入,](http://selectize.github.io/selectize.js/) [github链接,](https://github.com/selectize/selectize.js) [例子](./selectize.html)
-* ## [jquery datetimepicker](https://github.com/xdan/datetimepicker) [example](./datetimepicker.html)
-* ## [DateRangePicker, bootstrap4](http://www.daterangepicker.com/#options)
+## [selectize 用于方便地选择和输入,](http://selectize.github.io/selectize.js/) [github链接,](https://github.com/selectize/selectize.js) [例子](./selectize.html)
+## [jquery datetimepicker](https://github.com/xdan/datetimepicker) [example](./datetimepicker.html)
+## [DateRangePicker, bootstrap4](http://www.daterangepicker.com/#options)
     * [https://github.com/dangrossman/daterangepicker](https://github.com/dangrossman/daterangepicker)
     * [http://www.daterangepicker.com/](http://www.daterangepicker.com/)
     * [Example](./daterangepicker.html)
