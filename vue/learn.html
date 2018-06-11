@@ -22,6 +22,14 @@
             console.log(this.text)
           }
         },
+        created: function() {
+          console.log("触发created事件");
+          debugger;
+        },
+        mounted: function() {
+          debugger;
+          console.log("触发mounted事件");
+        }
       });
     </script>
   </body>
