@@ -34,56 +34,67 @@
 
 
 # [vue框架](./vue/README.md)
-* ## 参考
-    * ### [官网教程](https://cn.vuejs.org/v2/guide/)
-    * ### [learn test](./vue/learn.html)
-    * ### [old reference 以前整理的资料](./vue/README.md)
-* ## 基础
-    * ### Vue实例
-    * ### [bind class and style](https://cn.vuejs.org/v2/guide/class-and-style.html)
-        * #### 绑定HTML Class
-            * 对象语法
-            可以绑定多个，并且和原有的class属性共存
-            ```
-            <div v-bind:class="{active: isActive}"></div>
-            <div class="static"
-               v-bind:class="{ active: isActive, 'text-danger': hasError }">
-            </div>
-            ```
-            * 数组
-            ```
-            <div v-bind:class="[activeClass, errorClass]"></div>
-            data: {
-                activeClass: 'active',
-                errorClass: 'text-danger',
-            }
-            ```
-            * 绑定在组件上
-            ```
-            Vue.component('my-component', {
-                template: '<p class="foo bar">hi</p>'
-            })
-            <my-component class="baz boo"></my-component>
-            ```
-        * #### 绑定内联样式
-            * 对象语法
-            ```
-            <div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }"></div>
-            // 绑定到一个对象更好
-            <div v-bind:style="styleObject"></div>
-            ```
-            * 数组语法
-            ```
-            <div v-bind:style="[baseStyles, overridingStyles]"></div>
-            ```
-            * 自动添加前缀  
-            当 v-bind:style 使用需要添加浏览器引擎前缀的 CSS 属性时，如 transform，Vue.js 会自动侦测并添加相应的前缀。
-            * 多重值  
-            `<div :style="{ display: ['-webkit-box', '-ms-flexbox', 'flex'] }"></div>`只会渲染数组中最后一个被浏览器支持的值
+## 参考
+* ### [官网教程](https://cn.vuejs.org/v2/guide/)
+* ### [learn test](./vue/learn.html)
+* ### [old reference 以前整理的资料](./vue/README.md)
 
-    * ### [事件处理](https://cn.vuejs.org/v2/guide/events.html)
-        * `v-on:keyup`:
-        用户输入文字后触发，此时`v-model`的数值已经变化了
+## 基础
+* ### Vue实例
+    * 生命周期  
+    [生命周期图片, 因为图片太大，就不显示了](lifecycle.png)  
+        * beforeCreate: 
+        * created: vue创建完毕后触发
+        * mounted: 页面渲染完毕后触发
+        * updated: vue数据变化后，重新渲染触发
+* ### [bind class and style](https://cn.vuejs.org/v2/guide/class-and-style.html)
+    * #### 绑定HTML Class
+        * 对象语法
+        可以绑定多个，并且和原有的class属性共存
+        ```
+        <div v-bind:class="{active: isActive}"></div>
+        <div class="static"
+           v-bind:class="{ active: isActive, 'text-danger': hasError }">
+        </div>
+        ```
+        * 数组
+        ```
+        <div v-bind:class="[activeClass, errorClass]"></div>
+        data: {
+            activeClass: 'active',
+            errorClass: 'text-danger',
+        }
+        ```
+        * 绑定在组件上
+        ```
+        Vue.component('my-component', {
+            template: '<p class="foo bar">hi</p>'
+        })
+        <my-component class="baz boo"></my-component>
+        ```
+    * #### 绑定内联样式
+        * 对象语法
+        ```
+        <div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }"></div>
+        // 绑定到一个对象更好
+        <div v-bind:style="styleObject"></div>
+        ```
+        * 数组语法
+        ```
+        <div v-bind:style="[baseStyles, overridingStyles]"></div>
+        ```
+        * 自动添加前缀  
+        当 v-bind:style 使用需要添加浏览器引擎前缀的 CSS 属性时，如 transform，Vue.js 会自动侦测并添加相应的前缀。
+        * 多重值  
+        `<div :style="{ display: ['-webkit-box', '-ms-flexbox', 'flex'] }"></div>`只会渲染数组中最后一个被浏览器支持的值
+* ### [事件处理](https://cn.vuejs.org/v2/guide/events.html)
+    * `v-on:keyup`:
+    用户输入文字后触发，此时`v-model`的数值已经变化了
+
+## API
+    ### Lifecycle Hooks 生命周期钩子
+        * beforeCreate: data 和 eventwatcher 没被配置
+        * created: data oberver，属性和方法运算，watch/event 回调已经配置
 
 # other framework or useful repository
 ## [Baidu Map API](http://lbsyun.baidu.com/index.php?title=jspopular3.0)
