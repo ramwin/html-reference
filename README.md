@@ -100,6 +100,11 @@
 ## [Baidu Map API](http://lbsyun.baidu.com/index.php?title=jspopular3.0)
 * [测试页面](./test/baidu.html)
 
+## amap api 高德地图api
+* [official documents 官方文档](http://lbs.amap.com/api/javascript-api/summary)
+* [massmarker 海量点标记](http://lbs.amap.com/api/javascript-api/guide/overlays/massmarker)
+    * [测试](./test/amap_massmarker.html)
+
 ## [bootstrap](./bootstrap/README.md)
 ## [flex布局](./flex/README.md)
 ## [富文本编辑器](./summernote网页编辑器.html)
@@ -138,6 +143,7 @@ $("#id").select2()
 6. data source
 ```
 $('.js-data-example-ajax').select2({
+  minimumInputLength: 2, // Minimum search term length
   ajax: {
     url: 'https://api.github.com/search/repositories',  // the url can also be dynamic
     dataType: 'json'
