@@ -7,7 +7,6 @@
     <title>点聚合</title>
     <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
     <script src="http://webapi.amap.com/maps?v=1.4.6&key=93fc94012de7fd139283557b8d04534d&plugin=AMap.MarkerClusterer"></script>
-    <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
 </head>
 <body>
 <div id="container"></div>
@@ -16,9 +15,31 @@
     <input type="button" class="button" value="自定义图标" id="add1" onclick = 'addCluster(1)'/>
     <input type="button" class="button" value="完全自定义" id="add2" onclick = 'addCluster(2)'/>
 </div>
-<script src="http://a.amap.com/jsapi_demos/static/china.js"></script>
 <script>
-    var points = [{'lnglat': ['113.864691', '22.942327']}, {'lnglat': ['113.370643', '22.938827']}, {'lnglat': ['112.985037', '23.15046']}, {'lnglat': ['110.361899', '20.026695']}, {'lnglat': ['121.434529', '31.215641']}, {'lnglat': ['120.682502', '28.011099']}, {'lnglat': ['126.687123', '45.787618']}, {'lnglat': ['103.970724', '30.397931']}, {'lnglat': ['117.212164', '31.831641']}, {'lnglat': ['121.411101', '31.059407']}, {'lnglat': ['104.137953', '30.784276']}, {'lnglat': ['120.499683', '30.042305']}, {'lnglat': ['108.94686', '34.362975']}, {'lnglat': ['112.873295', '22.920901']}, {'lnglat': ['113.373916', '23.086728']}, {'lnglat': ['113.250159', '23.075847']}, {'lnglat': ['116.675933', '39.986343']}, {'lnglat': ['120.75997', '31.734934']}, {'lnglat': ['118.314741', '32.26999']}, {'lnglat': ['111.723311', '34.771838']}, {'lnglat': ['119.537126', '26.200017']}, {'lnglat': ['113.830123', '23.00734']}, {'lnglat': ['119.273795', '26.060002']}]
+    var points = [
+      {'lnglat': ['113.864691', '22.942327']},
+      {'lnglat': ['113.370643', '22.938827']},
+      {'lnglat': ['112.985037', '23.15046']},
+      {'lnglat': ['110.361899', '20.026695']},
+      {'lnglat': ['121.434529', '31.215641']},
+      {'lnglat': ['120.682502', '28.011099']},
+      {'lnglat': ['126.687123', '45.787618']},
+      {'lnglat': ['103.970724', '30.397931']},
+      {'lnglat': ['117.212164', '31.831641']},
+      {'lnglat': ['121.411101', '31.059407']},
+      {'lnglat': ['104.137953', '30.784276']},
+      {'lnglat': ['120.499683', '30.042305']},
+      {'lnglat': ['108.94686', '34.362975']},
+      {'lnglat': ['112.873295', '22.920901']},
+      {'lnglat': ['113.373916', '23.086728']},
+      {'lnglat': ['113.250159', '23.075847']},
+      {'lnglat': ['116.675933', '39.986343']},
+      {'lnglat': ['120.75997', '31.734934']},
+      {'lnglat': ['118.314741', '32.26999']},
+      {'lnglat': ['111.723311', '34.771838']},
+      {'lnglat': ['119.537126', '26.200017']},
+      {'lnglat': ['113.830123', '23.00734']},
+      {'lnglat': ['119.273795', '26.060002']}]
     var cluster, markers = [];
     var map = new AMap.Map("container", {
         resizeEnable: true,
@@ -32,7 +53,9 @@
             offset: new AMap.Pixel(-15,-15)
         }))
     }
-    var count  = markers.length;
+    console.log(markers)
+    // var count  = markers.length;
+    /*
     var _renderCluserMarker = function (context) {
         var factor = Math.pow(context.count/count,1/18)
         var div = document.createElement('div');
@@ -55,8 +78,10 @@
         context.marker.setOffset(new AMap.Pixel(-size/2,-size/2));
         context.marker.setContent(div)
      }
+     */
     // addCluster(2);
-    addCluster(1);
+    // addCluster();
+    cluster = new AMap.MarkerClusterer(map, markers,{gridSize:80});
 
     function addCluster(tag) {
         if (cluster) {

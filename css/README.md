@@ -5,6 +5,7 @@
 * [豆瓣快速参考](https://www.douban.com/note/65562130/?type=like)
 * [背景background](background背景.md)
 * 选择器 [快速参考](./select选择器.md) [例子](./select选择器.html)
+* [训练](https://flukeout.github.io/)
 
 # a标签
 ```
