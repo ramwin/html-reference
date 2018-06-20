@@ -67,6 +67,17 @@
     用户输入文字后触发，此时`v-model`的数值已经变化了
 * [ ] 表单输入绑定
 * ### [Components Basics 组件基础](https://cn.vuejs.org/v2/guide/components.html)
+    * 基础示例
+    ```
+      Vue.component('button-counter', {
+        data: function () {
+          return {
+            count: 0
+          }
+        },
+        template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
+      })
+    ```
 
 ## API
     ### Lifecycle Hooks 生命周期钩子
