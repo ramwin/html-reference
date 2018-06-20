@@ -73,6 +73,10 @@
         * beforeCreate: data 和 eventwatcher 没被配置
         * created: data oberver，属性和方法运算，watch/event 回调已经配置
 
+## 其他包
+* ### [Vue-amap 高德地图](https://elemefe.github.io/vue-amap/#/)
+  * [测试代码](./test/test-vue-amap.html)
+
 
 # HTTP协议
 * User-Agent:  
