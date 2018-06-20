@@ -28,7 +28,6 @@
             >
         </el-amap-marker>
       </el-amap>
-      <button v-on:click="add_marker">点我</button>
     </div>
   </body>
   <!-- 先引入 Vue -->
@@ -62,7 +61,11 @@
               });
               console.log(cluster);
             }, 1000);
-          }
+          },
+          click(o) {
+            alert(2);
+            debugger;
+          },
         }
       },
       created: function() {
@@ -74,12 +77,15 @@
 
         while (++index <= 30) {
           markers.push({
-            position: [basePosition[0] + 0.01 * index, basePosition[1]],
+            position: [basePosition[0], basePosition[1]],
             content: '<div style="text-align:center; background-color: hsla(180, 100%, 50%, 0.7); height: 24px; width: 24px; border: 1px solid hsl(180, 100%, 40%); border-radius: 12px; box-shadow: hsl(180, 100%, 50%) 0px 0px 1px;"></div>',
             events: {
               init(o) {
                 scope.markerRefs.push(o);
-              }
+              },
+              click(o) {
+                debugger;
+              },
             }
           });
         }
