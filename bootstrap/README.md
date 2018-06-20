@@ -102,6 +102,21 @@ use `blockquotes` to represent blockquote
 
 # [Components](https://getbootstrap.com/docs/4.1/components/alerts/)
 
+## [Buttons](https://getbootstrap.com/docs/4.1/components/buttons/)
+* Example  
+![button.png](./img/button.png)
+```
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-dark">Dark</button>
+<button type="button" class="btn btn-link">Link</button>
+```
+
 ## [Dropdowns](https://getbootstrap.com/docs/4.1/components/dropdowns/)
 * Example
 ```

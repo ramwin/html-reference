@@ -97,6 +97,8 @@
 
 # [jquery](http://api.jquery.com/)
 ## [Ajax](http://api.jquery.com/category/ajax/)
+* [jQuery.get](https://api.jquery.com/jquery.get/)
+`jQuery.get( url [, data ] [, success ] [, dataType ] )`
 * [jQuery.getJSON](http://api.jquery.com/jQuery.getJSON/)
     ```
     $.getJSON("/text/", {}, Function( PlainObject data, String textStatus, jqXHR jqXHR )).fail(function(res) {
@@ -117,6 +119,8 @@
 * [official documents 官方文档](http://lbs.amap.com/api/javascript-api/summary)
 * [massmarker 海量点标记](http://lbs.amap.com/api/javascript-api/guide/overlays/massmarker)
     * [测试](./test/amap_massmarker.html)
+    * 注意事项:
+        如果两个点标记的坐标完全一样，那么就无法分开
 
 ## [bootstrap](./bootstrap/README.md)
 ## [bootstrap-slider](./bootstrap-slider.html)
