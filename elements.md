@@ -1,6 +1,6 @@
 **Xiang Wang @ 2018-06-11 17:33:04**
 
-# [Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
+# [Elements 元素](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 ## Main Root
 ## Document metadata
 * link
@@ -23,8 +23,8 @@
 * section
 
 ## Text content
-    * `Chinese Space`: `　`
-    * [Character Entity](https://developer.mozilla.org/en-US/docs/Glossary/Entity)
+* `Chinese Space`: `　`
+* [Character Entity](https://developer.mozilla.org/en-US/docs/Glossary/Entity)
 
 ## Inline text semantics
 ## Image and multimedia
@@ -34,6 +34,28 @@
 ## Table content
 ## [Forms](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Forms)
 * [ ] button
+* [ ] [checkbox](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox)
+```
+<fieldset>
+  <legend>Choose some monster features</legend>
+  <div>
+    <input type="checkbox" id="scales" name="feature"
+      value="scales" checked />
+    <label for="scales">Scales</label>
+  </div>
+  <div>
+    <input type="checkbox" id="horns" name="feature"
+      value="horns" />
+    <label for="horns">Horns</label>
+  </div>
+  <div>
+    <input type="checkbox" id="claws" name="feature"
+      value="claws" />
+    <label for="claws">Claws</label>
+  </div>
+</fieldset>
+```
+
 * [ ] datalist
 * [ ] fieldset
 * [ ] form

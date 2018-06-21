@@ -78,6 +78,17 @@
         template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
       })
     ```
+    * [ ] 
+    * [props](https://cn.vuejs.org/v2/guide/components.html#%E9%80%9A%E8%BF%87-Prop-%E5%90%91%E5%AD%90%E7%BB%84%E4%BB%B6%E4%BC%A0%E9%80%92%E6%95%B0%E6%8D%AE)
+        ```
+        props: ['title', 'content', 'id']
+        props: {
+            'title': Number,
+            'id': {
+                type: Number, required: true,
+            }
+        }
+        ```
 
 ## API
     ### Lifecycle Hooks 生命周期钩子
