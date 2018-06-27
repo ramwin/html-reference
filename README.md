@@ -11,7 +11,9 @@
 # [vue框架](./vue/README.md)
 ## 参考
 * ### [官网教程](https://cn.vuejs.org/v2/guide/)
-* ### [learn test](./vue/learn.html)
+* ### learn test
+    * [基础测试](./vue/learn.html)
+    * [测试两个vm绑定一个值](./vue/2object.html) *请尽量不要这么做*
 * ### [old reference 以前整理的资料](./vue/README.md)
 
 ## 基础
@@ -62,6 +64,7 @@
         当 v-bind:style 使用需要添加浏览器引擎前缀的 CSS 属性时，如 transform，Vue.js 会自动侦测并添加相应的前缀。
         * 多重值  
         `<div :style="{ display: ['-webkit-box', '-ms-flexbox', 'flex'] }"></div>`只会渲染数组中最后一个被浏览器支持的值
+* ### [List Rendering 列表渲染](https://cn.vuejs.org/v2/guide/list.html)
 * ### [事件处理](https://cn.vuejs.org/v2/guide/events.html)
     * `v-on:keyup`:
     用户输入文字后触发，此时`v-model`的数值已经变化了
@@ -123,6 +126,34 @@
 
 # [jquery](http://api.jquery.com/)
 ## [Ajax](http://api.jquery.com/category/ajax/)
+* [jQuery.ajax](https://api.jquery.com/jQuery.ajax/)
+    ```
+    $.ajax({
+            url:"/upload/file/",
+            type: "POST",
+            async: true,
+
+            # 普通请求
+            data: {
+                data:reader2.result,
+            },
+
+            # json请求
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(data),
+
+            beforeSend: function(request) {
+                        request.setRequestHeader("Test", "Chenxizhang");
+                    },
+            success:function(responseTxt){
+                console.log('ok');
+            },
+            error: function(jqXHR, textStatus, errorThrown){
+                console.log("错误")
+                console.log(jqXHR.responseJSON)
+            },
+    });
+    ```
 * [jQuery.get](https://api.jquery.com/jquery.get/)
 `jQuery.get( url [, data ] [, success ] [, dataType ] )`
 * [jQuery.getJSON](http://api.jquery.com/jQuery.getJSON/)
