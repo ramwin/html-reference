@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>learn vue</title>
+    <script src="../source/vue-2.1.3.js"></script>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+    <div id="app">
+      <h1>测试2个vue绑定一个input</h1>
+      外面的值: {{text}}
+      修改外面的值: <input v-model="text">
+      <div id="innerapp">
+        里面的值: {{text}}
+        修改里面的text: <input v-model="text">
+        <hr>
+        里面的text-inner: {{textinner}}
+      </div>
+    </div>
+    <script>
+      var vm = new Vue({
+        el: "#app",
+        data: {
+          "text": "",
+        },
+      });
+      var vm2 = new Vue({
+        el: "#innerapp",
+        data: {
+          "text": "",
+          "textinner": "",
+        },
+      })
+    </script>
+  </body>
+</html>
