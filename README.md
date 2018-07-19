@@ -3,6 +3,7 @@
 # README
 * 这里主要存放html标签，属性。 css一类。 如果是和JavaScript有关的看[Javascript-tutorial](https://github.com/ramwin/javascript-tutorial.git/)
 * [mozilla web开发者资料](https://developer.mozilla.org/zh-CN/docs/Web)
+* [mozilla learning html: guides and tutorials](https://developer.mozilla.org/en-US/docs/Learn/HTML)
 * [mozilla HTML参考](https://developer.mozilla.org/zh-CN/docs/Web/HTML)
 * [Bootstrap参考](./bootstrap/README.md)
 * [glossary](https://developer.mozilla.org/en-US/docs/Glossary)
@@ -111,12 +112,9 @@
     * 400: 参数错误
     * 429: 请求过于频繁
 
-
 # [Elements 基础元素](./elements.md)
 
-
 # [CSS 样式](./css/README.md)
-
 
 # 功能
 * [截取图片](./cropper图片截取.html)
@@ -125,47 +123,54 @@
 
 
 # [jquery](http://api.jquery.com/)
-## [Ajax](http://api.jquery.com/category/ajax/)
-* [jQuery.ajax](https://api.jquery.com/jQuery.ajax/)
-    ```
-    $.ajax({
-            url:"/upload/file/",
-            type: "POST",
-            async: true,
+* ## install
+```
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
+```
+* ## [Ajax](http://api.jquery.com/category/ajax/)
+    * [jQuery.ajax](https://api.jquery.com/jQuery.ajax/)
+        ```
+        $.ajax({
+                url:"/upload/file/",
+                type: "POST",
+                async: true,
 
-            # 普通请求
-            data: {
-                data:reader2.result,
-            },
+                # 普通请求
+                data: {
+                    data:reader2.result,
+                },
 
-            # json请求
-            contentType: "application/json; charset=utf-8",
-            data: JSON.stringify(data),
+                # json请求
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify(data),
 
-            beforeSend: function(request) {
-                        request.setRequestHeader("Test", "Chenxizhang");
-                    },
-            success:function(responseTxt){
-                console.log('ok');
-            },
-            error: function(jqXHR, textStatus, errorThrown){
-                console.log("错误")
-                console.log(jqXHR.responseJSON)
-            },
-    });
-    ```
-* [jQuery.get](https://api.jquery.com/jquery.get/)
-`jQuery.get( url [, data ] [, success ] [, dataType ] )`
-* [jQuery.getJSON](http://api.jquery.com/jQuery.getJSON/)
-    ```
-    $.getJSON("/text/", {}, Function( PlainObject data, String textStatus, jqXHR jqXHR )).fail(function(res) {
-        toastr.error(res.responseText);
-    })
-    ```
-* [jQuery.post](http://api.jquery.com/jQuery.post/)
-    ```
-    jQuery.post( url [, data ] [, success ] [, dataType ] )
-    ```
+                beforeSend: function(request) {
+                            request.setRequestHeader("Test", "Chenxizhang");
+                        },
+                success:function(responseTxt){
+                    console.log('ok');
+                },
+                error: function(jqXHR, textStatus, errorThrown){
+                    console.log("错误")
+                    console.log(jqXHR.responseJSON)
+                },
+        });
+        ```
+    * [jQuery.get](https://api.jquery.com/jquery.get/)
+    `jQuery.get( url [, data ] [, success ] [, dataType ] )`
+    * [jQuery.getJSON](http://api.jquery.com/jQuery.getJSON/)
+        ```
+        $.getJSON("/text/", {}, Function( PlainObject data, String textStatus, jqXHR jqXHR )).fail(function(res) {
+            toastr.error(res.responseText);
+        })
+        ```
+    * [jQuery.post](http://api.jquery.com/jQuery.post/)
+        ```
+        jQuery.post( url [, data ] [, success ] [, dataType ] )
+        ```
+* ## [UI api](https://api.jqueryui.com/)
+    * [toggle](https://api.jqueryui.com/toggle/): `$('#id').toggle()`
+
 
 
 # other framework or useful repository 其他有用的框架

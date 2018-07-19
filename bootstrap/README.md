@@ -137,8 +137,37 @@ $().dropdown('toggle')
 ```
 
 ## [Forms](https://getbootstrap.com/docs/4.1/components/forms/)
+### Layout
+#### Form grid
+* [ ] form row
+* Horizontal form
 
-* Checkboxes and radios
+### [Help Text](https://getbootstrap.com/docs/4.1/components/forms/#help-text)
+![](./img/form_help_text.png)
+```
+<label for="inputPassword5">Password</label>
+<input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+<small id="passwordHelpBlock" class="form-text text-muted">
+  Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+</small>
+```
+
+![](./img/form_help_text_inline.png)
+```
+<form class="form-inline">
+  <div class="form-group">
+    <label for="inputPassword6">Password</label>
+    <input type="password" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
+    <small id="passwordHelpInline" class="text-muted">
+      Must be 8-20 characters long.
+    </small>
+  </div>
+</form>
+```
+
+
+### Custom forms
+#### Checkboxes and radios
     * inline  
     ![](./img/inline-checkbox.png)
     ```python
@@ -312,6 +341,17 @@ Have a bunch of buttonss that all trigger the same modal with slightly different
   </div>
 </div>
 ```
+
+### [options](https://getbootstrap.com/docs/4.1/components/modal/#options)
+    ```
+    $('#myModal').modal(options)
+    ```
+### [methods](https://getbootstrap.com/docs/4.1/components/modal/#methods)
+    * $('#myModal').modal('hide')
+
+### TODO
+* [ ] events
+
 
 ## [Navs](https://getbootstrap.com/docs/4.1/components/navs/)
 * [example](./navs.html)
