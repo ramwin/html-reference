@@ -97,6 +97,17 @@ use `blockquotes` to represent blockquote
   </tbody>
 </table>
 ```
+* Striped rows
+Use `.table-striped` to add zebra-striping  使用 `.table-striped` 来产生间隔条纹
+    * Change the color:
+    ```
+    .table-striped>tbody>tr:nth-child(odd)>td,
+    .table-striped>tbody>tr:nth-child(odd)>th {
+      background-color: red; // Choose your own color here
+    }
+    ```
+
+
 ## Figures
 
 
