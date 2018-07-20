@@ -10,7 +10,7 @@
       .c {
         border-collapse: collapse;
       }
-      td {
+      .c td {
         border: 10px solid red;
       }
     </style>
@@ -46,6 +46,34 @@
       <tr>
         <td>内容</td>
         <td>内容</td>
+      </tr>
+    </table>
+
+    <style>
+      #testwidth {
+      }
+    </style>
+    <table id="#testwidth" border=1>
+      <caption>测试table设置宽度</caption>
+      <tr>
+        <th style="max-width: 100px">标题1</th>
+        <th>标题2</th>
+      </tr>
+      <tr>
+        <td style="max-width: 100px">
+          内容1
+          内容1
+          内容1
+          内容1
+          内容1
+          内容1
+          内容1
+          内容1
+          内容1
+          内容1
+          内容1
+        </td>
+        <td>内容2</td>
       </tr>
     </table>
   </body>

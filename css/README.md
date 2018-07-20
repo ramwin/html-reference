@@ -66,6 +66,7 @@
 
 ```
     border-collapse: collapse(两个边框合并成1个) | seperate(默认的分别现实独立的边框)
+    min-width: 对于th和td，一列的宽度是取决于最窄的那个
 ```
 
 # [伪类]()
