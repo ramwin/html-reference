@@ -25,6 +25,8 @@
         * created: vue创建完毕后触发
         * mounted: 页面渲染完毕后触发
         * updated: vue数据变化后，重新渲染触发
+* ### [侦听器](https://cn.vuejs.org/v2/guide/computed.html#侦听器)
+
 * ### [bind class and style](https://cn.vuejs.org/v2/guide/class-and-style.html)
     * #### 绑定HTML Class
         * 对象语法
@@ -174,142 +176,110 @@
 
 
 # other framework or useful repository 其他有用的框架
-## [Baidu Map API](http://lbsyun.baidu.com/index.php?title=jspopular3.0)
-* [测试页面](./test/baidu.html)
-
-## amap api 高德地图api
-* [official documents 官方文档](http://lbs.amap.com/api/javascript-api/summary)
-* [massmarker 海量点标记](http://lbs.amap.com/api/javascript-api/guide/overlays/massmarker)
-    * [测试](./test/amap_massmarker.html)
-    * 注意事项:
-        如果两个点标记的坐标完全一样，那么就无法分开
-
-## [bootstrap](./bootstrap/README.md)
-## [bootstrap-slider](./bootstrap-slider.html)
-## [flex布局](./flex/README.md)
-## [富文本编辑器](./summernote网页编辑器.html)
-## [less](http://lesscss.org/)
-* Document
+* ## [Baidu Map API](http://lbsyun.baidu.com/index.php?title=jspopular3.0)
+    * [测试页面](./test/baidu.html)
+* ## amap api 高德地图api
+    * [official documents 官方文档](http://lbs.amap.com/api/javascript-api/summary)
+    * [massmarker 海量点标记](http://lbs.amap.com/api/javascript-api/guide/overlays/massmarker)
+        * [测试](./test/amap_massmarker.html)
+        * 注意事项:
+            如果两个点标记的坐标完全一样，那么就无法分开
+* ## [bootstrap](./bootstrap/README.md)
+* ## [bootstrap-slider](./bootstrap-slider.html)
+* ## [DateRangePicker, bootstrap4](daterangepicker.md)
+* ## [flex布局](./flex/README.md)
+* ## [富文本编辑器](./summernote网页编辑器.html)
+* ## [jquery datetimepicker](https://github.com/xdan/datetimepicker) [example](./datetimepicker.html)
+not very good use daterangepicker instead
+* ## [jquery pagination plugin 分页](http://josecebe.github.io/twbs-pagination/)
+    * [website](http://josecebe.github.io/twbs-pagination/)
+    * demo
     ```
-    <link rel="stylesheet/less" type="text/css" href="styles.less" />
-    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.2/less.min.js" ></script>
+    <script src="https://raw.githubusercontent.com/josecebe/twbs-pagination/master/jquery.twbsPagination.js"></script>
+    <div id="pagination-demo"></div>
+    <script>
+      $('#pagination-demo').twbsPagination({
+        totalPages: 35,
+        visiblePages: 7,
+        first: "第一页",
+        prev: "上一页",
+        next: "下一页",
+        last: "最后一页",
+        onPageClick: function (event, page) {
+            $('#page-content').text('Page ' + page);
+        }
+      });
+    </script>
     ```
-
-## [markjs](https://github.com/julmot/mark.js/) *高亮某个字段*
-## [moment](./moment.md)
+    * options
+        * 
+    * methods:
+        * destroy
+        ```
+        var $pagination = $('selector');
+        $pagination.twbsPagination('destroy');  // use destroy and recreate to enable dynamic total page
+        $pagination.twbs-pagination(options);
+        ```
+* ## [less](http://lesscss.org/)
+    * Document
+        ```
+        <link rel="stylesheet/less" type="text/css" href="styles.less" />
+        <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.2/less.min.js" ></script>
+        ```
+* ## [markjs](https://github.com/julmot/mark.js/) *高亮某个字段*
+* ## [moment](./moment.md)
 Parse, validate, manipulate, and display dates and times in JavaScript.
-* Document
-    * example
-    ```
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
-    <script>
-      var now = moment(new Date())
-      console.log(now.format("YYYY-MM-DD"))
-      console.log(now.add(12, 'days').calendar());
-      moment("20111031", "YYYYMMDD")
-    </script>
-    ```
-    * [docs](https://momentjs.com/docs/)
-    * [manipulating](https://momentjs.com/docs/#/manipulating/)  
-        It should be noted that moments are mutable. Calling any of the manipulation methods will **change** the original moment.
-        * add: `moment().add(7, 'days|d|weeks|w|months|M|years|y')`
+    * Document
+        * example
+        ```
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+        <script>
+          var now = moment(new Date())
+          console.log(now.format("YYYY-MM-DD"))
+          console.log(now.add(12, 'days').calendar());
+          moment("20111031", "YYYYMMDD")
+        </script>
+        ```
+        * [docs](https://momentjs.com/docs/)
+        * [manipulating](https://momentjs.com/docs/#/manipulating/)  
+            It should be noted that moments are mutable. Calling any of the manipulation methods will **change** the original moment.
+            * add: `moment().add(7, 'days|d|weeks|w|months|M|years|y')`
+* ## [sweetalert, 用来替换系统的alert](./sweetalert.html)
+* ## [select2](./select2.md)
+    *Select2 is a jQuery based replacement for select boxes. It supports searching, remote data sets, and infinite scrolling of results.*  
+    * Document
+        1. get started, installation
+        ```
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+        <select></select>
+        $("#id").select2()
+        ```
 
-## [sweetalert, 用来替换系统的alert](./sweetalert.html)
-## [select2](./select2.md)
-*Select2 is a jQuery based replacement for select boxes. It supports searching, remote data sets, and infinite scrolling of results.*  
-* Document
-    1. get started, installation
-    ```
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
-    <select></select>
-    $("#id").select2()
-    ```
+        6. data source
+        ```
+        $('.js-data-example-ajax').select2({
+          minimumInputLength: 2, // Minimum search term length
+          ajax: {
+            url: 'https://api.github.com/search/repositories',  // the url can also be dynamic
+            dataType: 'json'
+          },
+          processResults: function (data) {
+            // Tranforms the top-level key of the response object from 'items' to 'results'
+            // you can also add some other tranforms to ensure the results is kind of [{"id": 1, "text": "text"}, {"id": 2, "text": "text2"}]
+            return {
+              results: data.items
+            };
+          },
+        });
+        ```
 
-    6. data source
-    ```
-    $('.js-data-example-ajax').select2({
-      minimumInputLength: 2, // Minimum search term length
-      ajax: {
-        url: 'https://api.github.com/search/repositories',  // the url can also be dynamic
-        dataType: 'json'
-      },
-      processResults: function (data) {
-        // Tranforms the top-level key of the response object from 'items' to 'results'
-        // you can also add some other tranforms to ensure the results is kind of [{"id": 1, "text": "text"}, {"id": 2, "text": "text2"}]
-        return {
-          results: data.items
-        };
-      },
-    });
-    ```
-
-    9. [Dynamic option create](https://select2.org/tagging)
-    ```
-    tags: true,  // add the tag whose value is the input value
-    createTag: function(params) {return {"id": null, "text": params.term}}  // customer the tag created
-    insertTag: function(data, tag) {data.push(tag)}  // determine where the tag should be placed
-    ```
-
-## [selectize 用于方便地选择和输入,](http://selectize.github.io/selectize.js/) [github链接,](https://github.com/selectize/selectize.js) [例子](./selectize.html)
-## [jquery datetimepicker](https://github.com/xdan/datetimepicker) [example](./datetimepicker.html)
-## [DateRangePicker, bootstrap4](http://www.daterangepicker.com/#options)
-* [https://github.com/dangrossman/daterangepicker](https://github.com/dangrossman/daterangepicker)
-* [http://www.daterangepicker.com/](http://www.daterangepicker.com/)
-* Document
-    * [Example](./daterangepicker.html)
-    ```
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-    <script>
-    $('input[name="dates"]').daterangepicker(options);
-    </script>
-    ```
-    * [interactive config generator](http://www.daterangepicker.com/#config)
-    * [option](http://www.daterangepicker.com/#options)
-        * `common option`: startDate, endDate, minDate, maxDate, timePicker, timePickerIncrement, timePicker24Hour, timePickerSeconds
-        * `seldom used option`: showWeekNumbers, showISOWeekNumbers, isInvalidDate, isCustomDate, 
-        * `ranges`: Set predefined date ranges the user can select from.
-        * `showDropdowns`: whether use can select year and month or not
-        * `showCustomRangeLabel`: Displays "Custom Range" at the end of the list of predefined ranges
-        * `alwaysShowCalendars`: Normally, if you use the ranges option to specify pre-defined date ranges, calendars for choosing a custom date range are not shown until the user clicks "Custom Range". When this option is set to true, the calendars for choosing a custom date range are always shown instead.
-        * `style option`: opens: ('left'/'right'/'center') | drops: ('down'/'up') | buttonClasses | applyButtonClasses | cancelButtonClasses 
-        * `local`: Allows you to provide localized strings for buttons and labels, customize the date format, and change the first day of week for the calendars. Check off locale in the configuration generator to see how to customize these options.
-        * `singleDatePicker`:  Show only a single calendar to choose one date, instead of a range picker with two calendars.
-        * `autoApply`: 
-        * `linkedCalendars`: When enabled, the two calendars displayed will always be for two sequential months
-        * `autoUpdateInput`: whether the date range picker should automatically update the value of the `<input>` element it's attached to at initialization and when the selected dates change
-        * `parentEl`: (string) jQuery selector of the parent element that the date range picker will be added to, if not provided this will be 'body'
-    * [ ] [methods](http://www.daterangepicker.com/#methods)
-    * [ ] [events](http://www.daterangepicker.com/#events)
-    * locale:
-    ```
-    locale: {
-      applyLabel: "确定",
-      cancelLabel: '取消',
-      fromLabel: '起始时间',
-      toLabel: '结束时间',
-      customRangeLabel: '自定义',
-      daysOfWeek: ['日', '一', '二', '三', '四', '五', '六' ],
-      monthNames : [ '一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月' ],
-      firstDay: 1,
-    }
-    ```
-    * [Events](http://www.daterangepicker.com/#events)
-    ```
-    $('#daterange').on('apply.daterangepicker', function(ev, picker) {
-      console.log(picker.startDate.format('YYYY-MM-DD'));
-      console.log(picker.endDate.format('YYYY-MM-DD'));
-    });
-    ```
-        * `show.daterangepicker`: Triggered when the picker is shown
-        * `hide.daterangepicker`: Triggered when the picker is hidden
-        * `showCalendar.daterangepicker`: Triggered when the calendar(s) are shown
-        * `hideCalendar.daterangepicker`: Triggered when the calendar(s) are hidden
-        * `apply.daterangepicker`: Triggered when the apply button is clicked, or when a predefined range is clicked
-        * `cancel.daterangepicker`: Triggered when the cancel button is clicked
-
-## [wing简单的开源框架](./wing.html)
-## [ztree树状图](./ztree.html)
+        9. [Dynamic option create](https://select2.org/tagging)
+        ```
+        tags: true,  // add the tag whose value is the input value
+        createTag: function(params) {return {"id": null, "text": params.term}}  // customer the tag created
+        insertTag: function(data, tag) {data.push(tag)}  // determine where the tag should be placed
+        ```
+* ## [selectize 用于方便地选择和输入,](http://selectize.github.io/selectize.js/) [github链接,](https://github.com/selectize/selectize.js) [例子](./selectize.html)
+* ## [wing简单的开源框架](./wing.html)
+* ## [ztree树状图](./ztree.html)

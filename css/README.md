@@ -122,3 +122,6 @@
 ```
     padding: 上 右 下 左 | 上 左右 下 | 上下 左右 | 上下左右
 ```
+
+# [Specificity 权重](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity)
+* [test 测试](specificity.html)

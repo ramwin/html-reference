@@ -153,6 +153,12 @@ $().dropdown('toggle')
 * [ ] form row
 * Horizontal form
 
+#### Inline Forms
+```
+<form class="form-inline">
+</form>
+```
+
 ### [Help Text](https://getbootstrap.com/docs/4.1/components/forms/#help-text)
 ![](./img/form_help_text.png)
 ```
