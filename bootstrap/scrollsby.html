@@ -11,15 +11,18 @@
 
     <title>Hello, world!</title>
     <style>
-      h4 {
-        border: 1px solid red;
-        margin: 10px;
-        min-height: 100px;
+      p {
+        min-height: 700px;
+      }
+      .scroll-body {
+        position: relative;
+        overflow-y: scroll;
+        max-height: 1000px;
       }
     </style>
   </head>
-  <body>
-    <nav id="navbar-example2" class="navbar navbar-light bg-light position-fixed">
+  <body class="scroll-body" data-spy="scroll" data-target="#navbar-example2" data-offset="50">
+    <nav id="navbar-example2" class="navbar navbar-light bg-light fixed-top">
       <a class="navbar-brand" href="#">Navbar</a>
       <ul class="nav nav-pills">
         <li class="nav-item">
@@ -39,9 +42,7 @@
         </li>
       </ul>
     </nav>
-    <div style="height: 100px"></div>
-    <div class="container scroll" style="height: 300px; border: 1px solid green; overflow-y: scroll;">
-    <div data-spy="scroll" data-target="#navbar-example2" data-offset="100">
+    <div>
       <h4 id="fat">@fat</h4>
       <p>...</p>
       <h4 id="mdo">@mdo</h4>
@@ -53,9 +54,6 @@
       <h4 id="three">three</h4>
       <p>...</p>
     </div>
-    </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
