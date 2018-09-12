@@ -189,6 +189,7 @@
 * ## [bootstrap](./bootstrap/README.md)
 * ## [bootstrap-slider](./bootstrap-slider.html)
 * ## [DateRangePicker, bootstrap4](daterangepicker.md)
+* ## [flatpickr](https://github.com/flatpickr/flatpickr)  *没有依赖的时间选择器*
 * ## [flex布局](./flex/README.md)
 * ## [富文本编辑器](./summernote网页编辑器.html)
 * ## [jquery datetimepicker](https://github.com/xdan/datetimepicker) [example](./datetimepicker.html)
