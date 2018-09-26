@@ -130,6 +130,7 @@ Use `.table-striped` to add zebra-striping  使用 `.table-striped` 来产生间
 * 样式
     * btn-outline-success: **边框**颜色
 
+## [Carousel 轮播图](https://getbootstrap.com/docs/4.1/components/carousel/)
 ## [Dropdowns](https://getbootstrap.com/docs/4.1/components/dropdowns/)
 * Example
 ```
