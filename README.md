@@ -110,9 +110,11 @@
 * User-Agent:  
 [在www.ramwin.com查看自己的user-agent和IP](https://www.ramwin.com/reqres/meta/), **推荐**，因为信息更多更详细  
 [在whoisshostingthing.com查看自己的user-agent和IP](http://www.whoishostingthis.com/tools/user-agent/)  
-* 状态码
+* [状态码](https://zh.wikipedia.org/wiki/HTTP%E7%8A%B6%E6%80%81%E7%A0%81)
+    * 100: 客户端继续发送请求
     * 400: 参数错误
     * 429: 请求过于频繁
+    * 511: 需要认证才能获取网络访问权限
 
 # [Elements 基础元素](./elements.md)
 
