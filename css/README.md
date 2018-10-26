@@ -1,75 +1,75 @@
 **Xiang Wang @ 2016-09-14 15:05:53**
 
-# 基础
+## 基础
 * [MDN Mozilla官方指南](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Reference)
 * [豆瓣快速参考](https://www.douban.com/note/65562130/?type=like)
 * [背景background](background背景.md)
 * 选择器 [快速参考](./select选择器.md) [例子](./select选择器.html)
 * [训练](https://flukeout.github.io/)
 
-# a标签
+## a标签
 ```
     target: _blank 新窗口 | _top 跳出当前框架
     text-decoration: none 是否有下划线
     cursor: pointer 鼠标移动上去后变成小手
 ```
-# border边框 [示例](./border.html)
+## border边框 [示例](./border.html)
     * border: `1px solid red;`
     * [border-style](https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-style) *可以设置成虚线框，双实线*
 
-# [box-shadow阴影](https://developer.mozilla.org/zh-CN/docs/Web/CSS/box-shadow)
+## [box-shadow阴影](https://developer.mozilla.org/zh-CN/docs/Web/CSS/box-shadow)
     ```
     box-shadow:  inset | offset-x | offset-y | blur-radius | spread-radius | color
     inset: 不写就是外边框，否则就是内边框
     blur-radius: 扩散程度(越大，阴影扩散得越开, 也就越淡)
     spread-radius: 阴影放大比例(可以为负值)
     ```
-# float [参考](https://developer.mozilla.org/en-US/docs/Web/CSS/float) [测试](float.html)
+## float [参考](https://developer.mozilla.org/en-US/docs/Web/CSS/float) [测试](float.html)
     * value: left|right|none|inline-start|inline-end
     * __float会把元素脱离当前的流，使得自身的高度无法撑开父元素__
     * float的元素不仅仅会飘动，直到遇到了父元素的边框或者是其他的浮动元素
 
-# ul列表
+## ul列表
     * `list-style: none|inside|outside|url` # 列表样式 
 
-# 鼠标样式
+## 鼠标样式
 
 ```
     cursor: not-allowed  # 禁止
 ```
-# 超出范围[overflow]:
+## 超出范围[overflow]:
 
 ```
     visible: 默认显示 | hidden: 不显示 | scroll: 滚动 | auto: 滚动 | inherit: 继承父级元素
 ```
-# [display](./display.html)
+## [display](./display.html)
 
 ```
     box-sizing: content-box(默认)|border-box|inherit;
 ```
 
-# word-break:
+## word-break:
 
 ```
     keep-all: 总是不换行 | break-all: 总是换行 | normal: 看是不是一个单词
 ```
 
-# [链接(link)](./link.html)
+## [链接(link)](./link.html)
 
 ```
     select:hover: {color: red}  # 注意这个会影响所有的子元素
 ```
 
-# [before](./before伪类.html)
+## [before](./before伪类.html)
 
-# [表格](./table.html)
+## [表格](./table.html)
 
 ```
     border-collapse: collapse(两个边框合并成1个) | seperate(默认的分别现实独立的边框)
     min-width: 对于th和td，一列的宽度是取决于最窄的那个
 ```
 
-# [伪类]()
+## [伪类]()
     * [参考资料](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-classes)
     * [案例](./pseudo-class伪类.html)
 
@@ -93,8 +93,8 @@
         }
         ```
 
-# [文字](./text.html)
-## [参考资料](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-overflow)
+## [文字](./text.html)
+### [参考资料](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-overflow)
 * text-align: left|center|right|justify 靠左|居中|靠右|两端对其(最后一行靠左)
 * line-height: 100px; 配合line-height可以让文字处于正中间
 * [vertical-aligh](https://developer.mozilla.org/zh-CN/docs/Web/CSS/vertical-align): top|bottom|middle
@@ -113,15 +113,43 @@
 * word-spacing: 单词之间的尺寸
 * letter-spacing: 字母之间的尺寸
 
-# [颜色](./color颜色.html)
+## [颜色](./color颜色.html)
 * [关键字颜色参考,尽量使用下面的这个链接](https://developer.mozilla.org/en/docs/Web/CSS/color_value#Color_keywords)
 * [颜色示例](./color颜色.html)
 
-# [padding]
+## [padding]
 
 ```
     padding: 上 右 下 左 | 上 左右 下 | 上下 左右 | 上下左右
 ```
 
-# [Specificity 权重](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity)
+## [Specificity 权重](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity)
 * [test 测试](specificity.html)
+
+## CSS3
+* ### filter 滤镜 [官网](https://developer.mozilla.org/zh-CN/docs/Web/CSS/filter)
+
+```css
+/* URL to SVG filter */
+filter: url("filters.svg#filter-id");
+
+/* <filter-function> values */
+filter: blur(5px);
+filter: brightness(0.4);
+filter: contrast(200%);
+filter: drop-shadow(16px 16px 20px blue);
+filter: grayscale(50%);
+filter: hue-rotate(90deg);
+filter: invert(75%);
+filter: opacity(25%);
+filter: saturate(30%);
+filter: sepia(60%);
+
+/* Multiple filters */
+filter: contrast(175%) brightness(3%);
+
+/* Global values */
+filter: inherit;
+filter: initial;
+filter: unset;
+```
