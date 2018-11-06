@@ -2,10 +2,12 @@
 
 ## 基础
 * [MDN Mozilla官方指南](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Reference)
-* [豆瓣快速参考](https://www.douban.com/note/65562130/?type=like)
 * [背景background](background背景.md)
 * 选择器 [快速参考](./select选择器.md) [例子](./select选择器.html)
 * [训练](https://flukeout.github.io/)
+* 引入
+> <link rel="stylesheet" href="./source/css.css">
+
 
 ## a标签
 ```
@@ -42,8 +44,7 @@
 ```
     visible: 默认显示 | hidden: 不显示 | scroll: 滚动 | auto: 滚动 | inherit: 继承父级元素
 ```
-## [display](./display.html)
-
+## display [测试页面](./display.html) [官网](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
 ```
     box-sizing: content-box(默认)|border-box|inherit;
 ```
@@ -123,6 +124,22 @@
     padding: 上 右 下 左 | 上 左右 下 | 上下 左右 | 上下左右
 ```
 
+## Position [官网](https://developer.mozilla.org/en-US/docs/Web/CSS/position) [测试](./position.html)
+* [ ] static
+* [ ] relative
+* ### absolute
+从文档流(normal flow of the document)中脱离, 根据最近一个定位的父级元素来定位.  
+因为没有了position, 所以这时候的定位根据 top, right, bottom, left.  
+
+```
+    .right {
+      position: absolute;
+      right: 0px;
+    }
+```
+* [ ] fixed
+* [ ] sticky
+
 ## [Specificity 权重](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity)
 * [test 测试](specificity.html)
 
@@ -130,26 +147,26 @@
 * ### filter 滤镜 [官网](https://developer.mozilla.org/zh-CN/docs/Web/CSS/filter)
 
 ```css
-/* URL to SVG filter */
-filter: url("filters.svg#filter-id");
+    /* URL to SVG filter */
+    filter: url("filters.svg#filter-id");
 
-/* <filter-function> values */
-filter: blur(5px);
-filter: brightness(0.4);
-filter: contrast(200%);
-filter: drop-shadow(16px 16px 20px blue);
-filter: grayscale(50%);
-filter: hue-rotate(90deg);
-filter: invert(75%);
-filter: opacity(25%);
-filter: saturate(30%);
-filter: sepia(60%);
+    /* <filter-function> values */
+    filter: blur(5px);
+    filter: brightness(0.4);
+    filter: contrast(200%);
+    filter: drop-shadow(16px 16px 20px blue);
+    filter: grayscale(50%);
+    filter: hue-rotate(90deg);
+    filter: invert(75%);
+    filter: opacity(25%);
+    filter: saturate(30%);
+    filter: sepia(60%);
 
-/* Multiple filters */
-filter: contrast(175%) brightness(3%);
+    /* Multiple filters */
+    filter: contrast(175%) brightness(3%);
 
-/* Global values */
-filter: inherit;
-filter: initial;
-filter: unset;
+    /* Global values */
+    filter: inherit;
+    filter: initial;
+    filter: unset;
 ```
