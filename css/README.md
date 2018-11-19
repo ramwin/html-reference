@@ -1,8 +1,7 @@
 **Xiang Wang @ 2016-09-14 15:05:53**
 
 ## 基础
-* [MDN Mozilla官方指南](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Reference)
-* [背景background](background背景.md)
+* [MDN Mozilla官方指南](https://developer.mozilla.org/en-US/docs/Web/CSS)
 * 选择器 [快速参考](./select选择器.md) [例子](./select选择器.html)
 * [训练](https://flukeout.github.io/)
 * 引入
@@ -15,9 +14,27 @@
     text-decoration: none 是否有下划线
     cursor: pointer 鼠标移动上去后变成小手
 ```
-## border边框 [示例](./border.html)
+
+## background and border 背景和边框 [示例](./border.html) [官网](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Backgrounds_and_Borders)
+### 背景
+* [背景background](background背景.md)
+
+### 边框
+* 边框
     * border: `1px solid red;`
     * [border-style](https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-style) *可以设置成虚线框，双实线*
+
+* border-radius 圆角边框 [官网](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius)
+border-radius可以使用一个圆或者两个圆来描绘  
+这个属性是作用于整个background的, 就算没有border,也会变成切割状态(根据background-clip属性来决定样式)
+
+```
+    border-radius: 10px; 四周
+    border-radius: 10px 5%; 左上右下 | 右上左下
+    border-radius: 2px 4px 2px; 左上 | 右上左下 | 右下
+    border-radius: 1px 0 3px 4px; 左上 | 右上 | 右下 | 左下
+    border-radius: 10px 5% / 20px 25em 30px 35em;  横向的圆角 / 纵向的圆角
+```
 
 ## [box-shadow阴影](https://developer.mozilla.org/zh-CN/docs/Web/CSS/box-shadow)
     ```
