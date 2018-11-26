@@ -1,12 +1,61 @@
 **Xiang Wang @ 2016-09-14 15:05:53**
 
 ## 基础
-* [MDN Mozilla官方指南](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Reference)
-* [背景background](background背景.md)
+* [MDN Mozilla官方指南](https://developer.mozilla.org/en-US/docs/Web/CSS)
 * 选择器 [快速参考](./select选择器.md) [例子](./select选择器.html)
 * [训练](https://flukeout.github.io/)
 * 引入
 > <link rel="stylesheet" href="./source/css.css">
+
+## background and border 背景和边框 [示例](./border.html) [官网](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Backgrounds_and_Borders)
+### 背景
+* [背景background](background背景.md)
+
+### 边框
+* 边框
+    * border: `1px solid red;`
+    * [border-style](https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-style) *可以设置成虚线框，双实线*
+
+* border-radius 圆角边框 [官网](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius)
+border-radius可以使用一个圆或者两个圆来描绘  
+这个属性是作用于整个background的, 就算没有border,也会变成切割状态(根据background-clip属性来决定样式)
+
+```
+    border-radius: 10px; 四周
+    border-radius: 10px 5%; 左上右下 | 右上左下
+    border-radius: 2px 4px 2px; 左上 | 右上左下 | 右下
+    border-radius: 1px 0 3px 4px; 左上 | 右上 | 右下 | 左下
+    border-radius: 10px 5% / 20px 25em 30px 35em;  横向的圆角 / 纵向的圆角
+```
+
+## CSS types
+`CSS types`是一些CSS能够接受的类
+
+### gradient 渐变 [官网](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient)
+gradient是一种`<image>`, 所以可以用于background属性的value.  
+但是也正因为他是image, 所以它不能用于color或者background-color  
+如果要实现text的gradient, 请参考[this](https://css-tricks.com/snippets/css/gradient-text/). 把文字变成透明, 添加背景, 设置`backgroun-clip: text`
+```
+background: linear-gradient(white, black);
+background: radial-gradient(white, black);
+background: repeating-linear-gradient(white, black 50px);
+background: repeating-radial-gradient(white, black 50px);
+```
+
+* linear gradient [官网](https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient)
+```
+.linear-gradient {
+    backgroun: linear-gradient(to right,
+        red, orange, yellow, green, blue, indigo, violet);
+    )
+}
+```
+    * 语法
+    ```css
+    linear-gradient(45deg, blue, red);  /* 45度角 */
+    linear-gradient(to left top|to top|to bottom|to right, blue, red);  /* 根据div的边角来 */
+    linear-gradient(0deg, blue, green 40%|length, red);  /* 显示前面40%从蓝色到绿色, 然后后面变红色 */
+    ```
 
 
 ## Selector选择器
@@ -33,9 +82,6 @@ p:nth-child(1) or p:nth-child(0n+1)  和:first-child一样，但是拥有更高�
     text-decoration: none 是否有下划线
     cursor: pointer 鼠标移动上去后变成小手
 ```
-## border边框 [示例](./border.html)
-    * border: `1px solid red;`
-    * [border-style](https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-style) *可以设置成虚线框，双实线*
 
 ## [box-shadow阴影](https://developer.mozilla.org/zh-CN/docs/Web/CSS/box-shadow)
     ```

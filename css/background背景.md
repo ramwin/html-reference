@@ -2,7 +2,7 @@
 
 # 基础
 
-* [参考资料](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background), [例子](./background背景.html)
+* [参考资料](https://developer.mozilla.org/en-US/docs/Web/CSS/background), [例子](./background背景.html)
 
 
 ```
