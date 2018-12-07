@@ -34,7 +34,13 @@
     * type=image
     this is used to replace a submit button with image instead of text. **It doen't mean select a image**
     * [type=file](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file)
-    `<input name="myFile" type="file">`  
+    ```
+    <label for="image_uploads">  # 用label可以替换掉默认的选择
+      <image src="../source/image.jpg"/>
+    </label>
+    <input type="file" id="image_uploads" name="image_uploads"
+        accept=".jpg, .jpeg, .png" multiple hidden>
+    ```
     if you use file input, you should add `enctype="multipart/form-data"` property to form
         * multiple
         * accept

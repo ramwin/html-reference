@@ -58,11 +58,9 @@
     <h1>测试用图片替换label</h1>
     <form method="post" enctype="multipart/form-data">
       <div>
-        <label for="image_uploads"
-            style="background-image: url('../source/image.jpg');
-                   height: 100px; width: 200px; display: block;
-                   background-size: cover;"
-          ></label>
+        <label for="image_uploads">
+          <image src="../source/image.jpg"/>
+        </label>
         <input type="file" id="image_uploads" name="image_uploads" accept=".jpg, .jpeg, .png" multiple hidden>
       </div>
       <div class="preview">
