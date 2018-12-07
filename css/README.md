@@ -58,6 +58,24 @@ background: repeating-radial-gradient(white, black 50px);
     ```
 
 
+## Selector选择器
+### Simple Selectors
+### Attribute Selectors
+### Pseudo-classes and pseudo-elements
+* [x] nth-child
+这个nth-child可以加一个参数，代表匹配到什么就选择
+odd和even输入时代表选择奇数或者偶数
+An+B代表了符合An+B的元素
+```
+tr:nth-child(odd) 一个表格里面第1, 3, 5 等奇数行
+:nth-child(7)  第7个元素
+:nth-child(3n+4)  第 4, 7, 10...个元素
+:nth-child(-n+3)  前3个元素
+p:nth-child(n)  就是p, 但是拥有更高的specificity
+p:nth-child(1) or p:nth-child(0n+1)  和:first-child一样，但是拥有更高的specificity
+```
+### Combinators and multiple selectors
+
 ## a标签
 ```
     target: _blank 新窗口 | _top 跳出当前框架

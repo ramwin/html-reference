@@ -150,77 +150,7 @@ Use `.table-striped` to add zebra-striping  使用 `.table-striped` 来产生间
 $().dropdown('toggle')
 ```
 
-## [Forms](https://getbootstrap.com/docs/4.1/components/forms/)
-### Layout
-#### Form grid
-* [ ] form row
-* Horizontal form
-
-#### Inline Forms
-```
-<form class="form-inline">
-</form>
-```
-
-### [Help Text](https://getbootstrap.com/docs/4.1/components/forms/#help-text)
-![](./img/form_help_text.png)
-```
-<label for="inputPassword5">Password</label>
-<input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
-<small id="passwordHelpBlock" class="form-text text-muted">
-  Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
-</small>
-```
-
-![](./img/form_help_text_inline.png)
-```
-<form class="form-inline">
-  <div class="form-group">
-    <label for="inputPassword6">Password</label>
-    <input type="password" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
-    <small id="passwordHelpInline" class="text-muted">
-      Must be 8-20 characters long.
-    </small>
-  </div>
-</form>
-```
-
-
-### Custom forms
-#### Checkboxes and radios
-    * inline  
-    ![](./img/inline-checkbox.png)
-    ```python
-    <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-        <label class="form-check-label" for="inlineCheckbox1">1</label>
-    </div>
-    <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-        <label class="form-check-label" for="inlineCheckbox2">2</label>
-    </div>
-    <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
-        <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
-    </div>
-    ```
-
-    ![](./img/inline-radio.png)
-    ```html
-    <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-        <label class="form-check-label" for="inlineRadio1">1</label>
-    </div>
-    <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-        <label class="form-check-label" for="inlineRadio2">2</label>
-    </div>
-    <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
-        <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
-    </div>
-    ```
-
+## [Forms表单](./form表单.md)
 ## [List group](https://getbootstrap.com/docs/4.1/components/list-group/)
 * [custom content](https://getbootstrap.com/docs/4.1/components/list-group/#custom-content)
 ```html
@@ -252,144 +182,26 @@ $().dropdown('toggle')
 </div>
 ```
 
-## [Modal](https://getbootstrap.com/docs/4.1/components/modal/)
-
-### example
-```html
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-	<div class="modal-content">
-	  <div class="modal-header">
-		<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-		  <span aria-hidden="true">&times;</span>
-		</button>
-	  </div>
-	  <div class="modal-body">
-		...
-	  </div>
-	  <div class="modal-footer">
-		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-		<button type="button" class="btn btn-primary">Save changes</button>
-	  </div>
-	</div>
-  </div>
-</div>
-```
-
-### [Verying modal content](https://getbootstrap.com/docs/4.1/components/modal/#varying-modal-content)  
-Have a bunch of buttonss that all trigger the same modal with slightly different contents
-1. add data-* attributes to the button  
-    ```
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Open modal for @fat</button>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Open modal for @getbootstrap</button>
-    ```
-
-2. set  
-    ``` 
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="form-group">
-                <label for="recipient-name" class="col-form-label">Recipient:</label>
-                <input type="text" class="form-control" id="recipient-name">
-              </div>
-              <div class="form-group">
-                <label for="message-text" class="col-form-label">Message:</label>
-                <textarea class="form-control" id="message-text"></textarea>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Send message</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    ```
-
-3. add trigger js to the button  
-    ```
-    $('#exampleModal').on('show.bs.modal', function (event) {
-      var button = $(event.relatedTarget) // Button that triggered the modal
-      var recipient = button.data('whatever') // Extract info from data-* attributes
-      // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-      // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-      var modal = $(this)
-      modal.find('.modal-title').text('New message to ' + recipient)
-      modal.find('.modal-body input').val(recipient)
-    })
-    ```
-
-### [Size](https://getbootstrap.com/docs/4.1/components/modal/#optional-sizes)
-```
-<!-- Large modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
-
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      ...
-    </div>
-  </div>
-</div>
-
-<!-- Small modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">Small modal</button>
-
-<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      ...
-    </div>
-  </div>
-</div>
-```
-
-### [options](https://getbootstrap.com/docs/4.1/components/modal/#options)
-    ```
-    $('#myModal').modal(options)
-    ```
-### [methods](https://getbootstrap.com/docs/4.1/components/modal/#methods)
-    * $('#myModal').modal('hide')
-
-### TODO
-* [ ] events
-
+## [Modal](./modal模态框.md)
+弹出一个窗口让用户确认或者操作
 
 ## [Navs](https://getbootstrap.com/docs/4.1/components/navs/)
 * [example](./navs.html)
 ```html
-<ul class="nav">
-  <li class="nav-item">
-    <a class="nav-link active" href="#">Active</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link disabled" href="#">Disabled</a>
-  </li>
-</ul>
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Active</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
 ```
 * useful class:
     * `.nav`: 使用nav
@@ -591,6 +403,11 @@ format: `{property}{sides}-{breakpoint}-{size} | {property}{sides}-{size}`
 * size:
     * 0|1|2|3|4|5|auto
 * mx-auto: horizontally centering fixed
+
+## [Text]
+* Text alignment
+    * text-left|text-center|text-right
+    * text-sm-left|text-md-left|text-lg-left|text-xl-left
 
 # [Extend](https://getbootstrap.com/docs/4.1/extend/approach/)
 * [ ] Approach
