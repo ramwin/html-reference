@@ -1,8 +1,66 @@
-#### Xiang Wang @ 2016-08-23 10:09:38
+**Xiang Wang @ 2016-08-23 10:09:38**
 
 ## Form参考
+[测试代码](./test/form.html)
 
-## 基础参数
+### input 种类
+* [ ] button
+* [ ] [checkbox](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox)
+```
+<fieldset>
+  <legend>Choose some monster features</legend>
+  <div>
+    <input type="checkbox" id="scales" name="feature"
+      value="scales" checked />
+    <label for="scales">Scales</label>
+  </div>
+  <div>
+    <input type="checkbox" id="horns" name="feature"
+      value="horns" />
+    <label for="horns">Horns</label>
+  </div>
+  <div>
+    <input type="checkbox" id="claws" name="feature"
+      value="claws" />
+    <label for="claws">Claws</label>
+  </div>
+</fieldset>
+```
+
+* [ ] datalist
+* [ ] fieldset
+* [ ] form
+#### input [官网](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
+    * type=image
+    this is used to replace a submit button with image instead of text. **It doen't mean select a image**
+    * [type=file](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file)
+    `<input name="myFile" type="file">`  
+    if you use file input, you should add `enctype="multipart/form-data"` property to form
+        * multiple
+        * accept
+            * `image/png|.png` only the PNG files
+            * `accept="image/png, image/jpeg"` or `accept=".png, .jpg, .jpeg"`: accept PNG or JPEG files
+            * `accept="image/*"`: accept any file with an image/* MIME type
+        * required
+* [ ] label
+* [ ] legend
+* [ ] meter
+* [ ] optgroup
+* [ ] option
+* [ ] output
+* [ ] progress
+* [select](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select)
+```
+<!-- The second value will be selected initially -->
+<select name="text"> <!--Supplement an id here instead of using 'text'-->
+  <option value="first">First Value</option>
+  <option value="second" selected>Second Value</option>
+  <option value="third">Third Value</option>
+</select>
+```
+* [ ] textarea
+
+### 基础参数
     ```
     action="" # 访问的url
     method="POST" # 访问的方法
@@ -10,7 +68,7 @@
     onsubmit="return alert('I am goint to submit')" # 上传之前的做法, 有了return 可以return false的时候组织提交
     ```
 
-## 常用元素
+### 常用元素
 * input
     ```
     type="类型" # text, number, radio, checkbox, button, file
