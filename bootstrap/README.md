@@ -317,7 +317,7 @@ You can get more information from [here](https://stackoverflow.com/questions/140
 When spying on elements other than the `<body>`, be sure to have a `height` set and `overflow-y: scroll;` applied.
 
 
-# [Utilities](https://getbootstrap.com/docs/4.0/utilities/borders/)
+# Utilities [官网](https://getbootstrap.com/docs/4.0/utilities/borders/)
 
 ## [Borders](https://getbootstrap.com/docs/4.0/utilities/borders/)
 * Border-subtractive
@@ -408,6 +408,22 @@ format: `{property}{sides}-{breakpoint}-{size} | {property}{sides}-{size}`
 * Text alignment
     * text-left|text-center|text-right
     * text-sm-left|text-md-left|text-lg-left|text-xl-left
+
+## Vertical align [官网](https://getbootstrap.com/docs/4.1/utilities/vertical-align/)
+```
+<table style="height: 100px;">
+  <tbody>
+    <tr>
+      <td class="align-baseline">baseline</td>
+      <td class="align-top">top</td>
+      <td class="align-middle">middle</td>
+      <td class="align-bottom">bottom</td>
+      <td class="align-text-top">text-top</td>
+      <td class="align-text-bottom">text-bottom</td>
+    </tr>
+  </tbody>
+</table>
+```
 
 # [Extend](https://getbootstrap.com/docs/4.1/extend/approach/)
 * [ ] Approach
