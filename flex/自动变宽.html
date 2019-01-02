@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script src="../source/vue-2.1.3.js"></script>
+    <style>
+      .outer {
+        min-width: 300px;
+        overflow: scroll;
+        margin-right: 10px;
+        margin-left: 10px;
+      }
+      .inner {
+        width: 100px;
+        flex-shrink: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="border border-primary outer d-flex">
+        <div class="border border-danger inner" v-for="item in list">
+          {{item.name}}
+        </div>
+      </div>
+      <button v-on:click="add">点我加一个</button>
+    </div>
+    <link rel="stylesheet" href="../source/bootstrap/css/bootstrap.css"></link>
+  <script>
+    var vm = new Vue({
+      el: "#app",
+      data: {
+        "list": [
+          {"name": "第一个div", "id": "1"},
+          {"name": "第二个div", "id": "2"},
+          {"name": "第三个div", "id": "3"},
+        ]
+      },
+      methods: {
+        add: function() {
+          this.list.push(
+            {"name": "第一个div", "id": "1"}
+          )
+        }
+      }
+    })
+  </script>
+  </body>
+</html>

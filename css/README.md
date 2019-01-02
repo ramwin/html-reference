@@ -93,6 +93,9 @@ p:nth-child(1) or p:nth-child(0n+1)  和:first-child一样，但是拥有更高�
     blur-radius: 扩散程度(越大，阴影扩散得越开, 也就越淡)
     spread-radius: 阴影放大比例(可以为负值)
     ```
+
+## [Flex 弹性盒子布局](../flex/README.md)
+
 ## float [参考](https://developer.mozilla.org/en-US/docs/Web/CSS/float) [测试](float.html)
     * value: left|right|none|inline-start|inline-end
     * __float会把元素脱离当前的流，使得自身的高度无法撑开父元素__
