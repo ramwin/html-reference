@@ -15,17 +15,20 @@
       .inner {
         width: 100px;
         flex-shrink: 0;
+        height: 50px;
       }
     </style>
   </head>
   <body>
-    <div id="app">
+    <div id="app" class="bg-light d-flex">
+      <div class="bg-danger inner">
+      </div>
+      <button v-on:click="add">点我加一个</button>
       <div class="border border-primary outer d-flex">
         <div class="border border-danger inner" v-for="item in list">
           {{item.name}}
         </div>
       </div>
-      <button v-on:click="add">点我加一个</button>
     </div>
     <link rel="stylesheet" href="../source/bootstrap/css/bootstrap.css"></link>
   <script>
