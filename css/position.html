@@ -18,5 +18,17 @@
             >two(absolute)</div>
           <div class="border border-success small">three</div>
         </div>
+        <div class="border border-danger" style="position:relative">
+          我是父级元素
+          <div class="border small">
+            我是子元素1
+          </div>
+          <div class="border small position-absolute" style="top: 0px;">
+            我是子元素2: 但是top: 0px;
+          </div>
+          <div class="border small position-absolute" style="right: 10px; top: 10px;">
+            我是子元素3: 但是right: 10px; top: 10px
+          </div>
+        </div>
   </body>
 </html>
