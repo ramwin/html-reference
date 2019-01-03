@@ -1,6 +1,7 @@
 **Xiang Wang @ 2018-06-11 17:33:04**
 
-# [Elements 元素](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
+* [Elements 元素 官方文档](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
+
 ## Main Root
 ## Document metadata
 * link
@@ -46,6 +47,11 @@
         ```
 
 ## Image and multimedia
+* img
+[测试](test/img.html)
+    * src: 图片的路径
+    * alt: 图片的文字信息
+
 ## Embedded content
 ## Scriping
 ## Demarcating edits

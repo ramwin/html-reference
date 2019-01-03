@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1>测试图片的显示效果</h1>
+    <h2>固定宽度</h2>
+    <img src="../source/竖着的图片.png"
+        style="width: 200px"></img>
+    <h2>固定宽度和高度会自动缩放</h2>
+    <img src="../source/竖着的图片.png"
+        style="width: 200px; height: 200px;"></img>
+    <h2>固定宽度,然后高度有最大高度,不自动缩放</h2>
+    <div style="width: 200px; height: 200px; overflow: hidden">
+    <img src="../source/竖着的图片.png"
+        style="width: 100%"></img>
+        </div>
+    <h2>使用bootstrap的img-fluid</h2>
+    <img src="../source/竖着的图片.png" class="img-fluid img image"
+        style="width: 200px; max-height: 200px;"></img>
+    <h2>固定宽度高度, 不缩放 auto</h2>
+    <img src="../source/竖着的图片.png"
+        style="width: 200px; height: 200px; overflow: hidden;
+        image-rendering: auto"></img>
+    <h2>固定宽度高度, 不缩放 crisp-edges</h2>
+    <img src="../source/竖着的图片.png"
+        style="width: 200px; height: 200px; overflow: hidden;
+        image-rendering: crisp-edges;"></img>
+    <h2>固定宽度高度, 不缩放 pixelated</h2>
+    <img src="../source/竖着的图片.png"
+        style="width: 200px; height: 200px; overflow: hidden;
+        image-rendering: pixelated"></img>
+    <h2>固定宽度高度, 不缩放 inherit</h2>
+    <img src="../source/竖着的图片.png"
+        style="width: 200px; height: 200px; overflow: hidden;
+        image-rendering: inherit;"></img>
+    <h2>固定宽度高度, 不缩放 initial</h2>
+    <img src="../source/竖着的图片.png"
+        style="width: 200px; height: 200px; overflow: hidden;
+        image-rendering: initial"></img>
+    <h2>固定宽度高度, 不缩放 unset</h2>
+    <img src="../source/竖着的图片.png"
+        style="width: 200px; height: 200px; overflow: hidden;
+        image-rendering: unset"></img>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  </body>
+</html>
