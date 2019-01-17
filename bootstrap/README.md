@@ -362,8 +362,11 @@ format: d(-breakpoint)(-inline)?-flex
     * `mr-auto`: pushing items to the right
     * `ml-auto`: pushing items to the left
 * fill: *use .flex-fill to fore them into equal widths* `.flex(-breakpoint)-fill`
+使用flex-fill来让item均匀分布，占用所有空间。(能实现是因为都设置了flex-grow:1)
+* grow and shrink
+flex-grow-1, flex-grow-0, flex-shrink-1, flex-sm-grow-1
+
 * todolist:
-    * [ ] grow and shrink
     * [ ] wrap
     * [ ] order
     * [ ] align content

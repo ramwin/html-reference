@@ -1,6 +1,6 @@
 **Xiang Wang @ 2016-09-12 17:47:04**
 
-# 基础
+* [官网](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
 * display: flex;  # 外面的div
 * display: inline-flex;  # 内部的div
 
@@ -15,7 +15,7 @@
 ## 项目属性
 * order: 越大越靠前，默认是0
 * flex-grow: 项目放大比例，默认是0(存在剩余空间也不放大）
-* flex-shrinik: 项目缩小比例，默认是1
+* flex-shrinik: 项目缩小比例，默认是1 [测试](./shrink.html)
 * flex-basis: 计算多余空间是，项目占用的空间，默认auto
 * flex: <flex-grow> <flex-shrink> <flex-basis>
 * align-self: auto | flex-start | ... |  # 设定单个item和是否继承父级元素还是使用自己的方式展示

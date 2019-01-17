@@ -3,6 +3,7 @@
   <head>
     <title></title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="../source/bootstrap/css/bootstrap.css">
     <style>
       .out {
         max-width: 500px;
@@ -32,6 +33,24 @@
         </div>
       </div>
       <input >
+    </div>
+    <h1>测试shrink怎么压缩</h1>
+    <h2>房子够，问题没有, 大儿子多继承一点</h2>
+    <div class="border border-dark d-flex" style="width: 200px">
+      <div class="border border-danger flex-shrink-1 flex-grow-1">我是大儿子</div>
+      <div class="border border-primary">我是二儿子</div>
+    </div>
+    <h2>房子不够, 二儿子最有用，不能亏待他</h2>
+    <div class="border border-dark d-flex" style="width: 200px">
+      <div class="border border-danger flex-shrink-1">我是大儿子</div>
+      <div class="border border-primary flex-shrink-0">我是二儿子</div>
+      <div class="border border-primary">我是三儿子</div>
+    </div>
+    <h2>房间继续不够，三儿子你多亏一点, 亏了4个字长度， 大儿子亏了2个字长度</h2>
+    <div class="border border-dark d-flex" style="width: 200px">
+      <div class="border border-danger flex-shrink-1">我是大儿子名</div>
+      <div class="border border-primary flex-shrink-0">我是二儿子名</div>
+      <div class="border border-primary" style="flex-shrink:2">我是三儿子名</div>
     </div>
   </body>
 </html>

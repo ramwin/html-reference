@@ -23,6 +23,8 @@
 border-radius可以使用一个圆或者两个圆来描绘  
 这个属性是作用于整个background的, 就算没有border,也会变成切割状态(根据background-clip属性来决定样式)
 
+* border-width 边框宽度
+
 ```
     border-radius: 10px; 四周
     border-radius: 10px 5%; 左上右下 | 右上左下
