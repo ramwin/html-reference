@@ -1,7 +1,7 @@
 **Xiang Wang @ 2016-08-24 14:30:23**
 
 # README
-* 这里主要存放html标签，属性。 css一类。 如果是和JavaScript有关的看[Javascript-tutorial](https://github.com/ramwin/javascript-tutorial.git/)
+* 这里主要存放html标签，属性。 css一类。 如果是和JavaScript有关的看[Javascript-tutorial](https://github.com/ramwin/javascript-reference.git/)
 * [mozilla web开发者资料](https://developer.mozilla.org/zh-CN/docs/Web)
 * [mozilla learning html: guides and tutorials](https://developer.mozilla.org/en-US/docs/Learn/HTML)
 * [mozilla HTML参考](https://developer.mozilla.org/zh-CN/docs/Web/HTML)
@@ -225,6 +225,7 @@ not very good use daterangepicker instead
         $pagination.twbs-pagination(options);
         ```
 * ## [less](http://lesscss.org/)
+    * 基础用法: `lessc source.less target.css`
     * Document
         ```
         <link rel="stylesheet/less" type="text/css" href="styles.less" />

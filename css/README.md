@@ -15,9 +15,11 @@
 * 边框
     * border: `1px solid red;`
     * border-style [官网](https://developer.mozilla.org/en-US/docs/Web/CSS/border-style) *可以设置成虚线框，双实线*
+    ```
     none|dotted|inset|dashed(上下) solid(左右)|dashed(上) double(左右) none(下)|dashed(上) groove(右) none(下) dotted(左)  
     inset, outset 代表了看上去像突出或者凹进去  
     groove, ridge 代表了边框看上去是凹槽或者凸脊 
+    ```
 
 * border-radius 圆角边框 [官网](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius)
 border-radius可以使用一个圆或者两个圆来描绘  

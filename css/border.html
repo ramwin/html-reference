@@ -9,6 +9,14 @@
         height: 100px;
         background: yellow;
       }
+      #mountain {
+        width: 0px;
+        height: 0px;
+        border-top: 10px solid red;
+        border-right: 10px solid green;
+        border-bottom: 10px solid yellow;
+        border-left: 10px solid blue;
+      }
     </style>
   </head>
   <body>
@@ -16,5 +24,8 @@
     </div>
     <h1>测试如果有图片，border怎么办, 会变大</h1>
     <img src="../source/image.jpg" style="border-color: red; border-radius: 50%; width: 100px; height: 100px; border: 10px ;"></img>
+    <h2>测试如果是1px的div，有border</h2>
+    <div id="mountain">
+    </div>
   </body>
 </html>
