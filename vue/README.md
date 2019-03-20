@@ -7,13 +7,13 @@
 ```
 * [基础](basic.md), [示例](basic.html)
     * 基础
-        ```
-        var vm = new Vue({
-            el: '#选择元素渲染',
-            data: '渲染数据',
-            delimiters: ['${', '}$'],  // 标签
-        })
-        ```
+    ```
+    var vm = new Vue({
+        el: '#选择元素渲染',
+        data: '渲染数据',
+        delimiters: ['${', '}$'],  // 标签
+    })
+    ```
     * 选项数据 [官网](https://cn.vuejs.org/v2/api/#选项-数据)
         ```
         watch: {

@@ -35,7 +35,7 @@
 ### Vertically centered [官网](https://getbootstrap.com/docs/4.1/components/modal/#vertically-centered)
 ```
 <div class="modal fade">
-    <div class="modal-dialog modal-dialog-center">
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
         </div>
     </div>
