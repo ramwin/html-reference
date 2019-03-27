@@ -4,23 +4,23 @@
     <title></title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <style>
-      body {
-        margin: 0px;
-        padding: 0px;
+      #app {
+        background: white;
+        min-width: 200px;
+        min-height: 1000px;
       }
-      iframe {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
+      #iframe-container {
       }
     </style>
   </head>
   <body>
-    <iframe src="https://duishang.net">
-    </iframe>
+    <div id="app">
+      <div id="iframe-container">
+        <iframe src="https://www.kennethcachia.com/shape-shifter/?a=Hello%7C#countdown%203" width=500 height=600 frameborder=0 scrolling="no">
+        </iframe>
+        <iframe src="file:///home/wangx/github/other/shape-shifter/index.html?a=#countdown%205" width=500 height=600 frameborder=0 scrolling="no">
+        </iframe>
+      </div>
+    </div>
   </body>
 </html>

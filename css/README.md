@@ -11,7 +11,7 @@
 ### 背景
 * [背景background](background背景.md)
 
-### 边框
+### border边框
 * 边框
     * border: `1px solid red;`
     * border-style [官网](https://developer.mozilla.org/en-US/docs/Web/CSS/border-style) *可以设置成虚线框，双实线*
@@ -20,13 +20,10 @@
     inset, outset 代表了看上去像突出或者凹进去  
     groove, ridge 代表了边框看上去是凹槽或者凸脊 
     ```
-
 * border-radius 圆角边框 [官网](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius)
 border-radius可以使用一个圆或者两个圆来描绘  
 这个属性是作用于整个background的, 就算没有border,也会变成切割状态(根据background-clip属性来决定样式)
-
 * border-width 边框宽度
-
 ```
     border-radius: 10px; 四周
     border-radius: 10px 5%; 左上右下 | 右上左下
@@ -214,8 +211,26 @@ p:nth-child(1) or p:nth-child(0n+1)  和:first-child一样，但是拥有更高�
 * [ ] fixed
 * [ ] sticky
 
+## Scroll 滚动
+[测试用内部div的滚动取代body的滚动](./scroll.html)
+[测试各种滚动的属性](./scroll-type.html)
+* [ ] scroll-behavior
+当用户点击anchor的时候，是直接跳转过去还是滑动过去
+* [ ] scrollbar-color
+* [ ] scrollbar-width
+* 隐藏滚动条
+```
+cssselector::-webkit-scrollbar {
+  display: none;
+}
+```
+
 ## [Specificity 权重](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity)
 * [test 测试](specificity.html)
+
+## [z-index]()
+[官网](https://developer.mozilla.org/en-US/docs/Web/CSS/z-index)
+[测试](./z-index.html)
 
 ## CSS3
 * ### filter 滤镜 [官网](https://developer.mozilla.org/zh-CN/docs/Web/CSS/filter)

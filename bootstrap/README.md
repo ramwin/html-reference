@@ -1,11 +1,9 @@
 **Xiang Wang @ 2016-11-16 23:11:08**
 
-# Menu
-* [Html reference](../README.md)
+[官方文档](https://getbootstrap.com/docs/4.1/getting-started/introduction/)
 
 # get started
-* [starter template](./basic.html)
-* [Official documentation](https://getbootstrap.com/docs/4.1/getting-started/introduction/)
+* [引用模板](./basic.html)
 
 
 # Content  
