@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <style>
+      .small-block {
+        width: 200px;
+        height: 200px;
+        background: red;
+      }
+      @keyframes red2yellow {
+        from {
+          background: red;
+        }
+        to {
+          background: yellow;
+        }
+      }
+      @keyframes rainbow {
+        0% {
+          background: red;
+        }
+        30% {
+          background: orange;
+        }
+        45% {
+          background: yellow;
+        }
+        60% {
+          background: green;
+        }
+        80% {
+          background: blue;
+        }
+        100% {
+          background: purple;
+        }
+      }
+      .animation1 {
+        animation: red2yellow 5s infinite;
+      }
+      .animation2 {
+        animation: rainbow 7s infinite;
+      }
+      .animation2:hover {
+        transform: scale(0.1);
+        transition-duration: 2s;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>基础使用</h1>
+    <div class="small-block animation1" >
+    </div>
+    <div class="small-block animation2">
+    </div>
+  </body>
+</html>

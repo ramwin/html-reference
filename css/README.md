@@ -127,10 +127,7 @@ p:nth-child(1) or p:nth-child(0n+1)  和:first-child一样，但是拥有更高�
 ```
 
 ## [链接(link)](./link.html)
-
-```
-    select:hover: {color: red}  # 注意这个会影响所有的子元素
-```
+`select:hover: {color: red}  # 注意这个会影响所有的子元素`
 
 ## [before](./before伪类.html)
 
@@ -142,28 +139,28 @@ p:nth-child(1) or p:nth-child(0n+1)  和:first-child一样，但是拥有更高�
 ```
 
 ## [伪类]()
-    * [参考资料](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-classes)
-    * [案例](./pseudo-class伪类.html)
+* [参考资料](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-classes)
+* [案例](./pseudo-class伪类.html)
 
-    * 基础
+* 基础
+```
+select :last-child  最后一个子节点, 注意是选择出来的所有元素的最后一个
+::placeholder 提示文字
+:checked 被选择的
+:before {  # 给元素之前添加元素
+  content: "9:00";
+  position: absolute;
+  left: -10px;
+  top: -10px;
+}
+```
+
+* :focus  `input输入框变成焦点的时候`
     ```
-    select :last-child  最后一个子节点, 注意是选择出来的所有元素的最后一个
-    ::placeholder 提示文字
-    :checked 被选择的
-    :before {  # 给元素之前添加元素
-      content: "9:00";
-      position: absolute;
-      left: -10px;
-      top: -10px;
+    input:focus {
+        outline: none
     }
     ```
-
-    * :focus  `input输入框变成焦点的时候`
-        ```
-        input:focus {
-            outline: none
-        }
-        ```
 
 ## [文字](./text.html)
 ### [参考资料](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-overflow)
@@ -173,14 +170,14 @@ p:nth-child(1) or p:nth-child(0n+1)  和:first-child一样，但是拥有更高�
 * word-break: keep-all 文字总是不换行
 * 设置超出范围就隐藏并显示省略号
 ```
-    .ellipsis-text {
-        white-space: nowrap;  // 要允许字符超出位置
-        overflow: hidden;  // 超出去后要隐藏
-        text-overflow: ellipsis;  // 隐藏以后要留下省略号, 如果是clip就是截断
-    }
-    .ellipsis-text:hover {
-        overflow: visible; // 超出去后显示出来
-    }
+.ellipsis-text {
+    white-space: nowrap;  // 要允许字符超出位置
+    overflow: hidden;  // 超出去后要隐藏
+    text-overflow: ellipsis;  // 隐藏以后要留下省略号, 如果是clip就是截断
+}
+.ellipsis-text:hover {
+    overflow: visible; // 超出去后显示出来
+}
 ```
 * word-spacing: 单词之间的尺寸
 * letter-spacing: 字母之间的尺寸
@@ -201,12 +198,11 @@ p:nth-child(1) or p:nth-child(0n+1)  和:first-child一样，但是拥有更高�
 * ### absolute
 从文档流(normal flow of the document)中脱离, 根据最近一个定位的父级元素来定位.  
 因为没有了position, 所以这时候的定位根据 top, right, bottom, left.  
-
 ```
-    .right {
-      position: absolute;
-      right: 0px;
-    }
+.right {
+  position: absolute;
+  right: 0px;
+}
 ```
 * [ ] fixed
 * [ ] sticky
@@ -233,12 +229,11 @@ cssselector::-webkit-scrollbar {
 [测试](./z-index.html)
 
 ## CSS3
-* ### filter 滤镜 [官网](https://developer.mozilla.org/zh-CN/docs/Web/CSS/filter)
+### filter 滤镜 [官网](https://developer.mozilla.org/zh-CN/docs/Web/CSS/filter)
 
 ```css
     /* URL to SVG filter */
     filter: url("filters.svg#filter-id");
-
     /* <filter-function> values */
     filter: blur(5px);
     filter: brightness(0.4);
@@ -250,12 +245,15 @@ cssselector::-webkit-scrollbar {
     filter: opacity(25%);
     filter: saturate(30%);
     filter: sepia(60%);
-
     /* Multiple filters */
     filter: contrast(175%) brightness(3%);
-
     /* Global values */
     filter: inherit;
     filter: initial;
     filter: unset;
 ```
+
+### keyframes 动画
+[菜鸟教程](http://www.runoob.com/css3/css3-animations.html)
+[官网](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes)
+[测试](./keyframes.html)
