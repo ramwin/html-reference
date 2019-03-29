@@ -37,6 +37,9 @@
           background: purple;
         }
       }
+      .rotate180 {
+        transform: rotate3d(0, 1, 0, 180deg);
+      }
       .animation1 {
         animation: red2yellow 5s infinite;
       }
@@ -45,12 +48,31 @@
       }
       .animation2:hover {
         transform: scale(0.1);
+        /* transform: translate3d(2,3,13); */
         transition-duration: 2s;
       }
+      #change {
+        transition: 2s;
+      }
     </style>
+    <script>
+      function change(event) {
+        var dom = document.getElementById("change");
+        if (dom.getAttribute("class").indexOf("rotate") >= 0) {
+          dom.setAttribute("class", "small-block");
+        } else {
+          dom.setAttribute("class", "small-block rotate360 animation1");
+        }
+      }
+    </script>
   </head>
   <body>
-    <h1>基础使用</h1>
+    <h1>过渡transition的使用</h1>
+    <div class="small-block" id="change" onclick="change()">
+      我是一大段文字
+    </div>
+    <button onclick="change()">点我翻转</button>
+    <h1>动画keyframes的基础使用</h1>
     <div class="small-block animation1" >
     </div>
     <div class="small-block animation2">
