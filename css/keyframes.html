@@ -37,8 +37,94 @@
           background: purple;
         }
       }
+      @keyframes liverotate {
+        0% {
+          transform: rotate3d(0,0,0,0deg);
+        }
+        12.5% {
+          transform: rotate3d(-0.05,1,0,45deg);
+        }
+        25% {
+          transform: rotate3d(-0.1,1,0,90deg);
+          background; red;
+        }
+        37.5% {
+          transform: rotate3d(-0.05,1,0,135deg);
+        }
+        43.75% {
+          transform: rotate3d(-0.025,1,0,157.5deg);
+        }
+        49% {
+          transform: rotate3d(0,1,0,179deg);
+          background: yellow;
+        }
+        50% {
+          transform: rotate3d(0,1,0,180deg);
+          background: yellow;
+        }
+        51% {
+          transform: rotate3d(0,1,0,181deg);
+          background: yellow;
+        }
+        75% {
+          transform: rotate3d(0.1,1,0,270deg);
+          background: yellow;
+        }
+        100% {
+          transform: rotate3d(0,1,0,360deg);
+          background: yellow;
+        }
+        /*
+        62.5% {
+          transform: rotate3d(0.05,1,0,225deg);
+          background: green;
+        }
+        100% {
+          transform: rotate3d(0.05,1,0,225deg);
+          background: green;
+        }
+        75% {
+          transform: rotate3d(0.1,1,0,270deg);
+          background: purple;
+        }
+        100% {
+          transform: rotate3d(0,1,0,360deg);
+          background: purple;
+        }
+        62.5% {
+        }
+        75% {
+          transform: rotate3d(0.1,1,0,270deg);
+          background: purple;
+        }
+        100% {
+          transform: rotate3d(0,1,0,360deg);
+          background: red;
+        }
+        */
+      }
+      @keyframes liverotate2 {
+        0% {
+          transform: rotate3d(0,0,0,0deg);
+        }
+        50% {
+          transform: rotate3d(0,1,0,180deg);
+          background: yellow;
+        }
+        100% {
+          transform: rotate3d(0,1,0,360deg);
+          background: yellow;
+        }
+      }
       .rotate180 {
         transform: rotate3d(0, 1, 0, 180deg);
+      }
+      .rotate360 {
+        /* transform: rotate3d(-0.1, 1, 0, 360deg);*/
+        /* animation: liverotate 1s infinite;*/
+        animation: liverotate2 1s infinite;
+        animation-duration:3s;
+        animation-timing-function: linear;
       }
       .animation1 {
         animation: red2yellow 5s infinite;
@@ -52,7 +138,7 @@
         transition-duration: 2s;
       }
       #change {
-        transition: 2s;
+        transition: 5s;
       }
     </style>
     <script>
@@ -61,7 +147,7 @@
         if (dom.getAttribute("class").indexOf("rotate") >= 0) {
           dom.setAttribute("class", "small-block");
         } else {
-          dom.setAttribute("class", "small-block rotate360 animation1");
+          dom.setAttribute("class", "small-block rotate360");
         }
       }
     </script>
