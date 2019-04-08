@@ -1,6 +1,5 @@
 **Xiang Wang @ 2016-08-23 10:09:38**
 
-## Form参考
 [测试代码](./test/form.html)
 
 ### input 种类
@@ -67,12 +66,14 @@
 * [ ] textarea
 
 ### 基础参数
-    ```
-    action="" # 访问的url
-    method="POST" # 访问的方法
-    enctype="multipart/form-data" # 如果是上传文件的话需要这个
-    onsubmit="return alert('I am goint to submit')" # 上传之前的做法, 有了return 可以return false的时候组织提交
-    ```
+* action
+"" # 访问的url
+* method
+"POST" # 访问的方法
+* enctype
+"multipart/form-data" # 如果是上传文件的话需要这个
+* onsubmit
+"return alert('I am goint to submit')" # 上传之前的做法, 有了return 可以return false的时候组织提交
 
 ### 常用元素
 * input
