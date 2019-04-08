@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <style>
+      .small-block {
+        width: 200px;
+        height: 200px;
+        background: red;
+      }
+      @keyframes red2yellow {
+        from {
+          background: red;
+        }
+        to {
+          background: yellow;
+        }
+      }
+      @keyframes rainbow {
+        0% {
+          background: red;
+        }
+        30% {
+          background: orange;
+        }
+        45% {
+          background: yellow;
+        }
+        60% {
+          background: green;
+        }
+        80% {
+          background: blue;
+        }
+        100% {
+          background: purple;
+        }
+      }
+      @keyframes liverotate {
+        0% {
+          transform: rotate3d(0,0,0,0deg);
+        }
+        12.5% {
+          transform: rotate3d(-0.05,1,0,45deg);
+        }
+        25% {
+          transform: rotate3d(-0.1,1,0,90deg);
+          background; red;
+        }
+        37.5% {
+          transform: rotate3d(-0.05,1,0,135deg);
+        }
+        43.75% {
+          transform: rotate3d(-0.025,1,0,157.5deg);
+        }
+        49% {
+          transform: rotate3d(0,1,0,179deg);
+          background: yellow;
+        }
+        50% {
+          transform: rotate3d(0,1,0,180deg);
+          background: yellow;
+        }
+        51% {
+          transform: rotate3d(0,1,0,181deg);
+          background: yellow;
+        }
+        75% {
+          transform: rotate3d(0.1,1,0,270deg);
+          background: yellow;
+        }
+        100% {
+          transform: rotate3d(0,1,0,360deg);
+          background: yellow;
+        }
+        /*
+        62.5% {
+          transform: rotate3d(0.05,1,0,225deg);
+          background: green;
+        }
+        100% {
+          transform: rotate3d(0.05,1,0,225deg);
+          background: green;
+        }
+        75% {
+          transform: rotate3d(0.1,1,0,270deg);
+          background: purple;
+        }
+        100% {
+          transform: rotate3d(0,1,0,360deg);
+          background: purple;
+        }
+        62.5% {
+        }
+        75% {
+          transform: rotate3d(0.1,1,0,270deg);
+          background: purple;
+        }
+        100% {
+          transform: rotate3d(0,1,0,360deg);
+          background: red;
+        }
+        */
+      }
+      @keyframes liverotate2 {
+        0% {
+          transform: rotate3d(0,0,0,0deg);
+        }
+        50% {
+          transform: rotate3d(0,1,0,180deg);
+          background: yellow;
+        }
+        100% {
+          transform: rotate3d(0,1,0,360deg);
+          background: yellow;
+        }
+      }
+      .rotate180 {
+        transform: rotate3d(0, 1, 0, 180deg);
+      }
+      .rotate360 {
+        /* transform: rotate3d(-0.1, 1, 0, 360deg);*/
+        /* animation: liverotate 1s infinite;*/
+        animation: liverotate2 1s infinite;
+        animation-duration:3s;
+        animation-timing-function: linear;
+      }
+      .animation1 {
+        animation: red2yellow 5s infinite;
+      }
+      .animation2 {
+        animation: rainbow 7s infinite;
+      }
+      .animation2:hover {
+        transform: scale(0.1);
+        /* transform: translate3d(2,3,13); */
+        transition-duration: 2s;
+      }
+      #change {
+        transition: 5s;
+      }
+    </style>
+    <script>
+      function change(event) {
+        var dom = document.getElementById("change");
+        if (dom.getAttribute("class").indexOf("rotate") >= 0) {
+          dom.setAttribute("class", "small-block");
+        } else {
+          dom.setAttribute("class", "small-block rotate360");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>过渡transition的使用</h1>
+    <div class="small-block" id="change" onclick="change()">
+      我是一大段文字
+    </div>
+    <button onclick="change()">点我翻转</button>
+    <h1>动画keyframes的基础使用</h1>
+    <div class="small-block animation1" >
+    </div>
+    <div class="small-block animation2">
+    </div>
+  </body>
+</html>
