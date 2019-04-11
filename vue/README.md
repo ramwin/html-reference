@@ -1,19 +1,20 @@
-#### Xiang Wang @ 2016-09-30 10:34:15
+**Xiang Wang @ 2016-09-30 10:34:15**
+
+[官网](https://cn.vuejs.org/)
 
 ### 教程
 * 安装
 ```
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.0/vue.js" type="text/javascript"></script>
+<script src="https://unpkg.com/vue" type="text/javascript"></script>
 ```
 * [基础](basic.md), [示例](basic.html)
-    * 基础
-    ```
-    var vm = new Vue({
-        el: '#选择元素渲染',
-        data: '渲染数据',
-        delimiters: ['${', '}$'],  // 标签
-    })
-    ```
+```
+var vm = new Vue({
+    el: '#选择元素渲染',
+    data: '渲染数据',
+    delimiters: ["${", "}$"],  // 标签
+})
+```
     * 选项数据 [官网](https://cn.vuejs.org/v2/api/#选项-数据)
         ```
         watch: {
