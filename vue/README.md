@@ -1,6 +1,6 @@
 **Xiang Wang @ 2016-09-30 10:34:15**
 
-[官网](https://cn.vuejs.org/)
+[官网](https://cn.vuejs.org/v2/guide/)
 
 ### 教程
 * 安装

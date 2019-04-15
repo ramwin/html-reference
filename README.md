@@ -17,6 +17,39 @@
     * [测试两个vm绑定一个值](./vue/2object.html) *请尽量不要这么做*
 * ### [old reference 以前整理的资料](./vue/README.md)
 
+## 模板语法
+### 插值
+* 文本
+使用Mustache的语法
+```
+<span> Message: {{ msg }}</span>
+<span v-once>这个将不会发生改变: {{ msg }}</span>
+```
+* 原始HTML
+```
+<p>Using mustaches: {{ rawHtml }}</p>
+<p>Using v-html directive: <span v-html="rawHtml"></span></p>
+这样后面的rawHtml的内容会直接替换这个span
+```
+* 特性
+Mustache不能用于HTML特性上，这种情况应该使用v-bind, 如果value是`null`, `undefined`或者`false`就不会渲染到html特性上
+```
+<div v-bind:id="dynamicId"></div>
+```
+* 使用JavaScript表达式
+```
+{{ number + 1 }}
+{{ ok ? 'YES' : 'NO' }}
+{{ message.split('').reverse().join('') }}
+```
+### 缩写
+* v-bind:  
+`v-bind:href="url" => :ref="url"`
+* v-on:  
+`v-on:click="doSomething" => @click="doSomething"`
+### to be continued
+* [ ] 指令
+
 ## 基础
 * ### Vue实例
     * 生命周期  
