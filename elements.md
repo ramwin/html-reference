@@ -47,10 +47,34 @@
         ```
 
 ## Image and multimedia
-* img
+### img
 [测试](test/img.html)
     * src: 图片的路径
-    * alt: 图片的文字信息
+    * alt: 图的文字信息
+### video
+[官网](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video)
+[测试](./test/video.html)
+video可以用来放audio, 但是audio更好
+如果你希望有其他的使用操作: 参考 `HTMLMediaElement` `track`
+* 案例
+* 属性
+    * autoplay: 自动播放
+    * buffered: 包含一个TimeRanges对象
+    * controls: 是否需要设置
+    * crossorigin
+    * height
+    * intrinsicsize
+    * loop
+    * muted
+    * preload: 是否预先载入（告诉浏览器先载入视频还是载入其他页面）
+    * playsinline 是否可以不全屏播放
+    * poster 预览图片
+    * src
+    * width
+* 事件
+    * play: 播放
+    * pause: 暂停
+* 使用笔记
 
 ## Embedded content
 * iframe
