@@ -5,9 +5,15 @@
 * [mozilla web开发者资料](https://developer.mozilla.org/zh-CN/docs/Web)
 * [mozilla learning html: guides and tutorials](https://developer.mozilla.org/en-US/docs/Learn/HTML)
 * [mozilla HTML参考](https://developer.mozilla.org/zh-CN/docs/Web/HTML)
-* [Bootstrap参考](./bootstrap/README.md)
 * [glossary](https://developer.mozilla.org/en-US/docs/Glossary)
-* [Vue](#vue框架)
+
+# [bootstrap](./bootstrap/README.md)
+## Components 组件
+* [modal](./bootstrap/modal模态框.md)
+
+## 其他插件
+* [bootstrap-slider](./bootstrap-slider.html)
+* [DateRangePicker, bootstrap4](daterangepicker.md)
 
 # [vue框架](./vue/README.md)
 ## 参考
@@ -160,7 +166,6 @@ Mustache不能用于HTML特性上，这种情况应该使用v-bind, 如果value�
 * [下拉框选择搜索](./select搜索选择.html)
 * [根据页数自动分页](./page分页.html) [官方教程](https://esimakin.github.io/twbs-pagination/)
 
-
 # [jquery](http://api.jquery.com/)
 * ## install
 ```
@@ -210,8 +215,6 @@ Mustache不能用于HTML特性上，这种情况应该使用v-bind, 如果value�
 * ## [UI api](https://api.jqueryui.com/)
     * [toggle](https://api.jqueryui.com/toggle/): `$('#id').toggle()`
 
-
-
 # other framework or useful repository 其他有用的框架
 * ## [Baidu Map API](http://lbsyun.baidu.com/index.php?title=jspopular3.0)
     * [测试页面](./test/baidu.html)
@@ -221,9 +224,6 @@ Mustache不能用于HTML特性上，这种情况应该使用v-bind, 如果value�
         * [测试](./test/amap_massmarker.html)
         * 注意事项:
             如果两个点标记的坐标完全一样，那么就无法分开
-* ## [bootstrap](./bootstrap/README.md)
-* ## [bootstrap-slider](./bootstrap-slider.html)
-* ## [DateRangePicker, bootstrap4](daterangepicker.md)
 * ## [flatpickr](https://github.com/flatpickr/flatpickr)  *没有依赖的时间选择器*
 * ## [flex布局](./flex/README.md)
 * ## [富文本编辑器](./summernote网页编辑器.html)
