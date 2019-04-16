@@ -21,47 +21,11 @@
 ```
 * [引用模板](./basic.html)
 
-
 # Content  
 ## Reboot  
 
-## [typography](https://getbootstrap.com/docs/4.1/content/typography/)
-the look of text
-* Heading
-* display heading
-* lead
-* inline text elements
-    * mark
-    * del
-    * s
-    * ins
-    * u
-    * small
-    * strong
-    * em
-* abbreviations
-* [blockquotes](https://getbootstrap.com/docs/4.1/content/typography/#blockquotes)  
-use `blockquotes` to represent blockquote
-    * example
-    ```
-    <blockquote class="blockquote">
-      <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-    </blockquote>
-    ```
-    * naming a source
-    ```
-    <blockquote class="blockquote">
-      <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-    </blockquote>
-    ```
-    * alignment
-    ```
-    <blockquote class="blockquote text-right">
-      <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-    </blockquote>
-    ```
+## [typography](./typography)
+文字的排版，h1, blockquotes
 
 ## Code
 
@@ -78,49 +42,8 @@ use `blockquotes` to represent blockquote
     * mx-auto
     * d-block
 
-## Tables
-```
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
-```
-* Striped rows
-Use `.table-striped` to add zebra-striping  使用 `.table-striped` 来产生间隔条纹
-    * Change the color:
-    ```
-    .table-striped>tbody>tr:nth-child(odd)>td,
-    .table-striped>tbody>tr:nth-child(odd)>th {
-      background-color: red; // Choose your own color here
-    }
-    ```
-
+## [Tables](./tables.md)
+表格
 
 ## Figures
 
@@ -144,55 +67,7 @@ Use `.table-striped` to add zebra-striping  使用 `.table-striped` 来产生间
 * 样式
     * btn-outline-success: **边框**颜色
 
-## [Carousel 轮播图](https://getbootstrap.com/docs/4.3/components/carousel/)
-
-### How it works
-* 如果有自己的样式需要，要自己来写样式。如果几个carousel-item高度不一样，carousel会在动画结束后变得和当前的item一样高
-* 必须有一个carousel-item是active以撑开carousel本身。
-如果Page Visibility API支持的话，当页面不展示的时候是不会滚动的，避免资源浪费
-### Example
-* 基础例子
-```
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-        <img src="..." class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
-    </div>
-  </div>
-</div>
-```
-* 需要carousel垂直剧中，限制高度
-```
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <div class="d-flex align-items-center" style="max-height: 200px;">
-        <img src="{% static 'homepage/img/轮播图1.jpg' %}"
-          class="d-block w-100" alt="...">
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="d-flex align-items-center" style="max-height: 200px;">
-        <img src="{% static 'homepage/img/轮播图2.jpg' %}"
-          class="d-block w-100" alt="...">
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="d-flex align-items-center" style="max-height: 200px;">
-        <img src="{% static 'homepage/img/轮播图3.png' %}"
-          class="d-block w-100" alt="...">
-      </div>
-    </div>
-  </div>
-</div>
-
-```
+## [Carousel 轮播图](./carousel.md)
 
 ## [Dropdowns](https://getbootstrap.com/docs/4.1/components/dropdowns/)
 * Example
@@ -214,7 +89,7 @@ $().dropdown('toggle')
 ```
 
 ## [Forms表单](./form表单.md)
-## [List group](https://getbootstrap.com/docs/4.1/components/list-group/)
+## [List group](https://getbootstrap.com/docs/4.3/components/list-group/)
 * [custom content](https://getbootstrap.com/docs/4.1/components/list-group/#custom-content)
 通过在 .ligt-group-item 里面加一个 .row来做内部的自适应
 ```
@@ -291,45 +166,7 @@ $().dropdown('toggle')
 ## [Navbar](./components组件.md#Navbar)
 导航栏，用来导航到其他页面
 
-## [Scrollspy](https://getbootstrap.com/docs/4.0/components/scrollspy/)
-* [example](./scrollsby.html)
-```
-<nav id="navbar-example2" class="navbar navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <ul class="nav nav-pills">
-    <li class="nav-item">
-      <a class="nav-link" href="#fat">@fat</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#mdo">@mdo</a>
-    </li>
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#one">one</a>
-        <a class="dropdown-item" href="#two">two</a>
-        <div role="separator" class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#three">three</a>
-      </div>
-    </li>
-  </ul>
-</nav>
-<div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
-  <h4 id="fat">@fat</h4>
-  <p>...</p>
-  <h4 id="mdo">@mdo</h4>
-  <p>...</p>
-  <h4 id="one">one</h4>
-  <p>...</p>
-  <h4 id="two">two</h4>
-  <p>...</p>
-  <h4 id="three">three</h4>
-  <p>...</p>
-</div>
-```
-* How it works:  
-When spying on elements other than the `<body>`, be sure to have a `height` set and `overflow-y: scroll;` applied.
-
+## [Scrollspy](./scrollspy.md)
 
 # Utilities [官网](https://getbootstrap.com/docs/4.0/utilities/borders/)
 
