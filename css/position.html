@@ -30,5 +30,36 @@
             我是子元素3: 但是right: 10px; top: 10px
           </div>
         </div>
+    <h2>测试Bootom相对于parent的概念</h2>
+    <p>默认位置会放在当前div的后面</p>
+    <p>top, bottom相对于的是div的top</p>
+
+    <div style="
+        background: red;
+        width: 200px;
+        height: 200px;
+        padding: 20px;
+        border: 10px solid blue;
+        margin: 40px;
+        position: relative;
+        ">
+      <img src="../source/竖着的图片.png" style="width: 100%; height: 100%;"/>
+      <div style="
+        background: yellow;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+      ">
+      </div>
+      <div style="
+        background: purple;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+      ">
+      </div>
+    </div>
   </body>
 </html>

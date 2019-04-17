@@ -197,7 +197,7 @@ select :last-child  最后一个子节点, 注意是选择出来的所有元素�
 * [ ] relative
 * ### absolute
 从文档流(normal flow of the document)中脱离, 根据最近一个定位的父级元素来定位.  
-因为没有了position, 所以这时候的定位根据 top, right, bottom, left.  
+因为没有了position, 所以这时候的定位根据 top, right, bottom, left.  0代表紧贴的border。width和height是包括里面的和padding
 ```
 .right {
   position: absolute;
