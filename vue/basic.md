@@ -30,14 +30,6 @@ var vm = new Vue({
 * 指令 `<p v-if="greeting">Hello!</p>`
 * 参数 `<a v-bind:href="url"></a> <a v-on:click="doSth"></a>` `:href="url"` `@click="doSomething"`
 
-### class绑定
-* 基础: `class="static" v-bind:class="{ 'class-a': isA, 'class-b': isB }">`
-* 直接绑定:
-    `data: { classObject: { 'class-a': true, 'class-b': false } }`
-    `v-bind:class="classObject"`
-* 三元表达式: `v-bind:class="[classA, isB ? classB: '']">`
-* 样式绑定: `v-bind:style="styleObject" data: {styleObject: {color:'red', 'fontSize:'13px'}}`
-
 # 条件渲染
 ```
     <h1 v-if="ok">Yes</h1>
