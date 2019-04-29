@@ -146,7 +146,7 @@ Mustache不能用于HTML特性上，这种情况应该使用v-bind, 如果value�
 
 # [Elements 基础元素](./elements.md)
 ## [Forms](./form.md)
-## [Image and multimedia](./elements.md#image_and_multimedia)
+## [Image and multimedia](./elements.md#image-and-multimedia)
 * audo
 * video
 
