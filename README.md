@@ -144,6 +144,12 @@ Mustache不能用于HTML特性上，这种情况应该使用v-bind, 如果value�
 * ### [Vue-amap 高德地图](https://elemefe.github.io/vue-amap/#/)
   * [测试代码](./test/test-vue-amap.html)
 
+# [Elements 基础元素](./elements.md)
+## [Forms](./form.md)
+## [Image and multimedia](./elements.md#image_and_multimedia)
+* audo
+* video
+
 
 # HTTP协议
 * User-Agent:  
@@ -155,9 +161,6 @@ Mustache不能用于HTML特性上，这种情况应该使用v-bind, 如果value�
     * 409: 请求冲突，多个同步更新之间的编辑冲突等
     * 429: 请求过于频繁
     * 511: 需要认证才能获取网络访问权限
-
-# [Elements 基础元素](./elements.md)
-## [Forms](./form.md)
 
 # [CSS 样式](./css/README.md)
 

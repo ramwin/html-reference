@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+    <audio src="../source/mp3.mp3" controls>
+    </audio>
+    <script>
+      function play() {
+        // mySound = new Audio("../source/mp3.mp3");
+        mySound = new Audio("not exists file");  // 用一个根本不存在的路径来判断，是否允许自动播放
+        var result = mySound.play();
+        result.catch(function(exception) {
+          console.error(exception.name);
+          if (exception.name == "NotAllowedError") {
+            alert(
+              "您没有允许自动播放音频, 请访问\n" +
+              "-- chrome://flags/#autoplay-policy(谷歌浏览器)\n" +
+              "-- about:preferences#privacy(火狐浏览器)\n" +
+              "来修改")
+          } else if (exception.name="NotSupportedError") {
+            console.info("允许自动播放的");
+          }
+          else {
+            console.info(exception)
+            console.info(exception.name)
+            console.info(exception.message)
+          }
+        })
+      }
+      play();
+    </script>
+    <button onclick="play()">点我自动播放一次</button>
+  </body>
+</html>

@@ -46,7 +46,23 @@
         <a href="tel:+491570156">拨打电话: +49 157 0156</a>
         ```
 
-## Image and multimedia
+## [Image and multimedia](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Image_and_multimedia)
+### to be continued
+* [ ] area
+* [ ] map
+
+### [audio](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio)
+[测试](test/audio.html)
+```
+<audio src="../source/mp3.mp3"></audio>
+```
+对应的webapi: [HTMLAudioElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement)
+* HTMLAudioElement:
+```
+mySound = new Audio("source.mp3");
+var result = mySound.play();
+```
+
 ### img
 [测试](test/img.html)
     * src: 图片的路径
