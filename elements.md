@@ -61,6 +61,23 @@
 ```
 mySound = new Audio("source.mp3");
 var result = mySound.play();
+result.catch(function(exception) {
+    console.error(exception.name);
+    if (exception.name == "NotAllowedError") {
+      alert(
+        "您没有允许自动播放音频, 请访问\n" +
+        "-- chrome://flags/#autoplay-policy(谷歌浏览器)\n" +
+        "-- about:preferences#privacy(火狐浏览器)\n" +
+        "来修改")
+    } else if (exception.name="NotSupportedError") {
+      console.info("允许自动播放的");
+    }
+    else {
+      console.info(exception)
+      console.info(exception.name)
+      console.info(exception.message)
+    }
+})
 ```
 
 ### img
