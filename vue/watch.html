@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script src="https://unpkg.com/vue" type="text/javascript"></script>
+    <script src="https://cdn.bootcss.com/lodash.js/4.17.11/lodash.min.js"></script>
+  </head>
+  <body>
+    <h1>测试侦听器</h1>
+    <h2>测试监听query的text</h2>
+    <div id="watch">
+      <input v-model="query.text"/>
+      <p>{{query.text}}</p>
+      <button @click="reset()">重置query</button>
+    </div>
+    <script>
+      var vm = new Vue({
+        el: "#watch", 
+        data: {
+          "query": {
+            "text": "搜索的内容",
+          }
+        },
+        watch: {
+          "query.text": function(newVal, oldVal) {
+            console.info("query.text变啦", newVal);
+          }
+        },
+        methods: {
+          "reset": function() {
+            this.query = {
+              "text": "重置的内容",
+            }
+          }
+        },
+      })
+    </script>
+    <h2>测试监听的debounce</h2>
+    <div id="debounce">
+      <input v-model="search" />
+    </div>
+    <script>
+      var vm = new Vue({
+        el: "#debounce",
+        data: {
+          "search": "",
+        },
+        created: function() {
+          this.debouncedGetAnswer = _.debounce(
+            function(query) {
+              this.getanswer(query);
+            },
+            1000
+          )
+        },
+        watch: {
+          "search": function(newVal, oldVal) {
+            this.debouncedGetAnswer(newVal)
+          }
+        },
+        methods: {
+          "getanswer": function(query) {
+            console.info("getanswer", query);
+          }
+        },
+      })
+    </script>
+  </body>
+</html>

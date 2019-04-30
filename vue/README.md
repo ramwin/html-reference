@@ -17,7 +17,30 @@ var vm = new Vue({
 })
 ```
 
-#### Class与Style绑定
+### 侦听器
+[测试](watch.html)
+* 配合lodash的debounce来进行延迟搜索
+```
+var vm = new Vue({
+    watch: {
+        question: function(newQuestion, oldQuestion) {
+            this.answer = "Waiting for you to stop typing..."
+            this.debouncedGetAnswer()
+        },
+    },
+    created: {
+        this.debouncedGetAnswer = _.debounce(this.getAnswer, 500)
+    },
+    methods: {
+        getAnswer: function() {
+            ....
+        }
+    },
+})
+```
+* watch可以监听data的二级字段
+
+### Class与Style绑定
 [官网](https://cn.vuejs.org/v2/guide/class-and-style.html)
 [测试](./class与style绑定.html)
 > 直接把v-bind用于class和style,容易出错，所以vue做了专门的增强，可以用数组或者对象来渲染
