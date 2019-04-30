@@ -2,29 +2,20 @@
 
 [官网](https://cn.vuejs.org/v2/guide/)
 
-### 安装
-```
-<script src="https://unpkg.com/vue" type="text/javascript"></script>
-```
+## 基础
+### 介绍-起步
 ### [基础](basic.md), [示例](basic.html)
 ```
+<script src="https://unpkg.com/vue" type="text/javascript"></script>
+var data = {
+    'name': '姓名'
+}
 var vm = new Vue({
-    el: '#选择元素渲染',
-    data: '渲染数据',
+    el: "#profile",
+    data: data,
     delimiters: ["${", "}$"],  // 标签
 })
 ```
-* 选项数据 [官网](https://cn.vuejs.org/v2/api/#选项-数据)
-    ```
-    watch: {
-        a: function(val, oldval) {}
-        b: 'someMethod',
-        c: {
-            handler: function(val, oldval) {},
-            deep: true,
-        }
-    }
-    ```
 
 #### Class与Style绑定
 [官网](https://cn.vuejs.org/v2/guide/class-and-style.html)
@@ -70,3 +61,34 @@ var vm = new Vue({
 ### [过滤器](filter过滤器.md), [示例](filter过滤器.html)
 ### [指令](directive指令.md), [示例](directive指令.html)
 ### [组件](component组件.md), [示例](component组件.html), [进阶](component组件_进阶.html)
+
+### 表单输入绑定
+使用`v-model`可以进行数据绑定
+#### 基础用法
+* 文本
+```
+<input v-model="message">
+<p>Message is: {{ message }}</p>
+```
+* 多行文本
+注意多行文本在textarea中使用`<textarea>{{text}}</textarea>`不会生效
+#### 修饰符
+* .lazy
+默认情况下v-model在input事件触发后将更新，添加lazy的话，change时才会变化
+* .number
+自动自行parseFloat, 如果无法被解析就会返回原始的值
+* .trim
+过滤首尾的空白字符
+
+## api
+### 选项数据 [官网](https://cn.vuejs.org/v2/api/#选项-数据)
+```
+watch: {
+    a: function(val, oldval) {}
+    b: 'someMethod',
+    c: {
+        handler: function(val, oldval) {},
+        deep: true,
+    }
+}
+```

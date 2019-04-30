@@ -1,17 +1,6 @@
 **Xiang Wang @ 2016-09-12 11:02:16**
 * <a href="#v-for">列表渲染</a>
 
-# 基础示例
-```
-<script src="https://unpkg.com/vue" type="text/javascript"></script>
-var data = {
-    'name': '姓名'
-}
-var vm = new Vue({
-    el: "#profile",
-    data: data,
-})
-```
 # 实例方法
 * data: 数据
 * el: 绑定dom   `vm.$el === document.getElementById('example')`
@@ -24,7 +13,6 @@ var vm = new Vue({
 ### 数据绑定
 * 基础绑定 `{{msg}}`
 * 一次性帮定 `{{* msg }}`
-* 双向帮顶 `v-model="msg"` 但是如果用js直接操作这个元素的值，并不会触发model的变化，需要手工修改
 * 基础操作 `{{number +1}} {{ok? 'YES': 'NO' }}`
 * 过滤器 `{{ string | capitalize }}`
 * 指令 `<p v-if="greeting">Hello!</p>`
@@ -72,8 +60,3 @@ var vm = new Vue({
 * `<input type="checkbox" v-model="checked"><label for="checkbox">{{checked}}</label>`
     * v-bind:true-value|false-value="a" 被选择的时候产生的数值
     * v-bind:value=""  # 自定义选择后的数值
-    * lazy  # 不是时时输入就改变，而是change触发后才改变数值
-    * debounce  # 最小延迟，一段时间不变后才触发
-
-
-<div id="end"></div>
