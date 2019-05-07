@@ -83,7 +83,6 @@ var vm = new Vue({
 ### [v-for循环](v-for.md), [示例](v-for.html)
 ### [过滤器](filter过滤器.md), [示例](filter过滤器.html)
 ### [指令](directive指令.md), [示例](directive指令.html)
-### [组件](component组件.md), [示例](component组件.html), [进阶](component组件_进阶.html)
 
 ### 表单输入绑定
 使用`v-model`可以进行数据绑定
@@ -102,6 +101,10 @@ var vm = new Vue({
 自动自行parseFloat, 如果无法被解析就会返回原始的值
 * .trim
 过滤首尾的空白字符
+
+## [组件](component组件.md)
+[测试](component组件.html) [进阶测试](component组件_进阶.html)
+### 组件事件
 
 ## api
 ### 选项数据 [官网](https://cn.vuejs.org/v2/api/#选项-数据)

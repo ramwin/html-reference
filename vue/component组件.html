@@ -38,18 +38,20 @@
     <h1>传递参数的组件</h1>
       <div id="param">
         <my-component3 foo='data' v-bind:foo1="name" v-bind:foo2.sync='foo2'></my-component3>
-        原来的名字: {{* name}}
+        原来的名字: {{ name}}
         单向绑定的名字:<input type="text" v-model="name">
         双向绑定的名字:<input type="text" v-model="foo2">
       </div>
       <script>
         var MyComponent3 = Vue.extend({
           props: ['foo', 'foo1', 'foo2'],
-          template: '<div>静态数据foo的值是{{foo}}<br>动态数据foo1的数值是{{foo1}}<br>\
-            动态地变更组件元素<input v-model="foo1"><br>\
-            动态地变更组件和父组件元素<input v-model="foo2"><br>\
-            </div>\
-            '
+          template: `
+            <div>
+              静态数据foo的值是{{foo}}<br>动态数据foo1的数值是{{foo1}}<br>
+              动态地变更组件元素<input v-model="foo1"><br>
+              动态地变更组件和父组件元素<input v-model="foo2"><br>
+            </div>
+            `
         })
         Vue.component('my-component3', MyComponent3)
         var param = new Vue({
@@ -87,7 +89,12 @@
       })
       var FriendComponent = Vue.extend({  // 单个朋友的组件
         props: ['item'],
-        template: '<div>我的一个好朋友组件: {{item.name}}</div><button v-on:click="_delete()">删除</button>',
+        template: `
+          <div>
+            <div>我的一个好朋友组件: {{item.name}}</div>
+            <button v-on:click="_delete()">删除</button>
+          </div>
+        `,
         methods: {
           _delete: function() {
             debugger;
@@ -101,6 +108,51 @@
         el: '#example',
         data: data,
       })
+    </script>
+    <h1>自定义组件事件</h1>
+    <div id="blog-posts-events-demo">
+      <div :style="{ fontSize: postFontSize + 'em' }">
+        <blog-post
+          v-for="post in posts"
+          :key="post.id"
+          :post="post"
+          @enlarge-text="enlargeText"
+        ></blog-post>
+      </div>
+    </div>
+    <script>
+    Vue.component('blog-post', {
+      props: ['post'],
+      template: `
+        <div class="blog-post">
+          <h3>{{ post.title }}</h3>
+          <button @click="enlarge()">
+            Enlarge text
+          </button>
+          <div v-html="post.content"></div>
+        </div>
+      `,
+      methods: {
+        "enlarge": function() {
+          this.$emit("enlarge-text", {"size": 1});
+        }
+      },
+    })
+    new Vue({
+      el: '#blog-posts-events-demo',
+      data: {
+        posts: [
+          {"title": "大事不好啦", "id": 1},
+          {"title": "老板要涨工资", "id": 2},
+        ],
+        postFontSize: 1
+      },
+      methods: {
+        "enlargeText": function(detail) {
+          console.info("事件来啦", detail)
+        }
+      },
+    })
     </script>
     
   </body>
