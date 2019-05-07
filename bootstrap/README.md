@@ -21,6 +21,11 @@
 ```
 * [引用模板](./basic.html)
 
+# Layout
+## Overview
+* container: 随着外部尺寸变化，container宽度变化
+* container-fluid: 始终是100%宽
+
 # Content  
 ## Reboot  
 
