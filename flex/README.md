@@ -1,8 +1,9 @@
 **Xiang Wang @ 2016-09-12 17:47:04**
 
-* [官网](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
-* display: flex;  # 外面的div
-* display: inline-flex;  # 内部的div
+[官网](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)  
+display: flex;  # 外面的div  
+display: inline-flex;  # 内部的div  
+[测试](./test.html)
 
 ## 容器属性
 * flex-direction: row | row-reverse | column | column-reverse;  # 主轴方向

@@ -7,6 +7,7 @@
 * [mozilla HTML参考](https://developer.mozilla.org/zh-CN/docs/Web/HTML)
 * [glossary](https://developer.mozilla.org/en-US/docs/Glossary)
 
+# [flex布局](./flex/README.md)
 # [bootstrap](./bootstrap/README.md)
 ## Components 组件
 * [modal](./bootstrap/modal模态框.md)
@@ -228,7 +229,6 @@ Mustache不能用于HTML特性上，这种情况应该使用v-bind, 如果value�
         * 注意事项:
             如果两个点标记的坐标完全一样，那么就无法分开
 * ## [flatpickr](https://github.com/flatpickr/flatpickr)  *没有依赖的时间选择器*
-* ## [flex布局](./flex/README.md)
 * ## [富文本编辑器](./summernote网页编辑器.html)
 * ## [jquery datetimepicker](https://github.com/xdan/datetimepicker) [example](./datetimepicker.html)
 not very good use daterangepicker instead
