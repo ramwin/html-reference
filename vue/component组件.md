@@ -36,12 +36,12 @@ Vue.component('my-component', MyComponent)
 ### 自定义事件
 ```
 // 子组件绑定时间
-<blog-post v-on:enlarge-text="enlarge-text()"></blog-post>
+<blog-post v-on:enlarge-text="enlargeText()"></blog-post>
 // 子组件触发事件
 $emit('enlarge-text', detail);  // detail可以是数字或者对象等
 // 父组件处理事件
 methods: {
-    "enlarge-text": function(detail) {
+    "enlargeText": function(detail) {
     }
 }
 ```

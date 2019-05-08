@@ -1,6 +1,5 @@
 **Xiang Wang @ 2018-11-08 16:34:50**
 
-
 [官网](https://getbootstrap.com/docs/4.1/components/modal/)
 
 ### example
@@ -9,30 +8,29 @@
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
   Launch demo modal
 </button>
-
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-  <div class="modal-content">
-    <div class="modal-header">
-    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      </div>
+      <div class="modal-body">
+      ...
+      </div>
+      <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
     </div>
-    <div class="modal-body">
-    ...
     </div>
-    <div class="modal-footer">
-    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-    <button type="button" class="btn btn-primary">Save changes</button>
-    </div>
-  </div>
-  </div>
 </div>
 ```
 
-### Vertically centered [官网](https://getbootstrap.com/docs/4.1/components/modal/#vertically-centered)
+### [Vertically centered](vertical-centered)
 ```
 <div class="modal fade">
     <div class="modal-dialog modal-dialog-centered">
@@ -87,7 +85,7 @@ Have a bunch of buttonss that all trigger the same modal with slightly different
 ```
 $('#exampleModal').on('show.bs.modal', function (event) {
   var button = $(event.relatedTarget) // Button that triggered the modal
-  var recipient = button.data('whatever') // Extract info from data-* attributes
+  var recipient = button.data('whatever') // Extract info from `data-*` attributes
   // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
   // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
   var modal = $(this)
@@ -96,11 +94,11 @@ $('#exampleModal').on('show.bs.modal', function (event) {
 })
 ```
 
-### [Size](https://getbootstrap.com/docs/4.1/components/modal/#optional-sizes)
+### [Size][modal-size]
+modal-dialog默认 `max-width: 500px;` modal-sm: 300px, modal-lg: 800px;
 ```
 <!-- Large modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
-
 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
@@ -131,4 +129,5 @@ $('#exampleModal').on('show.bs.modal', function (event) {
 ### TODO
 * [ ] events
 
-
+[vertical-centered]: https://getbootstrap.com/docs/4.1/components/modal/#vertically-centered
+[modal-size]: https://getbootstrap.com/docs/4.1/components/modal/#optional-sizes
