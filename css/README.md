@@ -1,26 +1,25 @@
 **Xiang Wang @ 2016-09-14 15:05:53**
 
 ## 基础
-* [MDN Mozilla官方指南](https://developer.mozilla.org/en-US/docs/Web/CSS)
-* 选择器 [快速参考](./select选择器.md) [例子](./select选择器.html)
-* [训练](https://flukeout.github.io/)
+* [MDN Mozilla官方指南][mozilla]
+* 选择器 [快速参考](./select选择器.md) [例子](./select选择器.html) [训练](https://flukeout.github.io/)
 * 引入
 > <link rel="stylesheet" href="./source/css.css">
 
-## background and border 背景和边框 [示例](./border.html) [官网](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Backgrounds_and_Borders)
+## background and border 背景和边框 [示例](./border.html) [官网][background]
 ### 背景
 * [背景background](background背景.md)
 
 ### border边框
 * 边框
     * border: `1px solid red;`
-    * border-style [官网](https://developer.mozilla.org/en-US/docs/Web/CSS/border-style) *可以设置成虚线框，双实线*
+    * [border-style][border-style] *可以设置成虚线框，双实线*
     ```
     none|dotted|inset|dashed(上下) solid(左右)|dashed(上) double(左右) none(下)|dashed(上) groove(右) none(下) dotted(左)  
     inset, outset 代表了看上去像突出或者凹进去  
     groove, ridge 代表了边框看上去是凹槽或者凸脊 
     ```
-* border-radius 圆角边框 [官网](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius)
+* [border-radius][border-radius]
 border-radius可以使用一个圆或者两个圆来描绘  
 这个属性是作用于整个background的, 就算没有border,也会变成切割状态(根据background-clip属性来决定样式)
 * border-width 边框宽度
@@ -35,7 +34,7 @@ border-radius可以使用一个圆或者两个圆来描绘
 ## CSS types
 `CSS types`是一些CSS能够接受的类
 
-### gradient 渐变 [官网](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient)
+### [gradient 渐变](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient)
 gradient是一种`<image>`, 所以可以用于background属性的value.  
 但是也正因为他是image, 所以它不能用于color或者background-color  
 如果要实现text的gradient, 请参考[this](https://css-tricks.com/snippets/css/gradient-text/). 把文字变成透明, 添加背景, 设置`backgroun-clip: text`
@@ -88,28 +87,35 @@ p:nth-child(1) or p:nth-child(0n+1)  和:first-child一样，但是拥有更高�
 ```
 
 ## [box-shadow阴影](https://developer.mozilla.org/zh-CN/docs/Web/CSS/box-shadow)
-    ```
-    box-shadow:  inset | offset-x | offset-y | blur-radius | spread-radius | color
-    inset: 不写就是外边框，否则就是内边框
-    blur-radius: 扩散程度(越大，阴影扩散得越开, 也就越淡)
-    spread-radius: 阴影放大比例(可以为负值)
-    ```
+```
+box-shadow:  inset | offset-x | offset-y | blur-radius | spread-radius | color
+inset: 不写就是外边框，否则就是内边框
+blur-radius: 扩散程度(越大，阴影扩散得越开, 也就越淡)
+spread-radius: 阴影放大比例(可以为负值)
+```
 
 ## [Flex 弹性盒子布局](../flex/README.md)
 
 ## float [参考](https://developer.mozilla.org/en-US/docs/Web/CSS/float) [测试](float.html)
-    * value: left|right|none|inline-start|inline-end
-    * __float会把元素脱离当前的流，使得自身的高度无法撑开父元素__
-    * float的元素不仅仅会飘动，直到遇到了父元素的边框或者是其他的浮动元素
+* value: left|right|none|inline-start|inline-end
+* __float会把元素脱离当前的流，使得自身的高度无法撑开父元素__
+* float的元素不仅仅会飘动，直到遇到了父元素的边框或者是其他的浮动元素
 
 ## ul列表
-    * `list-style: none|inside|outside|url` # 列表样式 
+* `list-style: none|inside|outside|url` # 列表样式 
 
 ## 鼠标样式
+* cursor
+```
+cursor: not-allowed  # 禁止
+```
 
+* [pointer-events][pointer-events]
+表明是否可以点击
 ```
-    cursor: not-allowed  # 禁止
+pointer-events: auto可以点击|none不可以点击, 其他的都仅仅和svg有关
 ```
+
 ## 超出范围[overflow]:
 
 ```
@@ -272,3 +278,9 @@ display: -webkit-box;
 -webkit-box-orient: vertical;
 text-overflow: hidden;
 ```
+
+[mozilla]: https://developer.mozilla.org/en-US/docs/Web/CSS
+[background]: https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Backgrounds_and_Borders
+[border-style]: https://developer.mozilla.org/en-US/docs/Web/CSS/border-style
+[border-radius]: https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
+[pointer-events]: https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events
