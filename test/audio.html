@@ -9,8 +9,9 @@
     </audio>
     <script>
       function play() {
-        // mySound = new Audio("../source/mp3.mp3");
-        mySound = new Audio("not exists file");  // 用一个根本不存在的路径来判断，是否允许自动播放
+        // var mySound = new Audio("../source/mp3.mp3");
+        // mySound = new Audio("not exists file");  // 用一个根本不存在的路径来判断，是否允许自动播放
+        var mySound = new Audio("https://duishang.net/static/group/%E5%80%92%E8%AE%A1%E6%97%B62019-05-15-5%E5%A3%B0.mp3")
         var result = mySound.play();
         result.catch(function(exception) {
           console.error(exception.name);
@@ -31,6 +32,12 @@
         })
       }
       play();
+      setInterval(
+        res=>{
+          play()
+        },
+        5000,
+      )
     </script>
     <button onclick="play()">点我自动播放一次</button>
   </body>
