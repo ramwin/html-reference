@@ -67,9 +67,11 @@
       <button @click="add_item_reverse">逆序增加item</button>
       <ul class="border border-primary list-group d-flex flex-column-reverse"
           style="max-height: 300px; overflow: scroll">
+        <p>我是顶部</p>
         <li v-for="item in items" class="list-group-item">
           <p>{{item}}</p>
         </li>
+        <p>我是底部</p>
       </ul>
     </div>
     <script>

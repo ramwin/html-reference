@@ -25,5 +25,28 @@
         第一个元素会有特效哦
       </div>
     </div>
+    <h1>相邻的元素</h1>
+    <style>
+      .bro {
+        width: 100px; 
+        height: 100px;
+        background: red;
+        margin: 0px;
+      }
+      .bro.active {
+        background: white;
+      }
+      .bro.active ~ .bro {
+        border-radius: 10px;
+      }
+    </style>
+    <div style="display: flex">
+      <div class="bro">1</div>
+      <div class="bro">1</div>
+      <div class="bro">1</div>
+      <div class="bro active">3</div>
+      <div class="bro">1</div>
+      <div class="bro">1</div>
+    </div>
   </body>
 </html>
