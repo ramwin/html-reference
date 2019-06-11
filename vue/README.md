@@ -1,12 +1,18 @@
 **Xiang Wang @ 2016-09-30 10:34:15**
 
 [官网](https://cn.vuejs.org/v2/guide/)
-
-## 基础
-### 介绍-起步
 ### [基础](basic.md), [示例](basic.html)
+
+## 安装
 ```
 <script src="https://unpkg.com/vue" type="text/javascript"></script>
+```
+
+### 介绍
+
+### Vue实例
+* 创建一个Vue实例
+```
 var data = {
     'name': '姓名'
 }
@@ -16,6 +22,9 @@ var vm = new Vue({
     delimiters: ["${", "}$"],  // 标签
 })
 ```
+
+* 生命周期
+<img src="./生命周期.png" width="600" height="1500"/>
 
 ### 侦听器
 [测试](watch.html)
