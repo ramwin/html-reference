@@ -106,7 +106,7 @@ v-if必须用在元素上，使用template来包含几个元素，渲染时这�
     <p>Paragraph 2</p>
 </template>
 ```
-用key来管理服用: vue的if切换时，有些元素不会重新渲染，导致有些输入框的输入不会清空。如果你一定要清空，请使用key来制定dom唯一
+用key来管理复用: vue的if切换时，有些元素不会重新渲染，导致有些输入框的输入不会清空。如果你一定要清空，请使用key来制定dom唯一
 ```
 <template v-if="loginType === 'username'">
   <label>Username</label>
@@ -117,8 +117,12 @@ v-if必须用在元素上，使用template来包含几个元素，渲染时这�
   <input placeholder="Enter your email address" key="email-input">
 </template>
 ```
-* 使用`v-show`
-v-show仅仅做一个功能，设置dom的display是否为hidden
+* 使用`v-show`  
+v-show仅仅做一个功能，设置dom的display是否为hidden, 但是如果已经在dom上设置了display属性，会导致这个v-show失效
+* v-if vs v-show  
+v-show切换开销小，v-if如果判断为false,直接干脆不渲染
+* v-if与v-for一起使用  
+尽量避免
 
 ### [v-for循环](v-for.md), [示例](v-for.html)
 ### [过滤器](filter过滤器.md), [示例](filter过滤器.html)
@@ -157,4 +161,40 @@ watch: {
         deep: true,
     }
 }
+```
+
+## 风格指南
+### 优先级A的规则：必要的
+* 避免 v-if 和 v-for用在一起  
+因为v-for比v-if有更高的优先级，所以哪怕我们只渲染一小部分用户元素，也会重新渲染遍历所有的列表  
+过滤后的列表只会在 users 数组发生相关变化时才被重新运算，过滤更高效。  
+使用 v-for="user in activeUsers" 之后，我们在渲染的时候只遍历活跃用户，渲染更高效  
+解藕渲染层的逻辑，可维护性 (对逻辑的更改和扩展) 更强。  
+```
+<ul>
+  <li
+    v-for="user in activeUsers"
+    :key="user.id"
+  >
+    {{ user.name }}
+  </li>
+</ul>
+computed: {
+  activeUsers: function () {
+    return this.users.filter(function (user) {
+      return user.isActive
+    })
+  }
+}
+```
+通过先外层判断，然后才循环，避免了即使`shouldShowUsers`为false， 仍然会遍历users的问题
+```
+<ul v-if="shouldShowUsers">
+  <li
+    v-for="user in users"
+    :key="user.id"
+  >
+    {{ user.name }}
+  </li>
+</ul>
 ```
