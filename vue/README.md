@@ -1,12 +1,15 @@
 **Xiang Wang @ 2016-09-30 10:34:15**
 
 [官网](https://cn.vuejs.org/v2/guide/)
-### [基础](basic.md), [示例](basic.html)
+## [基础](basic.md)
+[旧的测试代码](basic.html)
+[新的测试代码](基础.html)
 
-## 安装
+### 安装
 ```
 <script src="https://unpkg.com/vue" type="text/javascript"></script>
 ```
+* 条件与循环
 
 ### 介绍
 
@@ -88,6 +91,34 @@ var vm = new Vue({
     * [ ] 数组语法
     三元表达式: `v-bind:class="[classA, isB ? classB: '']">`
 * 样式绑定: `v-bind:style="styleObject" data: {styleObject: {color:'red', 'fontSize:'13px'}}`
+
+### 条件渲染
+* 使用`v-if`
+```
+直接使用v-if指令
+<h1 v-if="awesome">Vue is awesome!</h1>
+<h1 v-else-if="beautiful">Vue is beautiful!</h1>
+<h1 v-else="normal">Vue is normal!</h1>
+v-if必须用在元素上，使用template来包含几个元素，渲染时这个template不会显示
+<template v-if="ok">
+    <h1>Title</h1>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+</template>
+```
+用key来管理服用: vue的if切换时，有些元素不会重新渲染，导致有些输入框的输入不会清空。如果你一定要清空，请使用key来制定dom唯一
+```
+<template v-if="loginType === 'username'">
+  <label>Username</label>
+  <input placeholder="Enter your username" key="username-input">
+</template>
+<template v-else>
+  <label>Email</label>
+  <input placeholder="Enter your email address" key="email-input">
+</template>
+```
+* 使用`v-show`
+v-show仅仅做一个功能，设置dom的display是否为hidden
 
 ### [v-for循环](v-for.md), [示例](v-for.html)
 ### [过滤器](filter过滤器.md), [示例](filter过滤器.html)
