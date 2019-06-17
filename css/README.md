@@ -4,7 +4,7 @@
 * [MDN Mozilla官方指南][mozilla]
 * 选择器 [快速参考](./select选择器.md) [例子](./select选择器.html) [训练](https://flukeout.github.io/)
 * 引入
-> <link rel="stylesheet" href="./source/css.css">
+> `<link rel="stylesheet" href="./source/css.css">`
 
 ## background and border 背景和边框 [示例](./border.html) [官网][background]
 ### 背景
