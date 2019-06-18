@@ -170,97 +170,35 @@ Mustache不能用于HTML特性上，这种情况应该使用v-bind, 如果value�
 * [下拉框选择搜索](./select搜索选择.html)
 * [根据页数自动分页](./page分页.html) [官方教程](https://esimakin.github.io/twbs-pagination/)
 
-# [jquery](http://api.jquery.com/)
-* ## install
-```
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
-```
-* ## [Ajax](http://api.jquery.com/category/ajax/)
-    * [jQuery.ajax](https://api.jquery.com/jQuery.ajax/)
-        ```
-        $.ajax({
-                url:"/upload/file/",
-                type: "POST",
-                async: true,
-
-                # 普通请求
-                data: {
-                    data:reader2.result,
-                },
-
-                # json请求
-                contentType: "application/json; charset=utf-8",
-                data: JSON.stringify(data),
-
-                beforeSend: function(request) {
-                            request.setRequestHeader("Test", "Chenxizhang");
-                        },
-                success:function(responseTxt){
-                    console.log('ok');
-                },
-                error: function(jqXHR, textStatus, errorThrown){
-                    console.log("错误")
-                    console.log(jqXHR.responseJSON)
-                },
-        });
-        ```
-    * [jQuery.get](https://api.jquery.com/jquery.get/)
-    `jQuery.get( url [, data ] [, success ] [, dataType ] )`
-    * [jQuery.getJSON](http://api.jquery.com/jQuery.getJSON/)
-        ```
-        $.getJSON("/text/", {}, Function( PlainObject data, String textStatus, jqXHR jqXHR )).fail(function(res) {
-            toastr.error(res.responseText);
-        })
-        ```
-    * [jQuery.post](http://api.jquery.com/jQuery.post/)
-        ```
-        jQuery.post( url [, data ] [, success ] [, dataType ] )
-        ```
-* ## [UI api](https://api.jqueryui.com/)
-    * [toggle](https://api.jqueryui.com/toggle/): `$('#id').toggle()`
+# [jquery](./jquery.md)
+## [Ajax](./jquery.md#ajax)
 
 # other framework or useful repository 其他有用的框架
-* ## [Baidu Map API](http://lbsyun.baidu.com/index.php?title=jspopular3.0)
-    * [测试页面](./test/baidu.html)
 * ## amap api 高德地图api
     * [official documents 官方文档](http://lbs.amap.com/api/javascript-api/summary)
     * [massmarker 海量点标记](http://lbs.amap.com/api/javascript-api/guide/overlays/massmarker)
         * [测试](./test/amap_massmarker.html)
         * 注意事项:
             如果两个点标记的坐标完全一样，那么就无法分开
+* ## [Baidu Map API](http://lbsyun.baidu.com/index.php?title=jspopular3.0)
+    * [测试页面](./test/baidu.html)
+* ## Fontawesome 字体页面
+    [测试](./test/fontawesome.html)
+    * 直接使用
+    ```
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <i class="fas fa-camera-retro"></i>
+    ```
+    * [find your icons](https://fontawesome.com/icons?d=gallery)
+        * delete: `<i class="fas fa-minus-circle"></i>`
+        * plus: `<i class="fas fa-plus"></i>`
+    * 下载到本地后使用
+    [教程](https://fontawesome.com/how-to-use/on-the-web/setup/hosting-font-awesome-yourself)
 * ## [flatpickr](https://github.com/flatpickr/flatpickr)  *没有依赖的时间选择器*
 * ## [富文本编辑器](./summernote网页编辑器.html)
 * ## [jquery datetimepicker](https://github.com/xdan/datetimepicker) [example](./datetimepicker.html)
 not very good use daterangepicker instead
-* ## [jquery pagination plugin 分页](http://josecebe.github.io/twbs-pagination/)
-    * [website](http://josecebe.github.io/twbs-pagination/)
-    * demo
-    ```
-    <script src="https://raw.githubusercontent.com/josecebe/twbs-pagination/master/jquery.twbsPagination.js"></script>
-    <div id="pagination-demo"></div>
-    <script>
-      $('#pagination-demo').twbsPagination({
-        totalPages: 35,
-        visiblePages: 7,
-        first: "第一页",
-        prev: "上一页",
-        next: "下一页",
-        last: "最后一页",
-        onPageClick: function (event, page) {
-            $('#page-content').text('Page ' + page);
-        }
-      });
-    </script>
-    ```
-    * options
-        * 
-    * methods:
-        * destroy
-        ```
-        var $pagination = $('selector');
-        $pagination.twbsPagination('destroy');  // use destroy and recreate to enable dynamic total page
-        $pagination.twbs-pagination(options);
-        ```
+* [jquery pagination plugin: 分页插件](./other_lib.md#jquery-pagination-plugin)
 * ## [less](http://lesscss.org/)
     * 基础用法: `lessc source.less target.css`
     * Document
@@ -287,41 +225,7 @@ Parse, validate, manipulate, and display dates and times in JavaScript.
             It should be noted that moments are mutable. Calling any of the manipulation methods will **change** the original moment.
             * add: `moment().add(7, 'days|d|weeks|w|months|M|years|y')`
 * ## [sweetalert, 用来替换系统的alert](./sweetalert.html)
-* ## [select2](./select2.md)
-    *Select2 is a jQuery based replacement for select boxes. It supports searching, remote data sets, and infinite scrolling of results.*  
-    * Document
-        1. get started, installation
-        ```
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
-        <select></select>
-        $("#id").select2()
-        ```
-
-        6. data source
-        ```
-        $('.js-data-example-ajax').select2({
-          minimumInputLength: 2, // Minimum search term length
-          ajax: {
-            url: 'https://api.github.com/search/repositories',  // the url can also be dynamic
-            dataType: 'json'
-          },
-          processResults: function (data) {
-            // Tranforms the top-level key of the response object from 'items' to 'results'
-            // you can also add some other tranforms to ensure the results is kind of [{"id": 1, "text": "text"}, {"id": 2, "text": "text2"}]
-            return {
-              results: data.items
-            };
-          },
-        });
-        ```
-
-        9. [Dynamic option create](https://select2.org/tagging)
-        ```
-        tags: true,  // add the tag whose value is the input value
-        createTag: function(params) {return {"id": null, "text": params.term}}  // customer the tag created
-        insertTag: function(data, tag) {data.push(tag)}  // determine where the tag should be placed
-        ```
+* ## [select2](./other_lib.md#select2)
 * ## [selectize 用于方便地选择和输入,](http://selectize.github.io/selectize.js/) [github链接,](https://github.com/selectize/selectize.js) [例子](./selectize.html)
 * ## [wing简单的开源框架](./wing.html)
 * ## [ztree树状图](./ztree.html)
