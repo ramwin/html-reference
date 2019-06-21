@@ -35,6 +35,16 @@
             },
     });
     ```
+* 发送json请求
+```
+$.ajax({
+    data: Object,
+    dateType: "json",
+    success: function(res) {
+        res直接就是数据了
+    }
+})
+```
 * [jQuery.get](https://api.jquery.com/jquery.get/)
 `jQuery.get( url [, data ] [, success ] [, dataType ] )`
 * [jQuery.getJSON](http://api.jquery.com/jQuery.getJSON/)

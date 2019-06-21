@@ -188,6 +188,9 @@ select :last-child  最后一个子节点, 注意是选择出来的所有元素�
 * word-spacing: 单词之间的尺寸
 * letter-spacing: 字母之间的尺寸
 
+## 图片
+[测试](./image.html)
+
 ## [颜色](./color颜色.html)
 * [关键字颜色参考,尽量使用下面的这个链接](https://developer.mozilla.org/en/docs/Web/CSS/color_value#Color_keywords)
 * [颜色示例](./color颜色.html)
@@ -271,7 +274,8 @@ cssselector::-webkit-scrollbar {
 [官网](https://developer.mozilla.org/en-US/docs/Web/CSS/WebKit_Extensions)
 
 * -webkil-line-clamp
-限定文本的最大行数, [参考](https://www.html.cn/webkit/-webkit-line-clamp/) [官网](https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-line-clamp)不存在文档，所以提出了[issue](https://github.com/mdn/sprints/issues/1497)
+限定文本的最大行数, [参考](https://www.html.cn/webkit/-webkit-line-clamp/) [官网](https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-line-clamp)不存在文档，所以提出了[issue](https://github.com/mdn/sprints/issues/1497)  
+
 ```
 -webkit-line-clamp: 3
 display: -webkit-box;

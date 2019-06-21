@@ -171,7 +171,7 @@ Mustache不能用于HTML特性上，这种情况应该使用v-bind, 如果value�
 * [根据页数自动分页](./page分页.html) [官方教程](https://esimakin.github.io/twbs-pagination/)
 
 # [jquery](./jquery.md)
-## [Ajax](./jquery.md#ajax)
+* [Ajax](./jquery.md#ajax)
 
 # other framework or useful repository 其他有用的框架
 * ## amap api 高德地图api
