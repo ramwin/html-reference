@@ -2,12 +2,17 @@
 
 
 [官网 Forms](https://getbootstrap.com/docs/4.1/components/forms/)
+[测试](./form.html)
+
 ### Layout
 #### Form grid
 * [ ] form row
 * Horizontal form
 
 #### Inline Forms
+* 添加`display: flex`让所有的元素放在一行
+* 给所有的controls和input groups添加`width: auto`让他们不再占用整行
+* 确保每个form-control都有label
 ```
 <form class="form-inline">
 </form>

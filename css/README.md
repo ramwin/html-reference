@@ -144,8 +144,7 @@ pointer-events: auto可以点击|none不可以点击, 其他的都仅仅和svg�
     min-width: 对于th和td，一列的宽度是取决于最窄的那个
 ```
 
-## [伪类]()
-* [参考资料](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-classes)
+## [伪类](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes)
 * [案例](./pseudo-class伪类.html)
 
 * 基础
@@ -160,7 +159,12 @@ select :last-child  最后一个子节点, 注意是选择出来的所有元素�
   top: -10px;
 }
 ```
-
+* :disabled `输入框无效的时候`
+```
+input:disabled {
+  background: #ccc;
+}
+```
 * :focus  `input输入框变成焦点的时候`
     ```
     input:focus {
