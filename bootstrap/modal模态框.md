@@ -126,8 +126,14 @@ modal-dialog默认 `max-width: 500px;` modal-sm: 300px, modal-lg: 800px;
 ### [methods](https://getbootstrap.com/docs/4.1/components/modal/#methods)
     * $('#myModal').modal('hide')
 
-### TODO
-* [ ] events
+### [Events](https://getbootstrap.com/docs/4.1/components/modal/#events)
+`show.bs.modal`, `shown.bs.modal`, `hide.bs.modal`, `hidden.bs.modal`
+```
+$('#myModal').on('hidden.bs.modal', function (e) {
+  // do something...
+})
+```
+
 
 [vertical-centered]: https://getbootstrap.com/docs/4.1/components/modal/#vertically-centered
 [modal-size]: https://getbootstrap.com/docs/4.1/components/modal/#optional-sizes
