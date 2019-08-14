@@ -140,22 +140,31 @@ $().dropdown('toggle')
 弹出一个窗口让用户确认或者操作
 
 ## [Navs](https://getbootstrap.com/docs/4.1/components/navs/)
-* [example](./navs.html)
+### Base
+[example](./navs.html)
 ```html
-    <ul class="nav">
-      <li class="nav-item">
-        <a class="nav-link active" href="#">Active</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
+使用ul
+<ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">Disabled</a>
+  </li>
+</ul>
+或者使用nav
+<nav class="nav nav-pills nav-fill">
+  <a class="nav-item nav-link active" href="#">Active</a>
+  <a class="nav-item nav-link" href="#">Link</a>
+  <a class="nav-item nav-link" href="#">Link</a>
+  <a class="nav-item nav-link disabled" href="#">Disabled</a>
+</nav>
 ```
 * useful class:
     * `.nav`: 使用nav
@@ -167,6 +176,77 @@ $().dropdown('toggle')
     * `.nav-pills`: 片状样式
     * `.nav-fill`: 填充状态
     * `.nav-justifyied`: 统一大小
+### Available styles
+#### Horizontal alignment
+* justify-content-center
+```
+<ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">Disabled</a>
+  </li>
+</ul>
+```
+* justify-content-end
+#### Vertical
+#### Tabs
+#### Pills
+source:
+```
+.nav-pills .nav-link {
+  border-radius: 0.25rem;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #007bff;
+}
+```
+example
+```
+<ul class="nav nav-pills">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">Disabled</a>
+  </li>
+</ul>
+```
+#### Fill and justify
+* nav-fill  
+占用所有控件，但是宽度不同
+```
+<ul class="nav nav-pills nav-fill">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Longer nav link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">Disabled</a>
+  </li>
+</ul>
+```
+* nav-
 
 ## [Navbar](./components组件.md#Navbar)
 导航栏，用来导航到其他页面
