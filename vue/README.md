@@ -128,7 +128,7 @@ v-show切换开销小，v-if如果判断为false,直接干脆不渲染
 ### [过滤器](filter过滤器.md), [示例](filter过滤器.html)
 ### [指令](directive指令.md), [示例](directive指令.html)
 
-### 表单输入绑定
+### [表单输入绑定](https://cn.vuejs.org/v2/guide/forms.html)
 使用`v-model`可以进行数据绑定
 #### 基础用法
 * 文本

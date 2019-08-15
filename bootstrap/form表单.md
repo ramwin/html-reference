@@ -4,6 +4,22 @@
 [官网 Forms](https://getbootstrap.com/docs/4.1/components/forms/)
 [测试](./form.html)
 
+### [Checkbox and radios](https://getbootstrap.com/docs/4.1/components/forms/#checkboxes-and-radios)
+```
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+  <label class="form-check-label" for="defaultCheck1">
+    Default checkbox
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
+  <label class="form-check-label" for="defaultCheck2">
+    Disabled checkbox
+  </label>
+</div>
+```
+
 ### Layout
 #### Form grid
 * [ ] form row
