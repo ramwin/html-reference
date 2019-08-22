@@ -47,6 +47,11 @@
             * `accept="image/png, image/jpeg"` or `accept=".png, .jpg, .jpeg"`: accept PNG or JPEG files
             * `accept="image/*"`: accept any file with an image/* MIME type
         * required
+        * 选择后更新缩略图
+        ```
+        src = window.URL.createObjectURL(event.target.files[0])
+        document.getElementById("img").src=src
+        ```
 * [ ] label
 * [ ] legend
 * [ ] meter
