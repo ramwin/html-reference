@@ -281,7 +281,7 @@ cssselector::-webkit-scrollbar {
 限定文本的最大行数, [参考](https://www.html.cn/webkit/-webkit-line-clamp/) [官网](https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-line-clamp)不存在文档，所以提出了[issue](https://github.com/mdn/sprints/issues/1497)  
 
 ```
--webkit-line-clamp: 3
+-webkit-line-clamp: 3;
 display: -webkit-box;
 -webkit-box-orient: vertical;
 text-overflow: hidden;

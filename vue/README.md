@@ -129,6 +129,7 @@ v-show切换开销小，v-if如果判断为false,直接干脆不渲染
 ### [指令](directive指令.md), [示例](directive指令.html)
 
 ### [表单输入绑定](https://cn.vuejs.org/v2/guide/forms.html)
+[测试代码](./表单输入绑定.html)
 使用`v-model`可以进行数据绑定
 #### 基础用法
 * 文本
@@ -138,6 +139,12 @@ v-show切换开销小，v-if如果判断为false,直接干脆不渲染
 ```
 * 多行文本
 注意多行文本在textarea中使用`<textarea>{{text}}</textarea>`不会生效
+
+#### 值绑定
+用v-bind来绑定value，才可以实现是布尔值
+
+* 单选按钮
+
 #### 修饰符
 * .lazy
 默认情况下v-model在input事件触发后将更新，添加lazy的话，change时才会变化
