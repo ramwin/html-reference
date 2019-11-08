@@ -29,10 +29,39 @@
           },
           success: function(res) {
             debugger;
+
+      function sendajax() {
+        $.ajax({
+          url: "http://ship.ramwin.com:81/api/account/login/",
+          type: "POST",
+          dataType: "json",
+          data: JSON.stringify({
+            "username": "admin",
+            "password": "admin123",
+          }),
+          contentType: "application/json; charset=utf-8",
+          headers: {
+            "content-type": "application/json; charset=utf-8",
+          },
+          success: function(res) {
+            $.ajax({
+              url: "http://ship.ramwin.com:81/api/account/self/",
+              type: "GET",
+              dataType: "json",
+              contentType: "application/json; charset=utf-8",
+              headers: {
+                "content-type": "application/json; charset=utf-8",
+                "Authorization": "Token " + res["token"],
+              },
+              success: function(res) {
+                debugger;
+              }
+            })
           }
         })
       }
     </script>
     <button onclick="login()">登录</button>
+    <button onclick="sendajax()">ajax</button>
   </body>
 </html>
