@@ -13,5 +13,26 @@
       }
     </script>
     <button onclick="toggle()">click</button>
+    <script>
+      function login() {
+        $.ajax({
+          type: "POST",
+          url: "http://ship.ramwin.com:81/api/account/login/",
+          contentType: "application/json; charset=utf-8",
+          dataType: "json",
+          data:  JSON.stringify({
+            "username": "admin",
+            "password": "admin123",
+          }),
+          xhrFields: {
+            withCredentials: true,
+          },
+          success: function(res) {
+            debugger;
+          }
+        })
+      }
+    </script>
+    <button onclick="login()">登录</button>
   </body>
 </html>
