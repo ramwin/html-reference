@@ -29,7 +29,7 @@
 # Content  
 ## Reboot  
 
-## [typography](./typography)
+## [typography](./typography.md)
 文字的排版，h1, blockquotes
 
 ## Code
