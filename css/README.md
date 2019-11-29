@@ -2,7 +2,6 @@
 
 ## 基础
 * [MDN Mozilla官方指南][mozilla]
-* 选择器 [快速参考](./select选择器.md) [例子](./select选择器.html) [训练](https://flukeout.github.io/)
 * 引入
 > `<link rel="stylesheet" href="./source/css.css">`
 
@@ -61,10 +60,12 @@ background: repeating-radial-gradient(white, black 50px);
     ```
 
 
-## Selector选择器
+## [Selector选择器](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors)
+[训练](https://flukeout.github.io/)
+[例子](./select选择器.html)
 ### Simple Selectors
 ### Attribute Selectors
-### Pseudo-classes and pseudo-elements
+### Pseudo-classes
 * [x] nth-child
 这个nth-child可以加一个参数，代表匹配到什么就选择
 odd和even输入时代表选择奇数或者偶数
@@ -77,6 +78,14 @@ tr:nth-child(odd) 一个表格里面第1, 3, 5 等奇数行
 p:nth-child(n)  就是p, 但是拥有更高的specificity
 p:nth-child(1) or p:nth-child(0n+1)  和:first-child一样，但是拥有更高的specificity
 ```
+* [nth-of-type](https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-of-type)
+```
+div span:nth-of-type(2n+1) {
+    // div下面的第三个span. 注意,选择器span需要是element,不能是class选择
+}
+```
+* [has 父选择器](https://developer.mozilla.org/en-US/docs/Web/CSS/:has)
+### Pseudo-elements
 ### Combinators and multiple selectors
 
 ## a标签

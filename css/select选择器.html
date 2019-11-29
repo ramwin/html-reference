@@ -25,7 +25,7 @@
         第一个元素会有特效哦
       </div>
     </div>
-    <h1>相邻的元素</h1>
+    <h1>元素之后的元素</h1>
     <style>
       .bro {
         width: 100px; 
@@ -44,8 +44,27 @@
       <div class="bro">1</div>
       <div class="bro">1</div>
       <div class="bro">1</div>
-      <div class="bro active">3</div>
+      <div class="bro active">我是active</div>
       <div class="bro">1</div>
+      <div class="bro">1</div>
+    </div>
+    <h1>nth-child(3)</h1>
+    <style>
+      .test-child div:nth-child(3) {
+        background: green;
+      }
+      .test-child div:nth-of-type(3) {
+        background: yellow;
+      }
+    </style>
+    <div style="display: flex" class="test-child">
+      <span>我是冒充的span</span>
+      <div>我是冒充的</div>
+      <div class="bro">第3个child 第2个div 第1个bro</div>
+      <div class="bro">第4个child 第3个div 第2个bro</div>
+      <div class="bro">第5个child 第4个div 第3个bro</div>
+      <div class="bro inactive">我是inactive</div>
+      <div class="bro">bro4</div>
       <div class="bro">1</div>
     </div>
   </body>
