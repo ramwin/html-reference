@@ -128,7 +128,18 @@ v-show切换开销小，v-if如果判断为false,直接干脆不渲染
 * v-if与v-for一起使用  
 尽量避免
 
-### [v-for循环](v-for.md), [示例](v-for.html)
+### [列表渲染](https://cn.vuejs.org/v2/guide/list.html), [示例](v-for.html)
+```
+<div id="v-for"></div>
+    <li v-for="friend in friends">{{$index}}: {{friend.name}}</li>
+    <li v-for="(index, item) in items" track_by="_uid"></li>
+```
+* 维护状态  
+通过`v-bind:key="item.id"`让vue根据id的变化来避免重新渲染
+```
+<div v-for="item in items" v-bind:key="item.id"></div>
+```
+
 ### [过滤器](filter过滤器.md), [示例](filter过滤器.html)
 ### [指令](directive指令.md), [示例](directive指令.html)
 
