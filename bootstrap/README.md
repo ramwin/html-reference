@@ -55,6 +55,14 @@
 
 # [Components](./components组件.md)
 
+## [Badge 徽章](https://getbootstrap.com/docs/4.3/components/badge/)
+```
+<span class="badge badge-secondary">New</span>
+<span class="badge badge-success">Success</span> 修改颜色
+<span class="badge badge-pill badge-primary>Primary</span> 设置成圆圈的Pill
+<a href="#" class="badge badge-pill">Link</a> 链接
+```
+
 ## [Buttons 按钮](https://getbootstrap.com/docs/4.1/components/buttons/)
 * Example  
 ![button.png](./img/button.png)
