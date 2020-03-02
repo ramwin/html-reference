@@ -25,13 +25,6 @@
     <template v-if="ok"></template> # 这样在template里面就可以添加很多 dom 了  
 ```
 
-# 列表渲染 <div id="v-for"></div>  
-```
-<div id="v-for"></div>
-    <li v-for="friend in friends">{{$index}}: {{friend.name}}</li>
-    <li v-for="(index, item) in items" track_by="_uid"></li>
-```
-
 ### 替换数组
 ```
     example1.items.push({'name':'名字'});
