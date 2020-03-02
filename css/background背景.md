@@ -14,7 +14,7 @@ background:  linear-gradient(90deg, #FFC0CB 50%, #00FFFF 50%);  /*渐变*/
 ```
 
 ## 相关属性:
-### `background-size`
+### [background-size](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size)
 cover(可能看不到部分图片) contain(可能部门空白)
 background-size:1000px 600px;  /*背景图片的大小*/
 background-size:100% 100%;  /*背景图片的大小*/
