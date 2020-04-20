@@ -60,6 +60,14 @@ options: [{
 ```
 
 * [ ] Cascader级联选择器
+* Upload
+文件上传
+    * 参数
+    ```
+    action: 上传地址
+    on-success: function(response, file, fileList) {
+    }
+    ```
 
 #### Navigation
 * NavMenu
