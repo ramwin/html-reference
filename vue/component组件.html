@@ -5,6 +5,7 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <script src="../source/vue.js"></script>
     <meta http-equiv="refresh" content="30">
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js" integrity="sha256-VeNaFBVDhoX3H+gJ37DpT/nTuZTdjYro9yBruHjVmoQ=" crossorigin="anonymous"></script>
   </head>
   <body>
     <h1>最基础的组件</h1>
@@ -153,6 +154,82 @@
         }
       },
     })
+    </script>
+    <h1 id="测试refs">测试watch组件的refs</h1>
+    <div id="testwatch">
+      <p>我是父组件{{name}} {{total_money}} {{double_money}}</p>
+      <child
+        v-for="child in children"
+        :ref="'child-'+child.id"
+        :child="child"
+      > </child>
+      <button @click="cal_total">计算total</button>
+      <button @click="children.push({name: '私生子', id:3, money: 0})">生儿子</button>
+    </div>
+    <script>
+      Vue.component('child', {
+        props: ['child'],
+        template: `
+          <div>
+            <div>我是儿子 {{child.name}} {{child.money}} {{double_money}}</div>
+            <button @click="child.money += 1">我有利息</button>
+          </div>
+        `,
+        computed: {
+          double_money: function() {
+            return this.child.money ** 2
+          }
+        },
+        mounted: function() {
+          console.info("儿子渲染啦")
+        }
+      })
+      new Vue({
+        el: "#testwatch",
+        data: {
+          name: "我是爸爸",
+          children: [
+            {id: 1, name: "我是没钱的大儿子", money: 100},
+            {id: 2, name: "我是有钱的小儿子", money: 10000},
+          ],
+          isMounted: false,
+        },
+        computed: {
+          total_money: function() {
+            var total = 0
+            return _.sumBy(this.children, res=> {return res.money})
+          },
+          double_money: function() {
+            // var double_money = 0
+            // return _.sumBy(this.children, res=> {return res.money})
+            console.info("计算double_money")
+            if (!this.isMounted) {
+              return
+            }
+            return _.sumBy(
+              this.children,
+              res => {
+                var ref = this.$refs[`child-${res.id}`]
+                if (ref) {
+                  return ref[0].double_money
+                }
+              }
+            )
+          }
+        },
+        methods: {
+          cal_total: function() {
+            console.info(this.get_double_money())
+          },
+          get_double_money: function() {
+            return this.$refs['child-1'][0].double_money
+          }
+        },
+        mounted() {
+          this.isMounted = true
+          console.info("mounted")
+        }
+      })
     </script>
     
   </body>

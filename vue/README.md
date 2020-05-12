@@ -185,6 +185,17 @@ watch: {
 }
 ```
 
+### 实例property
+* $refs [测试](./component组件.html#测试refs)
+```
+<component ref="唯一id">
+new Vue({
+    this.$refs["唯一id"][0].call()
+})
+```
+注意, 这个因为ref是在mounted以后进行渲染的. 所以不能用computed进行监听.  
+如果要用的话需要设置isMounted变量.在mounted以后触发.  
+
 ### 特殊特性
 * key
 key用来辨识新旧nodes。如果key一致，就不会重新渲染整个dom。而key变化的时候，会强制替换元素
