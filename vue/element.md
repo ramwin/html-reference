@@ -2,6 +2,7 @@ Xiang Wang @ 2019-11-19 23:13:13
 
 
 ### html - vue - element
+[测试](./test_element.html)
 
 #### Basic组件
 ##### [Button按钮](https://element.eleme.cn/#/zh-CN/component/button)
@@ -89,7 +90,13 @@ options: [{
 ```
 
 * [ ] Cascader级联选择器
-* Upload
+##### slider滑块
+* v-model绑定值
+```
+<el-slider v-model="value1"></el-slider>
+```
+* change 值改变时触发，返回对应的value
+##### Upload
 文件上传
     * 案例
     ```
