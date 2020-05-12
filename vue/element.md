@@ -27,7 +27,36 @@ Xiang Wang @ 2019-11-19 23:13:13
 * autofocus
 * native-type
 
-#### Form组件
+#### [Form组件](https://element.eleme.cn/#/zh-CN/component/radio)
+##### [Radio 单选框](https://element.eleme.cn/#/zh-CN/component/radio)
+* 基础用法
+```
+使用单选框组
+<el-radio-group v-model="radio">
+    <el-radio v-model="radio" label="1">备选项</el-radio>
+    <el-radio v-model="radio" label="2">备选项</el-radio>
+</el-radio-group v-model="radio">
+直接使用单选框
+<el-radio v-model="radio" label="1">备选项</el-radio>
+<el-radio v-model="radio" label="2">备选项</el-radio>
+按钮样式
+<el-radio-button size="medium">使用button</el-radio-button>
+```
+* 属性
+    * value/v-model
+    * label
+    * disabled
+    * border
+    * size
+    * name
+    * change事件
+* Radio-group
+    * text-color: 激活的颜色
+    * fill: 激活的背景
+    * change: 事件
+* Radio-button
+
+##### 其他
 * [ ] InputNumber计数器
 * Select选择器
 ```
@@ -62,11 +91,32 @@ options: [{
 * [ ] Cascader级联选择器
 * Upload
 文件上传
+    * 案例
+    ```
+    <el-upload
+      multiple
+      <el-button size="small" type="primary">点击上传</el-button>
+    >
+    </el-upload>
+    ```
     * 参数
     ```
     action: 上传地址
+    data: 上传的form表单额外参数
+    headers: 上传的header
     on-success: function(response, file, fileList) {
     }
+    on-remove: function(file, fileList) {
+    }
+    ```
+
+#### Notice提示
+* loading 加载
+    * 整页加载
+    ```
+    <el-button v-loading.fullscreen.lock="<loading>">
+    </el-button>
+    通过控制loading可以选择是否完成
     ```
 
 #### Navigation
