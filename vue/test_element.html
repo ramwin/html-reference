@@ -15,6 +15,25 @@
       <el-slider v-model="slidervalue1" key="slidervalue1" @change="change('e', slidervalue1)" show-input></el-slider>
       <el-slider v-model="slidervalue2" key="slidervalue2" @change="change('a')" show-input></el-slider>
       <el-slider v-model="slidervalue3" key="slidervalue3" @change="change('c')" show-input></el-slider>
+      <h2>elinput</h2>
+      {{typeof(elinput)}} {{elinput}}
+      <el-input v-model="elinput" type="number"></el-input>
+      {{typeof(elinputnumber)}} {{elinputnumber}}
+      <el-input-number v-model="elinputnumber"></el-input-number>
+      <h2>布局</h2>
+      <el-row type="flex" align="middle" justify="end">
+        <el-col :span="10">
+          <el-slider v-model="slidervalue3" key="slidervalue3" @change="change('c')" show-input></el-slider>
+        </el-col>
+        <el-col :span="4">
+          <div style="border: 1px solid red">
+          <el-input  size="small" />
+          </div>
+        </el-col>
+        <el-col :span="6">
+          <el-input-number />
+        </el-col>
+      </el-row>
     </div>
   </body>
   <script>
@@ -24,32 +43,8 @@
         "slidervalue1": 10,
         "slidervalue2": 20,
         "slidervalue3": 70,
-      },
-      watch: {
-        // "slidervalue1": function(newval, oldval) {
-        //   console.info(`修改slidervalue1为: ${newval}`)
-        //   var overflow = this.slidervalue3 + this.slidervalue2 + this.slidervalue1 - 100
-        //   var overflow2 = overflow *this.slidervalue2 / ( this.slidervalue2 + this.slidervalue1)
-        //   var overflow1 = overflow *this.slidervalue1 / ( this.slidervalue2 + this.slidervalue1)
-        //   this.slidervalue2 -= overflow2
-        //   this.slidervalue1 -= overflow1
-        // },
-        // "slidervalue2": function(newval, oldval) {
-        //   console.info(`修改slidervalue2为: ${newval}`)
-        //   var overflow = this.slidervalue3 + this.slidervalue2 + this.slidervalue1 - 100
-        //   var overflow3 = overflow *this.slidervalue3 / ( this.slidervalue3 + this.slidervalue1)
-        //   var overflow1 = overflow *this.slidervalue1 / ( this.slidervalue2 + this.slidervalue1)
-        //   this.slidervalue3 -= overflow3
-        //   this.slidervalue1 -= overflow1
-        // },
-        // "slidervalue3": function(newval, oldval) {
-        //   console.info(`修改slidervalue3为: ${newval}`)
-        //   var overflow = this.slidervalue3 + this.slidervalue2 + this.slidervalue1 - 100
-        //   var overflow2 = overflow *this.slidervalue2 / ( this.slidervalue2 + this.slidervalue1)
-        //   var overflow1 = overflow *this.slidervalue1 / ( this.slidervalue2 + this.slidervalue1)
-        //   this.slidervalue2 -= overflow2
-        //   this.slidervalue1 -= overflow1
-        // },
+        "elinput": 10,
+        "elinputnumber": 1,
       },
       methods: {
         change: function(e, a, b) {

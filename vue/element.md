@@ -5,6 +5,17 @@ Xiang Wang @ 2019-11-19 23:13:13
 [测试](./test_element.html)
 
 #### Basic组件
+##### layout布局  
+注意是用middle, 不是center
+```
+<el-row
+  type="flex"
+  justify="start/end/center/space-between"
+  align="top/middle/bottom"
+>
+</el-row>
+```
+
 ##### [Button按钮](https://element.eleme.cn/#/zh-CN/component/button)
 
 ```
@@ -56,6 +67,11 @@ Xiang Wang @ 2019-11-19 23:13:13
     * fill: 激活的背景
     * change: 事件
 * Radio-button
+##### Input输入框
+```
+<el-input /> 得到的是string
+<el-input-number /> 得到的是数字
+```
 
 ##### 其他
 * [ ] InputNumber计数器
