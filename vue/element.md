@@ -134,13 +134,27 @@ options: [{
     ```
 
 #### Notice提示
-* loading 加载
-    * 整页加载
-    ```
-    <el-button v-loading.fullscreen.lock="<loading>">
-    </el-button>
-    通过控制loading可以选择是否完成
-    ```
+##### loading 加载
+
+* 整页加载
+```
+<el-button v-loading.fullscreen.lock="<loading>">
+</el-button>
+通过控制loading可以选择是否完成
+```
+
+##### MessageBox
+```
+this.$alert('这是一段内容', '标题名称', {
+  // confirmButtonText: '确定',
+  callback: action => {
+    this.$message({
+      type: 'info',
+      message: `action: ${ action }`
+    });
+  }
+});
+```
 
 #### Navigation
 * NavMenu

@@ -172,6 +172,8 @@ v-show切换开销小，v-if如果判断为false,直接干脆不渲染
 [测试](component组件.html) [进阶测试](component组件_进阶.html)
 ### 组件事件
 
+## [深入响应式原理](https://cn.vuejs.org/v2/guide/reactivity.html)
+* [测试class对象和vue的绑定](./test_class.html)
 ## api
 ### 选项数据 [官网](https://cn.vuejs.org/v2/api/#选项-数据)
 ```

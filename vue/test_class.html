@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script src="../source/vue-2.1.3.js"></script>
+    <link rel="stylesheet" href="../source/bootstrap/css/bootstrap.min.css">
+
+    <script src="https://cdn.bootcss.com/lodash.js/4.17.11/lodash.min.js"></script>
+  </head>
+  <body>
+    <h1>测试绑定class的属性</h1>
+    <div id="app1">
+      <p>绑定属性没问题</p>
+      <span>{{student.name}}</span>
+      <input v-model="student.name"></input>
+      <button @click="removename">你不配有名字</button>
+      <p>绑定getter属性</p>
+      <p>年龄: {{student.age}}</p>
+      <button @click="student.year -= 1">变老了</button>
+      <p>绑定列表爱好: </p>
+      <span v-for="hobby in student.hobbies">
+        <button>{{hobby.name}}</button>
+      </span>
+      <p>绑定computed的坚持的爱好</p>
+      <span v-for="hobby in alive_hobbies">
+        <button>{{hobby.name}}</button>
+      </span>
+      <p>测试绑定的get的列表, 这个就监听不到了</p>
+      <span v-for="l in student.list">
+        {{ l }}
+      </span>
+    </div>
+    <script>
+      class Student {
+        constructor(name) {
+          this.name = name
+          this.year = 1999
+          this.hobbies = [
+            {
+              name: '打羽毛球',
+              alive: true,
+            },
+            {
+              name: '游泳',
+              alive: true,
+            },
+          ]
+          this.dict = {
+            'foo': 'bar',
+          }
+        }
+        get age() {
+          return 2020 - this.year
+        }
+        get list() {
+          let result = []
+          for (let key in this.dict) {
+            result.push(this.dict[key])
+          }
+          return result
+        }
+      }
+      var vm = new Vue({
+        el: "#app1",
+        data: {
+          student: new Student("没有名字")
+        },
+        mounted: function() {
+          setTimeout(
+            res => {
+              this.student.hobbies.push({
+                name: '跑步', alive: true
+              })
+            },
+            2000,
+          )
+          setTimeout(
+            res => {
+              this.student.hobbies[0].alive = false
+            },
+            3000,
+          )
+          setTimeout(
+            res => {
+              this.student.dict["newkey"] = "newval"
+            },
+            400
+          )
+        },
+        computed: {
+          alive_hobbies: function() {
+            return _.filter(
+              this.student.hobbies,
+              res => {
+                return res.alive
+              }
+              )
+          },
+        },
+        methods: {
+          removename: function() {
+            this.student.name = "无名"
+          }
+        }
+      })
+    </script>
+  </body>
+</html>
