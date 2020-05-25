@@ -48,8 +48,8 @@ methods: {
 
 ### nextTick
 ```
-    # 用来做一些和dom有关的事，所以当dom被刷新完成后才触发这些事件
-    this.$nextTick(function() {
-        $('input', this.$el).focus();
-    })
+# 用来做一些和dom有关的事，所以当dom被刷新完成后才触发这些事件
+this.$nextTick(function() {
+    $('input', this.$el).focus();
+})
 ```

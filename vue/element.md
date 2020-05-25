@@ -1,7 +1,6 @@
 Xiang Wang @ 2019-11-19 23:13:13
 
 
-### html - vue - element
 [测试](./test_element.html)
 
 #### Basic组件
@@ -73,17 +72,15 @@ Xiang Wang @ 2019-11-19 23:13:13
 <el-input-number /> 得到的是数字
 ```
 
-##### 其他
-* [ ] InputNumber计数器
-* Select选择器
+##### Select选择器
 ```
 <el-select v-model="value" placeholder="请选择">
-    <el-option
-        v-for="item in options"
-        :key="item.value"
-        :label="item.label"
-        :value="item.value">
-    </el-option>
+  <el-option
+    v-for="item in options"
+    :key="item.value"
+    :label="item.label"
+    :value="item.value">
+  </el-option>
 </el-select>
 <script>
 options: [{
@@ -104,6 +101,9 @@ options: [{
 }],
 </script>
 ```
+
+##### 其他
+* [ ] InputNumber计数器
 
 * [ ] Cascader级联选择器
 ##### slider滑块
