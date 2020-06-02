@@ -208,23 +208,7 @@ not very good use daterangepicker instead
         <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.2/less.min.js" ></script>
         ```
 * ## [markjs](https://github.com/julmot/mark.js/) *高亮某个字段*
-* ## [moment](./moment.md)
-Parse, validate, manipulate, and display dates and times in JavaScript.
-    * Document
-        * example
-        ```
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
-        <script>
-          var now = moment(new Date())
-          console.log(now.format("YYYY-MM-DD"))
-          console.log(now.add(12, 'days').calendar());
-          moment("20111031", "YYYYMMDD")
-        </script>
-        ```
-        * [docs](https://momentjs.com/docs/)
-        * [manipulating](https://momentjs.com/docs/#/manipulating/)  
-            It should be noted that moments are mutable. Calling any of the manipulation methods will **change** the original moment.
-            * add: `moment().add(7, 'days|d|weeks|w|months|M|years|y')`
+* ## [moment](../javascript-reference/moment.md)
 * ## [sweetalert, 用来替换系统的alert](./sweetalert.html)
 * ## [select2](./other_lib.md#select2)
 * ## [selectize 用于方便地选择和输入,](http://selectize.github.io/selectize.js/) [github链接,](https://github.com/selectize/selectize.js) [例子](./selectize.html)
