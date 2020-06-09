@@ -31,6 +31,12 @@
         <div class="border border-danger small-box"></div>
       </div>
       <button @click="toggle_show()">点我切换</button>
+      <div>content: {{content}}</div>
+      <div style="border: 1px solid red;"
+        contenteditable
+        @keyup.enter="down(this)"
+        v-on:blur="blue(this)"
+        >{{content}}</div>
     </div>
     
     <script src="../source/jquery-3.1.0.js"></script>
@@ -41,12 +47,19 @@
         el: "#app",
         data: {
           "show": false,
+          content: "内容",
         },
         methods: {
-        toggle_show: function() {
-          console.info("切换")
-          this.show = ! this.show;
-        }
+          toggle_show: function() {
+            console.info("切换")
+            this.show = ! this.show;
+          },
+          down: function(e) {
+            this.content = event.target.innerText
+          },
+          blue: function(e) {
+            event.target.innerText = this.content
+          }
         }
       })
     </script>

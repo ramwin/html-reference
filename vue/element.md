@@ -106,12 +106,28 @@ options: [{
 * [ ] InputNumber计数器
 
 * [ ] Cascader级联选择器
+
 ##### slider滑块
 * v-model绑定值
 ```
 <el-slider v-model="value1"></el-slider>
 ```
 * change 值改变时触发，返回对应的value
+
+##### [DatePicker](https://element.eleme.io/#/zh-CN/component/date-picker)  
+* 选择日期范围
+```
+<el-date-picker
+    v-model="value1"
+    type="daterange"
+    range-separator="至"
+    start-placeholder="开始日期"
+    end-placeholder="结束日期">
+</el-date-picker>
+```
+
+##### DateTimePicker
+
 ##### Upload
 文件上传
     * 案例
