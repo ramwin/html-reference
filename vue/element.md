@@ -149,7 +149,7 @@ options: [{
     }
     ```
 
-#### Notice提示
+#### [Notice提示](https://element.eleme.io/#/zh-CN/component/alert)
 ##### loading 加载
 
 * 整页加载
@@ -170,6 +170,15 @@ this.$alert('这是一段内容', '标题名称', {
     });
   }
 });
+```
+
+##### Notification 通知
+```
+this.$notify({
+  title: "错误",
+  message: "报错",
+  type: "error"
+})
 ```
 
 #### Navigation
