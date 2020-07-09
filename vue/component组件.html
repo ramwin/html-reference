@@ -231,6 +231,52 @@
         }
       })
     </script>
+    <h1 id="插槽">测试插槽</h1>
+    <div id="testslot">
+      {{name}}
+      <slotchild v-for="child in children" v-bind:child="child">
+        <template v-slot:footer>
+          不要鞋跟
+        </template>
+      </slotchild>
+      <slotchild v-for="child in children" v-bind:child="child">
+        <slot v-bind:child="child">
+          儿子{{child.name}}呀  ---- {{name}}
+        </slot>
+      </slotchild>
+    </div>
+    <script>
+      Vue.component('slotchild', {
+        props: ['child'],
+        template: `
+          <div>
+            <div>我是儿子 {{child.name}} {{child.money}} {{double_money}}</div>
+            <button @click="child.money += 1">我有利息</button>
+            <slot>让我爸爸说两句</slot>
+            <slot name="footer">我是鞋跟</slot>
+          </div>
+        `,
+        computed: {
+          double_money: function() {
+            return this.child.money ** 2
+          }
+        },
+        mounted: function() {
+          console.info("儿子渲染啦")
+        }
+      })
+      new Vue({
+        el: "#testslot",
+        data: {
+          name: "测试插槽的父组件",
+          children: [
+            {id: 1, name: "我是没钱的大儿子", money: 100},
+            {id: 2, name: "我是有钱的小儿子", money: 10000},
+          ],
+        },
+      })
+    </script>
+
     
   </body>
 </html>

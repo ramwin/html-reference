@@ -46,6 +46,20 @@ methods: {
 }
 ```
 
+### [插槽](https://cn.vuejs.org/v2/guide/components-slots.html)
+```
+// 组件child
+<div>
+  <slot name="extra">我是默认的extra</slot>
+</div>
+// 调用
+<child>
+  <template v-slot:extra>
+    我要自定义extra
+  </template>
+</child>
+```
+
 ### nextTick
 ```
 # 用来做一些和dom有关的事，所以当dom被刷新完成后才触发这些事件
