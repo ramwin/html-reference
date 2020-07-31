@@ -252,6 +252,7 @@
           <div>
             <div>我是儿子 {{child.name}} {{child.money}} {{double_money}}</div>
             <button @click="child.money += 1">我有利息</button>
+            <slot name="money">我有{{child.money}}钱</slot>
             <slot>让我爸爸说两句</slot>
             <slot name="footer">我是鞋跟</slot>
           </div>

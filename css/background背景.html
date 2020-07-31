@@ -35,6 +35,19 @@
       background-position: 0px 0px, 100px 150px;
       background-repeat: no-repeat, no-repeat;
     }
+    #blur {
+      position: relative;
+    }
+    #blur::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      height: 100%; width: 100%;
+      background-image: url('../source/image.jpg');
+      background-size: 100% 100%;
+      background-repeat: no-repeat, no-repeat;
+      filter: blur(5px);
+    }
   </style>
   <body>
     这个div的背景设置了大小
@@ -46,6 +59,10 @@
 
     这个div我要有多个背景
     <div id="multi">
+    </div>
+
+    这个div的背景,我要模糊
+    <div id="blur">
     </div>
 
     <style>
