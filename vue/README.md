@@ -1,9 +1,25 @@
-**Xiang Wang @ 2016-09-30 10:34:15**
+Xiang Wang @ 2016-09-30 10:34:15
 
 [官网](https://cn.vuejs.org/v2/guide/)
 
 ## 其他框架
 ### [Element](./element.md)
+### Vue Router
+#### 基础
+```
+<router-link to=""></router-link>
+<router-link :to="{ name: 'user', params: {} }"></router-link>
+<router-link name="userdetail"></router-link>
+```
+#### [编程式的导航](https://router.vuejs.org/zh/guide/essentials/navigation.html)
+```
+this.$router.push('home')
+this.$router.push({name: 'home', params: {userId: '123'}})
+this.$router.push({path: 'register', params: {plan: 'private'}})
+router.replace
+router.go(3) 前进3步
+router.go(-1) 返回
+```
 
 ## [基础](basic.md)
 [旧的测试代码](basic.html)
