@@ -1,6 +1,7 @@
 Xiang Wang @ 2019-11-19 23:13:13
 
 
+[基础](./base.html)
 [测试](./test_element.html)
 
 #### Basic组件
@@ -15,16 +16,29 @@ Xiang Wang @ 2019-11-19 23:13:13
 </el-row>
 ```
 
-##### [Button按钮](https://element.eleme.cn/#/zh-CN/component/button)
-
+##### [Icon 图标](https://element.eleme.cn/#/zh-CN/component/icon)
 ```
-43
+<i class="el-icon-question"></i>  // 问号
+<i class="el-icon-refresh"></i>  // 问号
+```
+
+##### [Button按钮](https://element.eleme.cn/#/zh-CN/component/button)
+[测试按钮](./button.html)
+```
 <el-button plain type="primary">主要按钮</el-button>
 <el-button round type="success">成功按钮</el-button>
 <el-button circle type="info">信息按钮</el-button>
 <el-button disabled type="warning">警告按钮</el-button>
 <el-button type="danger">危险按钮</el-button>
 <el-button type="text">文字按钮</el-button>
+```
+* 按钮组
+```
+<el-button-group>
+  <el-button></el-button>
+  <el-button></el-button>
+  <el-button></el-button>
+</el-button-group>
 ```
 
 * size
@@ -149,6 +163,13 @@ options: [{
     }
     ```
 
+#### Data
+##### [Table](https://element.eleme.cn/#/zh-CN/component/table)
+```
+```
+###### table-column
+* width
+
 #### [Notice提示](https://element.eleme.io/#/zh-CN/component/alert)
 ##### loading 加载
 
@@ -192,4 +213,24 @@ this.$notify({
     <el-tab-pane label="角色管理" name="third">角色管理</el-tab-pane>
     <el-tab-pane label="定时任务补偿" name="fourth">定时任务补偿</el-tab-pane>
   </el-tabs>
+```
+
+#### Others其他
+##### Popover 弹出框
+```html
+<el-popover>
+    <el-button slot="reference">点我查看</el-button>
+</el-popover>
+<el-popover>
+    <i class="el-icon-question" slot="reference"></i>
+</el-popover>
+```
+* trigger: 触发方式 click|focus|hover|manual
+* content: 
+可以直接传入字符串或者slot未默认的dom
+```
+<el-popover>
+    <div>默认的内容的slot</div>
+    <i class="el-icon-question" slot="reference"></i>
+</el-popover>
 ```

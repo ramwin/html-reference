@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vxe-table/lib/index.css">
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xe-utils"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vxe-table"></script>
+  </head>
+  <body>
+    <div id="id">
+      <vxe-table
+        border="inner"
+        :data=tableData
+      >
+        <vxe-table-column type="seq" width="60"></vxe-table-column>
+        <vxe-table-column field="name" width="60" title="姓名"></vxe-table-column>
+        <vxe-table-column field="gender" width="60" title="性别"></vxe-table-column>
+        <vxe-table-column field="age" width="60" title="年龄"></vxe-table-column>
+      </vxe-table>
+    </div>
+    <script>
+      Vue.use(VXETable)
+      var vm = new Vue({
+        el: "#id",
+        data: {
+          tableData: [
+            {name: "rr9", gender: "男", age: 22},
+            {name: "rr9", gender: "男", age: 22},
+            {name: "rr9", gender: "男", age: 22},
+          ]
+        },
+      })
+    </script>
+    
+  </body>
+</html>

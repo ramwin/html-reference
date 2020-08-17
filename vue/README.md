@@ -3,7 +3,7 @@ Xiang Wang @ 2016-09-30 10:34:15
 [官网](https://cn.vuejs.org/v2/guide/)
 
 ## 其他框架
-### [Element](./element.md)
+### [Element](./element/README.md)
 ### Vue Router
 #### 基础
 ```
@@ -20,6 +20,9 @@ router.replace
 router.go(3) 前进3步
 router.go(-1) 返回
 ```
+
+### [Vxe Table](https://xuliangzhan_admin.gitee.io/vxe-table/#/table/api)
+[基础](./vxetable/base.html)
 
 ## [基础](basic.md)
 [旧的测试代码](basic.html)
