@@ -216,6 +216,18 @@ this.$notify({
 ```
 
 #### Others其他
+
+##### Dialog 对话框
+```
+<el-button type="text" @click="dialogVisible = true">点我</el-button>
+<el-dialog
+    title="修改信息"
+    :visible.sync="dialogVisible"
+>
+    <span>这是一段信息</span>    
+</el-dialog>
+```
+
 ##### Popover 弹出框
 ```html
 <el-popover>
