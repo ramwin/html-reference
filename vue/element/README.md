@@ -52,6 +52,14 @@ Xiang Wang @ 2019-11-19 23:13:13
 * autofocus
 * native-type
 
+##### [Link 文字链接](https://element.eleme.cn/#/zh-CN/component/link)
+```
+<el-link type="primary">链接</el-link>
+<router-link :to="{ name: '', params: {} ">
+  <el-link type="primary">链接</el-link>
+</router-link>
+```
+
 #### [Form组件](https://element.eleme.cn/#/zh-CN/component/radio)
 ##### [Radio 单选框](https://element.eleme.cn/#/zh-CN/component/radio)
 * 基础用法
@@ -166,7 +174,13 @@ options: [{
 #### Data
 ##### [Table](https://element.eleme.cn/#/zh-CN/component/table)
 ```
+<el-table
+  :data="tableData"
+>
+  <el-table-column prop="date">日期</el-table-column>
+</el-table>
 ```
+
 ###### table-column
 * width
 

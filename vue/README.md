@@ -23,6 +23,11 @@ router.go(3) 前进3步
 router.go(-1) 返回
 ```
 
+#### [数据获取](https://router.vuejs.org/zh/guide/advanced/data-fetching.html#数据获取)
+```
+this.$route.params.id
+```
+
 ### [Vxe Table](https://xuliangzhan_admin.gitee.io/vxe-table/#/table/api)
 [基础](./vxetable/base.html)
 
