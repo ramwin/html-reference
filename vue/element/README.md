@@ -242,13 +242,16 @@ this.$notify({
 </el-dialog>
 ```
 
-##### Popover 弹出框
+##### [Popover 弹出框](https://element.eleme.cn/#/zh-CN/component/popover)
 ```html
 <el-popover>
-    <el-button slot="reference">点我查看</el-button>
+  <el-button slot="reference">点我查看</el-button>
 </el-popover>
-<el-popover>
-    <i class="el-icon-question" slot="reference"></i>
+<el-popover
+  trigger="hover"
+  content="我是注释"
+>
+  <i class="el-icon-question" slot="reference"></i>
 </el-popover>
 ```
 * trigger: 触发方式 click|focus|hover|manual
