@@ -137,6 +137,16 @@ options: [{
 * change 值改变时触发，返回对应的value
 
 ##### [DatePicker](https://element.eleme.io/#/zh-CN/component/date-picker)  
+* 选择日期
+```
+<el-date-picker
+  v-model="detail.date"
+  type="date"
+  placeholder="选择日期"
+  format="yyyy-MM-dd"
+  value-format="yyyy-MM-dd"
+></el-date-picker>
+```
 * 选择日期范围
 ```
 <el-date-picker
@@ -183,6 +193,21 @@ options: [{
 
 ###### table-column
 * width
+
+##### Tree
+
+##### Pagination
+```
+<el-pagination
+  background
+  layout="prev, pager, next"
+  :total="50"
+  :current-page.sync="currentPage"
+>
+</el-pagination>
+```
+
+##### [ ] Badge
 
 #### [Notice提示](https://element.eleme.io/#/zh-CN/component/alert)
 ##### loading 加载
