@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+    <!--引入样式-->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"
+    />
+    <!-- 引入组件库 -->
+  </head>
+  <body>
+    <div id="app">
+      <h1>测试element</h1>
+      <el-button v-on:click="testconfirm">确认</el-button>
+      <el-popconfirm title="这是一段内容确定删除吗？" @confirm="onconfirm">
+        <el-button slot="reference">删除</el-button>
+      </el-popconfirm>
+      <template>
+        <el-popconfirm
+          title="这是一段内容确定删除吗？"
+          v-on:on-confirm="onconfirm"
+        >
+          <el-button slot="reference">删除1</el-button>
+        </el-popconfirm>
+      </template>
+      <el-popconfirm
+        title="这是一段内容确定删除吗？"
+        v-on:on-confirm="onconfirm"
+      >
+        <el-button slot="reference">删除</el-button>
+      </el-popconfirm>
+      <el-popconfirm title="这是一段内容确定删除吗？" v-on:confirm="onconfirm">
+        <el-button slot="reference">删除</el-button>
+      </el-popconfirm>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+  <script>
+    new Vue({
+      el: "#app",
+      data: {},
+      onconfirm: function () {
+        console.info("确认");
+      },
+      methods: {
+        onconfirm: function () {
+          console.info("确认");
+        },
+        testconfirm: function () {
+          this.$confirm({
+            content: "去人",
+          }).then(() => {
+            this.$message({
+              type: "success",
+              message: "删除成功!",
+            });
+          });
+        },
+      },
+    });
+  </script>
+</html>

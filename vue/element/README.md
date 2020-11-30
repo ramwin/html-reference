@@ -216,6 +216,7 @@ this.$notify({
 ```
 
 #### Others其他
+[测试](./test_other.html)
 
 ##### Dialog 对话框
 ```
@@ -245,4 +246,15 @@ this.$notify({
     <div>默认的内容的slot</div>
     <i class="el-icon-question" slot="reference"></i>
 </el-popover>
+```
+
+##### Popconfirm
+```
+<template>
+<el-popconfirm
+  title="这是一段内容确定删除吗？"
+>
+  <el-button slot="reference">删除</el-button>
+</el-popconfirm>
+</template>
 ```

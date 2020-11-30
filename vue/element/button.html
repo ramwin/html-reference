@@ -15,9 +15,9 @@
       <h1>测试element</h1>
       <h1>按钮组</button>
       <el-button-group>
-        <el-button type="primary">element的button</el-button>
-        <el-button type="primary">element的button</el-button>
-        <el-button type="primary">element的button</el-button>
+        <el-button type="primary" v-on:click="clickbutton">element的button</el-button>
+        <el-button type="primary" v-on:click="clickbutton">element的button</el-button>
+        <el-button type="primary" v-on:click="clickbutton">element的button</el-button>
       </el-button-group>
       <el-button-group>
         <el-button>
@@ -56,6 +56,11 @@
       el: "#app",
       data: {
       },
+      methods: {
+        clickbutton: function() {
+          console.info("点击")
+        }
+      }
     })
   </script>
 </html>
