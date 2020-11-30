@@ -26,6 +26,14 @@
 ## Text content
 * `Chinese Space`: `　`
 * [Character Entity](https://developer.mozilla.org/en-US/docs/Glossary/Entity)
+* [ ] li
+* [ol](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol)
+ordered list
+    * attributes
+        * reversed
+        * start: start from which number
+        * type: a|A|i|I|1(default)
+* [ ] p
 
 ## Inline text semantics
 使用这些元素来代表一些text

@@ -16,7 +16,7 @@ Vue.component('my-component', MyComponent)
 <my-component title="标题" v-bind:friends='friends'></my-component>
 ```
 
-### props
+### [props](https://cn.vuejs.org/v2/guide/components-props.html#Prop-%E9%AA%8C%E8%AF%81)
 ```
     props: {
         'name': {
@@ -28,6 +28,12 @@ Vue.component('my-component', MyComponent)
             required: false,
             default: function() {
                 return {}
+            }
+        },
+        propF: {
+            validator: function(value) {
+                // 返回一个布尔值
+                return (!value.error)
             }
         }
     }

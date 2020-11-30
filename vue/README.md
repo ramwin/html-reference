@@ -5,6 +5,8 @@ Xiang Wang @ 2016-09-30 10:34:15
 ## 其他框架
 ### [Element](./element/README.md)
 ### Vue Router
+[测试](./router/base.html)
+
 #### 基础
 ```
 <router-link to=""></router-link>
@@ -19,6 +21,11 @@ this.$router.push({path: 'register', params: {plan: 'private'}})
 router.replace
 router.go(3) 前进3步
 router.go(-1) 返回
+```
+
+#### [数据获取](https://router.vuejs.org/zh/guide/advanced/data-fetching.html#数据获取)
+```
+this.$route.params.id
 ```
 
 ### [Vxe Table](https://xuliangzhan_admin.gitee.io/vxe-table/#/table/api)

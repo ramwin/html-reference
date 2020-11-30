@@ -52,6 +52,14 @@ Xiang Wang @ 2019-11-19 23:13:13
 * autofocus
 * native-type
 
+##### [Link 文字链接](https://element.eleme.cn/#/zh-CN/component/link)
+```
+<el-link type="primary">链接</el-link>
+<router-link :to="{ name: '', params: {} ">
+  <el-link type="primary">链接</el-link>
+</router-link>
+```
+
 #### [Form组件](https://element.eleme.cn/#/zh-CN/component/radio)
 ##### [Radio 单选框](https://element.eleme.cn/#/zh-CN/component/radio)
 * 基础用法
@@ -129,6 +137,16 @@ options: [{
 * change 值改变时触发，返回对应的value
 
 ##### [DatePicker](https://element.eleme.io/#/zh-CN/component/date-picker)  
+* 选择日期
+```
+<el-date-picker
+  v-model="detail.date"
+  type="date"
+  placeholder="选择日期"
+  format="yyyy-MM-dd"
+  value-format="yyyy-MM-dd"
+></el-date-picker>
+```
 * 选择日期范围
 ```
 <el-date-picker
@@ -166,9 +184,30 @@ options: [{
 #### Data
 ##### [Table](https://element.eleme.cn/#/zh-CN/component/table)
 ```
+<el-table
+  :data="tableData"
+>
+  <el-table-column prop="date">日期</el-table-column>
+</el-table>
 ```
+
 ###### table-column
 * width
+
+##### Tree
+
+##### Pagination
+```
+<el-pagination
+  background
+  layout="prev, pager, next"
+  :total="50"
+  :current-page.sync="currentPage"
+>
+</el-pagination>
+```
+
+##### [ ] Badge
 
 #### [Notice提示](https://element.eleme.io/#/zh-CN/component/alert)
 ##### loading 加载
@@ -229,13 +268,16 @@ this.$notify({
 </el-dialog>
 ```
 
-##### Popover 弹出框
+##### [Popover 弹出框](https://element.eleme.cn/#/zh-CN/component/popover)
 ```html
 <el-popover>
-    <el-button slot="reference">点我查看</el-button>
+  <el-button slot="reference">点我查看</el-button>
 </el-popover>
-<el-popover>
-    <i class="el-icon-question" slot="reference"></i>
+<el-popover
+  trigger="hover"
+  content="我是注释"
+>
+  <i class="el-icon-question" slot="reference"></i>
 </el-popover>
 ```
 * trigger: 触发方式 click|focus|hover|manual
