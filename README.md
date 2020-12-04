@@ -196,7 +196,8 @@ Mustache不能用于HTML特性上，这种情况应该使用v-bind, 如果value�
     * 下载到本地后使用
     [教程](https://fontawesome.com/how-to-use/on-the-web/setup/hosting-font-awesome-yourself)
 * ## [flatpickr](https://github.com/flatpickr/flatpickr)  *没有依赖的时间选择器*
-* ## [富文本编辑器](./summernote网页编辑器.html)
+* ## [富文本编辑器:summernote](./summernote网页编辑器.html)
+* ## [富文本编辑器:tinymce](./tinymce.html)
 * ## [jquery datetimepicker](https://github.com/xdan/datetimepicker) [example](./datetimepicker.html)
 not very good use daterangepicker instead
 * [jquery pagination plugin: 分页插件](./other_lib.md#jquery-pagination-plugin)

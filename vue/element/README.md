@@ -243,10 +243,11 @@ this.$notify({
 
 #### Navigation
 * NavMenu
-* Tabs
+
+##### [Tabs](https://element.eleme.cn/#/zh-CN/component/tabs)
 内容有关联，但是类别不同
 ```
-  <el-tabs v-model="activeName" @tab-click="handleClick">
+  <el-tabs v-model="activeName" @tab-click="handleClick" type="card">
     <el-tab-pane label="用户管理" name="first">用户管理</el-tab-pane>
     <el-tab-pane label="配置管理" name="second">配置管理</el-tab-pane>
     <el-tab-pane label="角色管理" name="third">角色管理</el-tab-pane>
@@ -290,13 +291,9 @@ this.$notify({
 </el-popover>
 ```
 
-##### Popconfirm
+#### [Popconfirm 气泡确认框](https://element.eleme.cn/#/zh-CN/component/popconfirm)
 ```
-<template>
-<el-popconfirm
-  title="这是一段内容确定删除吗？"
->
+<el-popconfirm title="确认吗" @confirm="confirm">
   <el-button slot="reference">删除</el-button>
 </el-popconfirm>
-</template>
 ```
