@@ -162,7 +162,7 @@ options: [{
 
 ##### Upload
 文件上传
-    * 案例
+* 案例
     ```
     <el-upload
       multiple
@@ -170,7 +170,7 @@ options: [{
     >
     </el-upload>
     ```
-    * 参数
+* 参数
     ```
     action: 上传地址
     data: 上传的form表单额外参数
