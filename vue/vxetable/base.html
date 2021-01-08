@@ -12,6 +12,7 @@
   </head>
   <body>
     <div id="id">
+      <h2>基础</h2>
       <vxe-table
         border="inner"
         :data=tableData
@@ -21,17 +22,43 @@
         <vxe-table-column field="gender" width="60" title="性别"></vxe-table-column>
         <vxe-table-column field="age" width="60" title="年龄"></vxe-table-column>
       </vxe-table>
+      <h2>带tree</h2>
+      <vxe-grid
+        border="inner"
+        :data="treeData"
+        :edit-config="editConfig"
+        :tree-config="{}"
+        show-overflow
+        keep-source
+        :columns="tableColumn"
+      >
+      </vxe-grid>
     </div>
     <script>
       Vue.use(VXETable)
       var vm = new Vue({
         el: "#id",
         data: {
+          editConfig: {
+            trigger: "click",
+            mode: "cell",
+            showStatus: true,
+          },
+          tableColumn: [
+            { field: 'name', title: "姓名", treeNode: true},
+            { field: 'age', title: "年龄", editRender: {name : "input"}},
+          ],
           tableData: [
             {name: "rr9", gender: "男", age: 22},
             {name: "rr9", gender: "男", age: 22},
             {name: "rr9", gender: "男", age: 22},
-          ]
+          ],
+          treeData: [
+            {id: 1, name: "爸爸", gender: "男", age: 22, children: [
+              {id: 2, name: "儿子", gender: "男", age: 22},
+              {id: 3, name: "女儿", gender: "女", age: 22},
+            ]},
+          ],
         },
       })
     </script>

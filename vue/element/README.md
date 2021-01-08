@@ -94,35 +94,42 @@ Xiang Wang @ 2019-11-19 23:13:13
 <el-input-number /> 得到的是数字
 ```
 
-##### Select选择器
-```
-<el-select v-model="value" placeholder="请选择">
-  <el-option
-    v-for="item in options"
-    :key="item.value"
-    :label="item.label"
-    :value="item.value">
-  </el-option>
-</el-select>
-<script>
-options: [{
-    value: '选项1',
-    label: '黄金糕'
-}, {
-    value: '选项2',
-    label: '双皮奶'
-}, {
-    value: '选项3',
-    label: '蚵仔煎'
-}, {
-    value: '选项4',
-    label: '龙须面'
-}, {
-    value: '选项5',
-    label: '北京烤鸭'
-}],
-</script>
-```
+##### [Select选择器](https://element.eleme.cn/#/zh-CN/component/select)
+* 用法
+
+    ```
+    <el-select v-model="value" placeholder="请选择">
+      <el-option
+        v-for="item in options"
+        :key="item.value"
+        :label="item.label"
+        :value="item.value">
+      </el-option>
+    </el-select>
+    <script>
+    options: [{
+        value: '选项1',
+        label: '黄金糕'
+    }, {
+        value: '选项2',
+        label: '双皮奶'
+    }, {
+        value: '选项3',
+        label: '蚵仔煎'
+    }, {
+        value: '选项4',
+        label: '龙须面'
+    }, {
+        value: '选项5',
+        label: '北京烤鸭'
+    }],
+    </script>
+    ```
+
+* 属性
+
+    multiple: 是否多选
+
 
 ##### 其他
 * [ ] InputNumber计数器
