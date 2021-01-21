@@ -166,7 +166,11 @@ v-show切换开销小，v-if如果判断为false,直接干脆不渲染
 <div v-for="item in items" v-bind:key="item.id"></div>
 ```
 
-### [过滤器](filter过滤器.md), [示例](filter过滤器.html)
+### [过滤器](https://cn.vuejs.org/v2/guide/filters.html#ad) [示例](filter过滤器.html)
+```
+{{ message | filterA | filterB('arg1', arg2)}}
+```
+
 ### [指令](directive指令.md), [示例](directive指令.html)
 
 ### [表单输入绑定](https://cn.vuejs.org/v2/guide/forms.html)
