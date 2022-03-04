@@ -158,7 +158,7 @@ v-show切换开销小，v-if如果判断为false,直接干脆不渲染
 ```
 <div id="v-for"></div>
     <li v-for="friend in friends">{{$index}}: {{friend.name}}</li>
-    <li v-for="(index, item) in items" track_by="_uid"></li>
+    <li v-for="(item, index) in items" track_by="_uid"></li>
 ```
 * 维护状态  
 通过`v-bind:key="item.id"`让vue根据id的变化来避免重新渲染
