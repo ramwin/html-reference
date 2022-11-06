@@ -31,6 +31,9 @@ this.$route.params.id
 ### [Vxe Table](https://xuliangzhan_admin.gitee.io/vxe-table/#/table/api)
 [基础](./vxetable/base.html)
 
+### vue router
+* [如何传递数字参数](https://stackoverflow.com/questions/73418101/how-to-pass-integer-value-in-vue-router-4-props)
+
 ## [基础](basic.md)
 [旧的测试代码](basic.html)
 [新的测试代码](基础.html)

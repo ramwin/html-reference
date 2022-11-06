@@ -75,5 +75,15 @@
     这个div我要用base64当做背景
     <div id="base">
     </div>
+    <style>
+      #imageandcolor {
+        background: url('../source/image.jpg'), linear-gradient(to bottom, yellow, red);
+        background-size: 100% 10px, 100% 100%;
+        background-repeat: no-repeat;
+      }
+    </style>
+    这个div我要显示有颜色，然后是图片，最后是颜色. 但是不行啊。只能用linear-gradient来处理。并且处理效果不太好
+    <div id="imageandcolor">
+    </div>
   </body>
 </html>
