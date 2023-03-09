@@ -176,27 +176,39 @@ Mustache不能用于HTML特性上，这种情况应该使用v-bind, 如果value�
 * [Ajax](./jquery.md#ajax)
 
 # other framework or useful repository 其他有用的框架
-* ## amap api 高德地图api
-    * [official documents 官方文档](http://lbs.amap.com/api/javascript-api/summary)
-    * [massmarker 海量点标记](http://lbs.amap.com/api/javascript-api/guide/overlays/massmarker)
-        * [测试](./test/amap_massmarker.html)
-        * 注意事项:
-            如果两个点标记的坐标完全一样，那么就无法分开
-* ## [Baidu Map API](http://lbsyun.baidu.com/index.php?title=jspopular3.0)
-    * [测试页面](./test/baidu.html)
-* ## Fontawesome 字体页面
-    [测试](./test/fontawesome.html)
-    * 直接使用
-    ```
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    <i class="fas fa-camera-retro"></i>
-    ```
-    * [find your icons](https://fontawesome.com/icons?d=gallery)
-        * delete: `<i class="fas fa-minus-circle"></i>`
-        * plus: `<i class="fas fa-plus"></i>`
-    * 下载到本地后使用
-    [教程](https://fontawesome.com/how-to-use/on-the-web/setup/hosting-font-awesome-yourself)
-* ## [flatpickr](https://github.com/flatpickr/flatpickr)  *没有依赖的时间选择器*
+
+## slidev
+[文档](https://cn.sli.dev/guide/#scaffolding-your-first-presentation)
+把markdown做成PPT
+
+```
+npm init slidev@latest
+```
+
+
+## amap api 高德地图api
+* [official documents 官方文档](http://lbs.amap.com/api/javascript-api/summary)
+* [massmarker 海量点标记](http://lbs.amap.com/api/javascript-api/guide/overlays/massmarker)
+    * [测试](./test/amap_massmarker.html)
+    * 注意事项:
+        如果两个点标记的坐标完全一样，那么就无法分开
+
+## [Baidu Map API](http://lbsyun.baidu.com/index.php?title=jspopular3.0)
+* [测试页面](./test/baidu.html)
+
+## Fontawesome 字体页面
+[测试](./test/fontawesome.html)
+* 直接使用
+```
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<i class="fas fa-camera-retro"></i>
+```
+* [find your icons](https://fontawesome.com/icons?d=gallery)
+    * delete: `<i class="fas fa-minus-circle"></i>`
+    * plus: `<i class="fas fa-plus"></i>`
+* 下载到本地后使用
+[教程](https://fontawesome.com/how-to-use/on-the-web/setup/hosting-font-awesome-yourself)
+## [flatpickr](https://github.com/flatpickr/flatpickr)  *没有依赖的时间选择器*
 * ## [富文本编辑器:summernote](./summernote网页编辑器.html)
 * ## [富文本编辑器:tinymce](./tinymce.html)
 * ## [jquery datetimepicker](https://github.com/xdan/datetimepicker) [example](./datetimepicker.html)
