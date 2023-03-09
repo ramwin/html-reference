@@ -2,6 +2,25 @@ Xiang Wang @ 2016-09-30 10:34:15
 
 [官网](https://cn.vuejs.org/v2/guide/)
 
+## [CDN安装](https://cn.vuejs.org/guide/quick-start.html#using-vue-from-cdn)
+```
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<div id="app">{{ message }}</div>
+
+<script>
+  const { createApp } = Vue
+
+  createApp({
+    data() {
+      return {
+        message: 'Hello Vue!'
+      }
+    }
+  }).mount('#app')
+</script>
+```
+
 ## 其他框架
 ### [Element](./element/README.md)
 ### Vue Router
