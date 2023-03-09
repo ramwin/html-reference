@@ -25,6 +25,28 @@ transition: slide-left
 css: unocss
 ---
 
+# 展示图片
+<img src="/示例图片.png" class="h-40 w-90"/>
+
+---
+
+![](/示例图片.png)
+
+---
+layout: image-right
+image: ./小图片.png
+---
+
+# 第3页
+前面的文字  
+后面的文字
+
+<br>
+
+# 标题2
+
+---
+
 # Welcome to Slidev
 
 Presentation slides for developers
