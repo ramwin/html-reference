@@ -1,5 +1,8 @@
 ---
 theme: ./
+title: 转正答辩
+drawings:
+  persist: true
 ---
 
 # 转正答辩
@@ -9,6 +12,9 @@ theme: ./
 * 姓名: 王祥
 * 姓名: 王祥
 
+
+---
+layout: menu
 ---
 
 # 导航
@@ -17,23 +23,83 @@ theme: ./
 
 ## 工作内容
 
+## 主要成功
+
 ## 总结反思
 
 
 ---
 
-# Navigation
+# 工作内容
 
-Hover on the bottom-left corner to see the navigation's controls panel
+## 直接用html可以跨行
 
-### Keyboard Shortcuts
+<table>
+  <thead>
+    <tr>
+        <th>名称</th><th>主要内容</th><th>收获</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td rowspan=2>span</td><td>第一行</td><td>结果</td></tr>
+    <tr><td>第二行</td><td>结果</td></tr>
+    <tr><td><kbd>space</kbd> / <kbd>tab</kbd> / <kbd>right</kbd></td><td>next animation or slide</td><td></td></tr>
+  </tbody>
+</table>
 
-|     |     |
-| --- | --- |
-| <kbd>space</kbd> / <kbd>tab</kbd> / <kbd>right</kbd> | next animation or slide |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
+## markdown不行
+
+|标题|内容|
+|----|----|
+|张三|大学|
+|零四|至高|
+
+
+---
+
+# 表格跨行变色
+
+
+|对比项目|前 |后 |差异|原因|
+|--------|---|---|---|---|
+|文件架构|10M|20M|减少50%|去除了冗余代码|
+|耗时|40s|毫秒级M|减少99%|减少了复杂的import|
+|代码|40s|毫秒级M|减少99%|减少了复杂的import|
+
+<style>
+td {
+    padding: 30px 10px;
+}
+td:nth-child(4) {
+    color: red;
+}
+</style>
+
+---
+
+# 展示重点
+
+
+```markdown
+# 展示重点
+
+`
+这里是内容
+`
+
+```
+
+<Arrow
+    x1="56" y1="208"
+    x2="456" y2="408"
+    color="red"></Arrow>
+
+
+<div style="border: 1px solid red; width: 400px; height: 200px">
+    上面是400x200的箭头, 我是400x200的框
+    所以整个页面是按照 960 * 540来的
+</div>
+
 
 ---
 layout: image-right

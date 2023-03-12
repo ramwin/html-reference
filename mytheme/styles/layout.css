@@ -49,3 +49,41 @@
   width: 50%;
   margin-left: 0px;
 }
+.slidev-layout.menu h1 {
+  color: red;
+}
+.slidev-layout.menu h2 {
+  margin-left: 10%;
+  font-size: 2rem;
+  margin-top: 4vh;
+  background: url("/目录背景.png");
+  background-position: 3vw 0px;
+  background-repeat: no-repeat;
+}
+.slidev-layout.menu h2:before {
+  margin-right: 4vw;
+  color: white;
+  background: url("/数字背景.png");
+  padding: 0.4vh 1.4vh;
+}
+.slidev-layout.menu h2:nth-child(2):before {
+  content: "1";
+}
+.slidev-layout.menu h2:nth-child(3):before {
+  content: "2";
+}
+.slidev-layout.menu h2:nth-child(4):before {
+  content: "3";
+}
+.slidev-layout.menu h2:nth-child(5):before {
+  content: "4";
+}
+.slidev-layout.default thead tr {
+  background: green;
+}
+.slidev-layout.default tbody tr:nth-child(odd) {
+  background: pink;
+}
+.slidev-layout.default tbody tr:nth-child(even) {
+  background: red;
+}
