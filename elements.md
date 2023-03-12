@@ -37,22 +37,23 @@ ordered list
 
 ## Inline text semantics
 使用这些元素来代表一些text
-* ### a [官网](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a)
+### a [官网](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a)
 [测试](./test/a.html)
-    * [示例]
-    ```
-    <a href="www.baidu.com" target="_blank">访问百度</a>
-        target: _blank(新标签打开) | _top(跳出当前框架)
-    style: text-decoration: none 是否有下划线
-    ```
-    * Attributes 属性
-        * download 告诉浏览器, 这个是用来下载的
-        * target: `_self | _blank | _parent | _top`: 当前 | 新窗口 | 父浏览器的加载 | 响应成完整的窗口，后两个用于iframe或者上下文
-    * 其他:
-        ```
-        <a href="mailto:ramwin@qq.com">发送邮箱</a>
-        <a href="tel:+491570156">拨打电话: +49 157 0156</a>
-        ```
+
+* [示例]
+```
+<a href="www.baidu.com" target="_blank">访问百度</a>
+    target: _blank(新标签打开) | _top(跳出当前框架)
+style: text-decoration: none 是否有下划线
+```
+* Attributes 属性
+    * download 告诉浏览器, 这个是用来下载的
+    * target: `_self | _blank | _parent | _top`: 当前 | 新窗口 | 父浏览器的加载 | 响应成完整的窗口，后两个用于iframe或者上下文
+* 其他:
+```
+<a href="mailto:ramwin@qq.com">发送邮箱</a>
+<a href="tel:+491570156">拨打电话: +49 157 0156</a>
+```
 
 ## [Image and multimedia](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Image_and_multimedia)
 ### to be continued
