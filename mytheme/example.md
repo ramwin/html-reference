@@ -3,6 +3,8 @@ theme: ./
 title: 转正答辩
 drawings:
   persist: true
+# use UnoCSS
+css: unocss
 ---
 
 # 转正答辩
@@ -17,16 +19,7 @@ drawings:
 layout: menu
 ---
 
-# 导航
-
-## 个人简介
-
-## 工作内容
-
-## 主要成功
-
-## 总结反思
-
+<mymenu />
 
 ---
 
@@ -76,12 +69,17 @@ td:nth-child(4) {
 </style>
 
 ---
+title: 展示重点
+level: 2
+---
+
 
 # 展示重点
 
 
 ```markdown
 # 展示重点
+
 
 `
 这里是内容
@@ -118,7 +116,7 @@ image: 'https://source.unsplash.com/collection/94734566/1920x1080'
 
 # Code
 
-Use code snippets and get the highlighting directly!
+试试定义title
 
 ```ts
 interface User {
