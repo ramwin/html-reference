@@ -1,6 +1,8 @@
 <template>
   <div class="mymenu">
     <h1>导航</h1>
+    {{ $slidev.nav.currentPage }}
+    <button @click="te">点我</button>
     <h2
       v-for="title in titles"
     >
@@ -27,6 +29,9 @@ export default {
   methods: {
     visit(title) {
       title.visited = true
+    },
+    te() {
+      debugger
     },
   },
 }
