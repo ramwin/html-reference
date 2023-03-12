@@ -1,6 +1,6 @@
 <template>
   <div class="slidev-layout cover">
-    <div class="w-full justify-content-between">
+    <div class="my-auto w-full">
       <slot />
     </div>
   </div>

@@ -1,36 +1,22 @@
 :root {
+  // default theme color
+  // can be overrided by uses `themeConfig` option
   --slidev-theme-primary: #5d8392;
 }
-.slidev-layout.cover h1 {
-  @apply text-6xl leading-40;
-}
-.slidev-layout.cover ul {
-  margin-top: 20vh;
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-}
-.slidev-layout.cover ul li {
-  width: 50%;
-  box-sizing: border-box;
-  margin: 0px;
-}
-.slidev-layout.intro h1 {
-  @apply text-6xl leading-20;
-}
+
 .slidev-layout.cover,
 .slidev-layout.intro {
   @apply h-full grid;
-}
-.slidev-layout.cover h1 + p,
-.slidev-layout.intro h1 + p {
-  @apply -mt-2 opacity-50 mb-4;
-}
-.slidev-layout.cover p + h2,
-.slidev-layout.intro p + h2,
-.slidev-layout.cover ul + h2,
-.slidev-layout.intro ul + h2,
-.slidev-layout.cover table + h2,
-.slidev-layout.intro table + h2 {
-  @apply mt-10;
+
+  h1 {
+    @apply text-6xl leading-20;
+  }
+
+  h1 + p {
+    @apply -mt-2 opacity-50 mb-4;
+  }
+
+  p + h2, ul + h2, table + h2 {
+    @apply mt-10;
+  }
 }
