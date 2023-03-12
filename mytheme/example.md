@@ -1,14 +1,18 @@
 ---
 theme: ./
+background: './background.jpg'
 ---
 
 # 主题
 
 * 姓名: 王祥
-* 部门: IT部
+* 部门: 部门名字一般比较长
 * 师傅: 王帅
 * 部门: 金具
 
+---
+layout: center
+background: './background.jpg'
 ---
 
 # 目录
