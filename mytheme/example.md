@@ -100,6 +100,16 @@ td:nth-child(4) {
     所以整个页面是按照 960 * 540来的
 </div>
 
+<p>怎么快速作图呢, 先手动做一个箭头, 然后读取文件或者永久保存文件</p>
+
+`.slidev/drawings/example/*.svg`
+
+
+<Arrow
+    x1="528" y1="475"
+    x2="343" y2="377"
+    color="red"></Arrow>
+
 
 ---
 layout: image-right
