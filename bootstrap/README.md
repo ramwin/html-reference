@@ -265,6 +265,19 @@ example
 
 ## [Background][background]
 
+[测试](./background.html)
+
+常用的渐变提交按钮
+
+```
+:root { // 个人习惯, 渐变色从左到右
+  --bs-gradient: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+}
+<div class="row justify-content-center">
+  <button class="col-6 btn rounded-pill bg-primary bg-gradient">Hello, world!</button>
+</div>
+```
+
 ### 背景色
 ![./img/bootstrap-background.png](./img/bootstrap-background.png)
 
