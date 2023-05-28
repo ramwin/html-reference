@@ -1,10 +1,10 @@
 **Xiang Wang @ 2018-11-08 16:39:16**
 
 
-[官网 Forms](https://getbootstrap.com/docs/4.1/components/forms/)
+[官网 Forms][form-overview]
 [测试](./form.html)
 
-### [Checkbox and radios](https://getbootstrap.com/docs/4.1/components/forms/#checkboxes-and-radios)
+### [单选框 复选框][checkbox]
 ```
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
@@ -92,3 +92,7 @@
     <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
 </div>
 ```
+
+
+[form-overview]: https://getbootstrap.com/docs/5.3/forms/overview/
+[checkbox]: https://getbootstrap.com/docs/5.3/forms/checks-radios/#checks

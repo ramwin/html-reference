@@ -105,44 +105,54 @@ var vm = new Vue({
 * watch可以监听data的二级字段
 
 ### Class与Style绑定
-[官网](https://cn.vuejs.org/v2/guide/class-and-style.html)
+[官网][class-style]
 [测试](./class与style绑定.html)
 > 直接把v-bind用于class和style,容易出错，所以vue做了专门的增强，可以用数组或者对象来渲染
 
-* 绑定HTML Class
-    * 对象语法
-    ```
-    v-bind:class="{ 'class-a': isA, 'class-b': isB }">  // isA和isB是vue的data
-    ```
-    绑定的数据对象也可以不定义在模板里
-    ```
-    <div v-bind:class="classObject"></div>
-    data: {
-        classObject: {
-            active: true,
-            'text-danger': false,
+#### 绑定HTML Class
+* 对象语法
+```
+v-bind:class="{ 'class-a': isA, 'class-b': isB }">  // isA和isB是vue的data
+```
+绑定的数据对象也可以不定义在模板里
+```
+<div v-bind:class="classObject"></div>
+data: {
+    classObject: {
+        active: true,
+        'text-danger': false,
+    }
+}
+```
+甚至绑定到一个计算属性
+```
+<div v-bind:class="classObject"></div>
+data: {
+    isActive: true,
+    error: null
+}
+computed: {
+    classObject: function() {
+        return {
+            "active": this.isActive && !this.error,
+            "text-danger": this.error  && this.error.type === 'fatal',
         }
     }
-    ```
-    甚至绑定到一个计算属性
-    ```
-    <div v-bind:class="classObject"></div>
+}
+```
+* 数组语法
+```
+v-bind:class="[classA, isB ? classB: '', '默认存在']">
+```
+#### 样式绑定
+```
+v-bind:style="styleObject"
+vm = {
     data: {
-        isActive: true,
-        error: null
+        styleObject: {color:'red', 'fontSize:'13px'}
     }
-    computed: {
-        classObject: function() {
-            return {
-                "active": this.isActive && !this.error,
-                "text-danger": this.error  && this.error.type === 'fatal',
-            }
-        }
-    }
-    ```
-    * [ ] 数组语法
-    三元表达式: `v-bind:class="[classA, isB ? classB: '']">`
-* 样式绑定: `v-bind:style="styleObject" data: {styleObject: {color:'red', 'fontSize:'13px'}}`
+}
+```
 
 ### 条件渲染
 * 使用`v-if`
@@ -288,3 +298,5 @@ computed: {
   </li>
 </ul>
 ```
+
+[class-style]: https://cn.vuejs.org/guide/essentials/class-and-style.html#binding-html-classes
