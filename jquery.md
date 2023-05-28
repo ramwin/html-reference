@@ -4,7 +4,7 @@
 
 ## install
 ```
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" type="text/javascript"></script>
 ```
 ## [Ajax](http://api.jquery.com/category/ajax/)
 * [jQuery.ajax](https://api.jquery.com/jQuery.ajax/)

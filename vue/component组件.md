@@ -1,6 +1,6 @@
 **Xiang Wang @ 2016-10-11 11:24:14**
 
-[官网地址](http://cn.vuejs.org/guide/components.html)
+[官网地址][official-site]
 [测试](./component组件.html)
 
 
@@ -73,3 +73,6 @@ this.$nextTick(function() {
     $('input', this.$el).focus();
 })
 ```
+
+
+[official-site]: https://cn.vuejs.org/guide/essentials/component-basics.html
