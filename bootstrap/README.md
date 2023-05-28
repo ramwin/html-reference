@@ -263,7 +263,14 @@ example
 
 # Utilities [官网](https://getbootstrap.com/docs/4.0/utilities/borders/)
 
-## [Borders](https://getbootstrap.com/docs/4.0/utilities/borders/)
+## [Background][background]
+
+### 背景色
+![./img/bootstrap-background.png](./img/bootstrap-background.png)
+
+
+## 边框 border
+[官网][border]
 * Border-subtractive
     * border
     * border-top
@@ -272,18 +279,17 @@ example
     * border-left
 * Border-color:
 ![./img/border-color.png](./img/border-color.png)
-* Border-radius:
-    * rounded
-    * rounded-top
-    * rounded-left
-    * rounded-circle
-    * rounded-0
+### [Radius](https://getbootstrap.com/docs/5.3/utilities/borders/#radius)
+* rounded
+* rounded-top
+* rounded-left
+* rounded-circle
+* rounded-pill
+* rounded-0
 
 ## [Colors](https://getbootstrap.com/docs/4.0/utilities/colors/)
 * Color  
 ![./img/bootstrap-color.png](./img/bootstrap-color.png)
-* Background  
-![./img/bootstrap-background.png](./img/bootstrap-background.png)
 
 ## [Display](https://getbootstrap.com/docs/4.1/utilities/display/)
 * inline
@@ -400,3 +406,6 @@ format: `{property}{sides}-{breakpoint}-{size} | {property}{sides}-{size}`
 * [form输入](./form.html)
 * [弹出框](./popover弹出框.html)
 * [按钮示例](./button.html) [按钮文档](./button.md)
+
+[border]: https://getbootstrap.com/docs/5.3/utilities/borders/
+[background]: https://getbootstrap.com/docs/5.3/utilities/background/
