@@ -5,6 +5,21 @@
 * 引入
 > `<link rel="stylesheet" href="./source/css.css">`
 
+## Function
+### [var](https://developer.mozilla.org/en-US/docs/Web/CSS/var)
+使用一个变量. 这个变量载入时间可以在之后. 这样通过引入不同的theme.css来实现整个主题的替换
+```
+// theme.css
+:root {
+    --main-bg-color: pink
+}
+
+// common.html
+body {
+    background-color: var(--main-bg-color);
+}
+```
+
 ## background and border 背景和边框 [示例](./border.html) [官网][background]
 ### 背景
 * [背景background](background背景.md)
