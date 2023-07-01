@@ -61,6 +61,19 @@ Xiang Wang @ 2019-11-19 23:13:13
 ```
 
 #### [Form组件](https://element.eleme.cn/#/zh-CN/component/radio)
+
+```
+<el-form ref="form" :model="form" label-width="80px" @submit.native.prevent>
+  <el-form-item label="活动名称">
+    <el-input v-model="form.name"></el-input>
+  </el-form-item>
+  <el-form-item>
+    <el-button type="primary" @click="onSubmit">立即创建</el-button>
+    <el-button>取消</el-button>
+  </el-form-item>
+</el-form>
+```
+
 ##### [Radio 单选框](https://element.eleme.cn/#/zh-CN/component/radio)
 * 基础用法
 ```
