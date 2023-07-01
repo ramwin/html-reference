@@ -311,6 +311,17 @@ display: -webkit-box;
 text-overflow: hidden;
 ```
 
+## Transform-Function
+* rotate 旋转. 默认围绕中点顺时针旋转. 旋转时不影响布局占位
+```
+<div style=" border: 1px solid red; width: 100px; height: 100px;">123</div>
+<div style="transform: rotate(45deg); border: 1px solid red; width: 100px; height: 100px;">456</div>
+<div style=" border: 1px solid red; width: 100px; height: 100px;">789</div>
+```
+<div style=" border: 1px solid red; width: 100px; height: 100px;">123</div>
+<div style="transform: rotate(45deg); border: 1px solid red; width: 200px; height: 100px;">123</div>
+<div style=" border: 1px solid red; width: 100px; height: 100px;">789</div>
+
 [mozilla]: https://developer.mozilla.org/en-US/docs/Web/CSS
 [background]: https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Backgrounds_and_Borders
 [border-style]: https://developer.mozilla.org/en-US/docs/Web/CSS/border-style
