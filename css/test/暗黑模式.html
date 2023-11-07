@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <style>
+      .first {
+        color: green;
+      }
+      @media (prefers-color-scheme: dark) {
+        .first.adapter {
+          color: red;
+        }
+      }
+      :root {
+        --surface: green;
+      }
+      :root :is(.dark) {
+        --surface: red;
+      }
+      .second {
+        color: var(--surface);
+      }
+    </style>
+  </head>
+  <body class="dark">
+    <div class="first adapter">使用@media prefers-color-scheme白天我是绿色，夜里我是红色</div>
+    <div class="second adapter"
+      >第二种，使用:is(.dark)</div>
+  </body>
+</html>

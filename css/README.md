@@ -78,9 +78,24 @@ background: repeating-radial-gradient(white, black 50px);
 ## [Selector选择器](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors)
 [训练](https://flukeout.github.io/)
 [例子](./select选择器.html)
+
 ### Simple Selectors
 ### Attribute Selectors
 ### Pseudo-classes
+* [ ] :invalid() 
+* :is()
+用来选择多种类型
+```
+:is(.dark) {
+    --surface: red;
+}
+:is(.dark) :is(.adapter) {  // 暗黑模式下，所有的.adapter都是红色
+    color: red;
+}
+```
+
+* [ ] :lang()
+
 * [x] nth-child
 这个nth-child可以加一个参数，代表匹配到什么就选择
 odd和even输入时代表选择奇数或者偶数
@@ -321,6 +336,21 @@ text-overflow: hidden;
 <div style=" border: 1px solid red; width: 100px; height: 100px;">123</div>
 <div style="transform: rotate(45deg); border: 1px solid red; width: 200px; height: 100px;">123</div>
 <div style=" border: 1px solid red; width: 100px; height: 100px;">789</div>
+
+## 暗黑模式
+[测试](./test/暗黑模式.html)
+1. 使用prefers-color-scheme
+```
+.first {
+  color: green;
+}
+@media (prefers-color-scheme: dark) {
+  .first.adapter {
+    color: red;
+  }
+}
+```
+2. 使用class="dark"
 
 [mozilla]: https://developer.mozilla.org/en-US/docs/Web/CSS
 [background]: https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Backgrounds_and_Borders
